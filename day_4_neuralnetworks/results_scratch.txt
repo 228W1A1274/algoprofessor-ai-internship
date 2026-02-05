@@ -1,0 +1,1 @@
+Manual NN Accuracy: 100.00%

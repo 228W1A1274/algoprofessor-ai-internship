@@ -1,0 +1,1 @@
+CNN MNIST Accuracy: 98.92%
