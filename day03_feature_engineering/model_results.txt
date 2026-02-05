@@ -1,0 +1,3 @@
+--- Day 3 Model Performance ---
+XGBoost Accuracy: 77.65%
+LightGBM Accuracy: 81.56%

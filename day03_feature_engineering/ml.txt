@@ -1,0 +1,139 @@
+Regression and classification both are supervised models 
+For both we sue label data
+Both are used to solve machine learning algorithms
+Regression-continuous value(correlation between dependent variables and independent variables example house prices)
+classification-discrete value(email spam or not spam)
+
+Regression is used to divide into classes based on parameters
+Linear regression:
+It is statical method for continuous predictions
+Simple linear regression: Single independent variable is used to predict one dependent variable(e.g., salary from hours studied))
+multiple linear regression:  independent variable is used to predict one dependent variable(e.g., salary from hours studied, age, and sleep)
+
+Logistic regression:
+
+To convert continuous values in range of 0 to 1 by using sigmoid function
+We use decision boundary as threshold. Here we sue Decision boundary as linear.
+
+
+
+Feature engineering:
+(An outlier in a dataset is a data point that significantly differs from other observations, appearing as an unusually high or low value that doesn't fit the general pattern, often due to measurement errors, data entry mistakes, or representing a truly rare event, and can skew analysis, requiring careful identification and handling.
+)
+
+Means taking the raw data and extract meaningful information that ml model can understand
+
+->It is a process of selecting and modifying features form the dataset while creating a predictive model using machine learning
+
+Different techniques in future engineering:
+1)handling missing data(like NaN,null,none,-.?)It is done by removing data and replacing data with mean median or mode.
+
+2)Handling continuous values(we use normalization and standardization)
+.Normalization: Normalizing also knows as min-max scaling is used to transform features into a similar scale(it scales values between 0 and 1)
+   .Useful when data in dataset or on different scales
+   .Scikit-learn library provides the Minmaxscaler
+   .when data as no outliers
+.Standardization: It is a scaling technique  is a machine learning preprocessing technique that transforms numerical features to have a mean of 0 and a standard deviation of 1.
+
+3)Handling Categorical values: It is a data that can be represents categories like country gender.(They need to converted into numerical values for ml model)
+.For conversion e sue label encoding and one-hot-encoding.
+.Label encoding converts a categorical values of a column into number (here each label is given a unique integer based on alphabetical order)(it is present in scikit-learn)
+.one-hot-encoding adds new features based on unique values (it creates dummy variables where each category is resented as one-hot vector it is also present in scikit learn)
+
+Features election:It is process of sleceting the features either manually or automatically which contribute the most if the prediction value
+  ->Reduce the complexity of ml model
+  ->Improve the accuracy of model
+  ->Used to reduce overfitting
+  ->To train faster
+
+Methods for feature selection:
+1)removing features with low variance:(A certain threshold is selected for variance by using p(1-p) formula and remove all the features whose variance does not meet the threshold zero-variance features are also removed)
+
+2)univariate feature selection:(selecting independent features that ahs major impact on target feature selectkbest class is sued to select the features  here k represent top most features) 
+
+3)Recursive feature elimination:(Important features are identified by coef, feature_imporatnces attributes)
+
+4)Fs using selectfrommodel: It is based on specific  attribute such as coef_ or feature_imporatnces threshold defaultly mean is taking as threshold
+
+5)Sequential future selection:(By moving forward or backward bases on cross validation selector ion estimator)
+
+Correlation matrix heatmap: It shows relationship between the features or target features
+
+Pca-used for dimensionality reduction(reduce number of features)
+Find a new set of orthogonal(perpendicular) feature vectors in such a way that data spread is maximum in the direction of feature vector.
+
+
+We will consider the feature which has more variance(more data spread) so  we will rotate the axis with respect to that future then we will project the all features on to that axis
+
+Steps include  in this
+->Standardize the datasets by Xnew=X-mean(X)/std(X)(That means  we calculate mean std for every dataset
+->Compute covariance matrix for dataset
+->Eigenvalues eigen vectors of that covariance matrix(here Eigen vectors are orthogonal)(Data where eigenvalue is more then data spread  is more)
+->Sort the eigenvectors by decreasing eigen values
+->Chose a eigen vectors with largest eigenvalues to form d*k dimensional matrix w
+->Transform the samples onto new subspace
+
+T-SNE:
+->we start with original scatter plot then we put the points on the number line in random order
+->from tsne moves the points as time passes until points are clustered(should it move left or right)
+->At each point on the line or axis it checks for the points to attract  repel and then they go closer to their original cluster points and forms clusters on a single line
+
+1)Determine the similarity of all points in scatterplot(By calculating unscaled similarity between all the points)
+2)The next step is to scale the similarities to add up to 1(Why to 1?Tnse has a perplexity parameter equal to the expected density around each point and that comes into play but these clusters are still more similar )
+2)The averages the similarity scores of two different directions then e get similarity score of matrix
+
+
+BOOSTING WORKS ON DECISION TREE:
+
+Gradient boosting:
+
+->In gradient boosting we model the Function by taking the constant value which can be considered as  some kind of basis ad then add multiple weighted weak learners to it whose role is to bring the prediction to our labels(This means we take initial guess and then we calculate error or residual then we will add weak learners(means small changes  to solve these residuals) and get closer to labels by minimizing the loss
+
+1)computer the intial prediction f0(a guess in regression it is average of the labels)
+2)Compute the residuals(or error between our prediction and labels)
+3)train a tree to predict the residuals
+4)computer the new best approximation
+
+XGBOOST:(gpu)
+
+->XGBoost is extreme gradient boosting it is machine learning algorithm mainly on tabular datasets
+->Eg boosting is extension of gradient boosting it has capabilities of
+
+  .Regularization Capability: XGBoost includes built-in L1 (Lasso) and L2 (Ridge) regularization, which effectively penalizes model complexity to reduce overfitting.
+
+  .Missing Value Handling: The algorithm features built-in capabilities to automatically learn the best direction for missing values, removing the need for manual data imputation.
+
+  .In-built Cross-Validation: It supports integrated cross-validation and early stopping, which halts training when no further improvement is detected, ensuring the optimal number of iterations.
+  
+  .Speed and Scalability: Designed for high performance, it utilizes parallel processing and distributed computing frameworks, making it ideal for handling very large datasets.
+
+   .Depth-First Tree Growth: It employs a depth-first search strategy and utilizes a "max_depth" approach followed by post-pruning, allowing trees to grow deeper and more optimized compared to "greedy" pruning methods.
+
+   .Customizable Optimization: It supports user-defined objective functions and evaluation metrics, allowing for specialized optimizations tailored to specific business or research needs.
+    
+   .Versatile Interfaces: It provides an easy-to-use interface across multiple languages, including Python, R, Java, and C++. 
+
+
+LIGHTGBM:(local machine)
+
+->HISTOGRAM:WHERE WE WILL MAKE BINS OR ORIGINAL VALUE STO MAKE TARINING FASTER EXAMPLE LET US CONSIDER A COLUMN AS VALUES OF 50 55 60 THENW E WILL MAKE IT AS 50-60 BIN
+
+->EXCLUSIVE FEATURE BUNDLING: Exclusive features that cannot be same at the same time for suppose there is column of gender sometimes male as 1 and sometimes female as 1 no chance both becoming 1 light gbm makes them bundling means when it sees 10 it keeps as 11 when its sees 01 it keeps as 10 for reducing dimensionality
+
+->Gradient based one side sampling:
+It takes all the gradients of samples and sort them in descending order and then it will take 20 percent of highest gradients s it is and it will take 10 percent randomly sleeted(Samples) data in below 80 percent and combine them so it makes only one side sampling to reduce the training .
+
+
+
+->Seaborn is a powerful Python data visualization library based on Matplotlib that creates attractive, informative statistical graphics with minimal code. It integrates seamlessly with Pandas data structures, making it ideal for exploring relationships, distributions, and patterns in data. Key uses include generating complex plots like heatmaps, violin plots, and regression lines easily. 
+
+->In Seaborn, the sns.load_dataset() function is a specialized utility used to fetch built-in example datasets directly into your environment as Pandas DataFrames. 
+
+
+->Hyperparameters are the parameters that are not trained during the training they are set by the suers before the training .They are the configuration settings that control the learning process and model behavior(eg:max depth in tree,no of hidden layers)
+->They balance the tradeoff between overfitting and underfitting
+->Hyperparameters depend on dataset
+->Grid search is an automated, exhaustive tuning technique in machine learning that finds the optimal hyperparameters for a model by systematically scanning through a user-specified subset of all possible parameter combinations(it is computationally expensive and used for small or less hyperparameters)
+->Randomized search -Users defined range for each hyperparameter and specify how many models i am thinking to train.(it is used for large datasets and many hyperparameters)
+
+
