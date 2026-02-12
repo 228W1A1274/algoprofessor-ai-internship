@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.env
+day7_rag/data/vector_db/
+day7_rag/data/sec_filings/
+*.sqlite3
+*.bin

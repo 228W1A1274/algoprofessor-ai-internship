@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+
+# Environment files
+.env
+
+# Vector DB / Databases
+*.sqlite3
+*.db
+day7_rag/data/vector_db/
+
+# Large data
+day7_rag/data/

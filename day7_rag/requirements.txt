@@ -1,0 +1,29 @@
+# Core RAG dependencies
+langchain==0.1.10
+langchain-community==0.0.24
+langchain-groq==0.0.1
+chromadb==0.4.22
+
+# Document processing
+pypdf2==3.0.1
+python-dotenv==1.0.0
+
+# Data fetching
+yfinance==0.2.36
+requests==2.31.0
+beautifulsoup4==4.12.3
+sec-edgar-downloader==5.0.2
+
+# Embeddings (free local option)
+sentence-transformers==2.3.1
+
+# Utilities
+pandas==2.2.0
+tiktoken==0.6.0
+numpy==1.26.3
+
+# UI
+streamlit==1.31.0
+
+# Groq API
+groq==0.4.2
