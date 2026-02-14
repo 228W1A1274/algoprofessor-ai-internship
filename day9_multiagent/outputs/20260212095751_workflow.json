@@ -1,0 +1,27 @@
+{
+  "workflow_id": "20260212095751",
+  "topic": "AI + automation",
+  "content_type": "blog_post",
+  "word_count": 500,
+  "tone": "professional",
+  "research_depth": "standard",
+  "started_at": "2026-02-12T09:57:51.351393",
+  "status": "running",
+  "stages": {
+    "research": {
+      "status": "completed",
+      "time_seconds": 13.07779,
+      "sources_found": 3
+    },
+    "writing": {
+      "status": "completed",
+      "time_seconds": 3.666536,
+      "word_count": 692
+    },
+    "review_1": {
+      "status": "approved",
+      "time_seconds": 0.811931,
+      "score": 1.0
+    }
+  }
+}

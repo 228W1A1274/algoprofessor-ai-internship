@@ -1,0 +1,28 @@
+{
+  "workflow_id": "20260212095751",
+  "status": "completed",
+  "metadata": {
+    "word_count": 692,
+    "tone": "professional",
+    "sources": [
+      "Artificial Intelligence - Wikipedia. (2026, February 12). Retrieved from https://en.wikipedia.org/wiki/Artificial_intelligence",
+      "What Is Artificial Intelligence? | IBM. (2026, February 12). Retrieved from https://www.ibm.com/topics/artificial-intelligence",
+      "AI News & Insights | MIT Technology Review. (2026, February 12). Retrieved from https://www.technologyreview.com/topic/artificial-intelligence/"
+    ],
+    "sources_count": 3,
+    "research_depth": "standard",
+    "revision_cycles": 0,
+    "final_approved": true,
+    "final_score": 1.0
+  },
+  "timing": {
+    "total_seconds": 17.556257000000002,
+    "total_minutes": 0.2926042833333334,
+    "stages": {
+      "research": 13.07779,
+      "writing": 3.666536,
+      "review_1": 0.811931
+    }
+  },
+  "completed_at": "2026-02-12T09:58:08.907650"
+}

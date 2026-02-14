@@ -1,0 +1,26 @@
+# Core Multi-Agent Framework
+crewai==0.28.8
+crewai-tools==0.1.6
+
+# LLM Provider (Groq via OpenAI compatible)
+openai>=1.13.3,<2.0.0
+
+# Search & Web Tools
+duckduckgo-search==5.0.0
+beautifulsoup4==4.12.3
+requests==2.31.0
+lxml==5.1.0
+
+# Data Processing
+pandas==2.2.1
+numpy==1.26.4
+
+# Utilities
+python-dotenv==1.0.0
+colorama==0.4.6
+
+# File Operations
+openpyxl==3.1.2
+
+# Logging
+loguru==0.7.2

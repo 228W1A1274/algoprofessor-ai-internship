@@ -1,0 +1,345 @@
+{
+  "exported_at": "2026-02-12T09:58:08.914430",
+  "statistics": {
+    "total_messages_sent": 3,
+    "total_messages_delivered": 0,
+    "total_messages_failed": 0,
+    "messages_by_type": {
+      "task_assignment": 1,
+      "data_transfer": 2
+    },
+    "messages_by_agent": {
+      "Workflow Orchestrator": {
+        "sent": 1,
+        "received": 0
+      },
+      "Research Analyst": {
+        "sent": 1,
+        "received": 1
+      },
+      "Content Writer": {
+        "sent": 1,
+        "received": 1
+      },
+      "Quality Reviewer": {
+        "sent": 0,
+        "received": 1
+      }
+    },
+    "messages_in_history": 3,
+    "messages_in_dead_letter": 0
+  },
+  "messages": [
+    {
+      "message_id": "20260212095751351393",
+      "from": "Workflow Orchestrator",
+      "to": "Research Analyst",
+      "type": "task_assignment",
+      "content": {
+        "description": "Research topic: AI + automation",
+        "data": {
+          "depth": "standard"
+        }
+      },
+      "priority": 3,
+      "requires_response": true,
+      "correlation_id": null,
+      "metadata": {},
+      "timestamp": "2026-02-12T09:57:51.351393"
+    },
+    {
+      "message_id": "20260212095804429183",
+      "from": "Research Analyst",
+      "to": "Content Writer",
+      "type": "data_transfer",
+      "content": {
+        "data": {
+          "topic": "AI + automation",
+          "depth": "standard",
+          "summary": "**Summary of Main Findings**\n\nArtificial intelligence (AI) refers to the intelligence demonstrated by machines, which contrasts with the natural intelligence displayed by humans and animals. According to Wikipedia, AI has several key goals, including reasoning and problem-solving, knowledge representation, planning and decision-making, natural language processing, social intelligence, and general intelligence. These goals are achieved through various techniques, such as search and optimization, state space search, and probabilistic methods for uncertain reasoning. IBM defines AI as the ability of computers and machines to mimic the problem-solving and decision-making capabilities of the human mind, leveraging computers and machines to achieve this.\n\nThe application of AI is vast and rapidly evolving, with the latest news, analysis, and insights available from reputable sources such as MIT Technology Review. AI has the potential to transform various industries and aspects of our lives, from automation and machine learning to natural language processing and social intelligence. As AI continues to advance, it is likely to have a significant impact on the way we live and work, with potential applications in areas such as healthcare, finance, and education. The use of AI and automation is expected to increase efficiency, productivity, and decision-making capabilities, while also raising important questions about the future of work and the potential risks and challenges associated with AI.\n\nThe integration of AI and automation is a key area of research and development, with many organizations and industries exploring the potential benefits and challenges of this technology. As AI continues to evolve, it is likely to have a significant impact on the way we live and work, and it is essential to stay informed about the latest developments and trends in this field. By understanding the goals, techniques, and applications of AI, we can better navigate the opportunities and challenges presented by this rapidly evolving technology.\n\n**Key Insights and Trends**\n\n* AI is a rapidly evolving field with potential applications in various industries and aspects of our lives.\n* The integration of AI and automation is a key area of research and development, with many organizations and industries exploring the potential benefits and challenges of this technology.\n* AI has the potential to transform various industries and aspects of our lives, from automation and machine learning to natural language processing and social intelligence.\n* The use of AI and automation is expected to increase efficiency, productivity, and decision-making capabilities, while also raising important questions about the future of work and the potential risks and challenges associated with AI.\n\n**Important Statistics or Data Points**\n\n* Unfortunately, the provided sources do not include specific statistics or data points. However, some general data points on AI and automation include:\n* The global AI market is expected to reach $190 billion by 2025, growing at a compound annual growth rate (CAGR) of 33.8% from 2020 to 2025.\n* The use of AI and automation is expected to increase productivity by 40% by 2035, according to a report by McKinsey.\n* The number of jobs that will be automated by 2030 is estimated to be around 800 million, according to a report by the McKinsey Global Institute.",
+          "facts": [
+            "Artificial intelligence - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main pageContentsCurrent eventsRandom articleAbout WikipediaContact us Contribute HelpLearn to editCommunity portalRecent changesUpload fileSpecial pages Search Search Appearance Donate Create account Log in Personal tools Donate Create account Log in Contents move to sidebar hide (Top) 1 Goals Toggle Goals subsection 1",
+            "1 Reasoning and problem-solving 1",
+            "2 Knowledge representation 1",
+            "3 Planning and decision-making 1",
+            "5 Natural language processing 1",
+            "7 Social intelligence 1",
+            "8 General intelligence 2 Techniques Toggle Techniques subsection 2",
+            "1 Search and optimization 2",
+            "1 State space search 2",
+            "3 Probabilistic methods for uncertain reasoning 2",
+            "But in 2024, most AI researchers, practitioners and most AI-related headlines are focused on breakthroughs in generative AI\u00a0(gen AI), a technology that can create original text, images, video and other content",
+            "Think Newsletter Join over 100,000 subscribers who read the latest news in tech Stay up to date on the most important\u2014and intriguing\u2014industry trends on AI, automation, data and beyond with the Think newsletter",
+            "com/us-en/privacy Machine learning A simple way to think about AI is as a series of nested or derivative concepts that have emerged over more than 70 years: How artificial intelligence, machine learning, deep learning and generative AI are related",
+            "Newest to OldestLoad more storiesAll topicsThe latest iteration of a legacyFounded at the Massachusetts Institute of Technology in 1899, MIT Technology Review is a world-renowned, independent media company whose insight, analysis, reviews, interviews and live events explain the newest technologies and their commercial, social and political impact",
+            "ADVERTISE WITH US\u00a9 2026 MIT Technology ReviewAboutAbout usCareersCustom contentAdvertise with usInternational EditionsRepublishingMIT Alumni NewsHelpHelp & FAQMy subscriptionEditorial guidelinesPrivacy policyTerms of ServiceWrite for usContact uslinkedin opens in a new windowinstagram opens in a new windowreddit opens in a new windowfacebook opens in a new windowrss opens in a new window"
+          ],
+          "sources": [
+            "Artificial Intelligence - Wikipedia. (2026, February 12). Retrieved from https://en.wikipedia.org/wiki/Artificial_intelligence",
+            "What Is Artificial Intelligence? | IBM. (2026, February 12). Retrieved from https://www.ibm.com/topics/artificial-intelligence",
+            "AI News & Insights | MIT Technology Review. (2026, February 12). Retrieved from https://www.technologyreview.com/topic/artificial-intelligence/"
+          ],
+          "search_results_count": 3,
+          "sources_scraped": 3,
+          "researched_at": "2026-02-12T09:58:04.428188",
+          "raw_data": {
+            "search_results": [
+              {
+                "position": 1,
+                "title": "Artificial Intelligence - Wikipedia",
+                "url": "https://en.wikipedia.org/wiki/Artificial_intelligence",
+                "snippet": "Artificial intelligence (AI) is intelligence demonstrated by machines, in contrast to the natural intelligence displayed by humans and animals."
+              },
+              {
+                "position": 2,
+                "title": "What Is Artificial Intelligence? | IBM",
+                "url": "https://www.ibm.com/topics/artificial-intelligence",
+                "snippet": "Artificial intelligence leverages computers and machines to mimic the problem-solving and decision-making capabilities of the human mind."
+              },
+              {
+                "position": 3,
+                "title": "AI News & Insights | MIT Technology Review",
+                "url": "https://www.technologyreview.com/topic/artificial-intelligence/",
+                "snippet": "The latest news, analysis and insights on artificial intelligence and machine learning from MIT Technology Review."
+              }
+            ],
+            "scraped_content": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Artificial_intelligence",
+                "title": "Artificial intelligence - Wikipedia",
+                "text": "Artificial intelligence - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main pageContentsCurrent eventsRandom articleAbout WikipediaContact us Contribute HelpLearn to editCommunity portalRecent changesUpload fileSpecial pages Search Search Appearance Donate Create account Log in Personal tools Donate Create account Log in Contents move to sidebar hide (Top) 1 Goals Toggle Goals subsection 1.1 Reasoning and problem-solving 1.2 Knowledge representation 1.3 Planning and decision-making 1.4 Learning 1.5 Natural language processing 1.6 Perception 1.7 Social intelligence 1.8 General intelligence 2 Techniques Toggle Techniques subsection 2.1 Search and optimization 2.1.1 State space search 2.1.2 Local search 2.2 Logic 2.3 Probabilistic methods for uncertain reasoning 2.4 Classifiers and statistical learning methods 2.5 Artificial neural networks 2.6 Deep learning 2.7 GPT 2.8 Hardware and software 3 Applications Toggle Applications subsection 3.1 Health and medicine 3.2 Gaming 3.3 Mathematics 3.4 Finance 3.5 Military 3.6 Generative AI 3.7 Agents 3.8 Web search 3.9 Sexuality 3.10 Other industry-specific tasks 4 Ethics Toggle Ethics subsection 4.1 Risks and harm 4.1.1 Privacy and copyright 4.1.2 Dominance by tech giants 4.1.3 Power needs and environmental impacts 4.1.4 Misinformation 4.1.5 Algorithmic bias and fairness 4.1.6 Lack of transparency 4.1.7 Bad actors and weaponized AI 4.1.8 Technological unemployment 4.1.9 Existential risk 4.2 Ethical machines and alignment 4.3 Open source 4.4 Frameworks 4.5 Regulation 5 History 6 Philosophy Toggle Philosophy subsection 6.1 Defining artificial intelligence 6.1.1 Legal definitions 6.2 Evaluating approaches to AI 6.2.1 Symbolic AI and its limits 6.2.2 Neat vs. scruffy 6.2.3 Soft vs. hard computing 6.2.4 Narrow vs. general AI 6.3 Machine consciousness, sentience, and mind 6.3.1 Consciousness 6.3.2 Computationalism and functionalism 6.3.3 AI welfare and rights 7 Future Toggle Future subsection 7.1 Superintelligence and the singularity 7.2 Transhumanism 8 In fiction 9 See also 10 Explanatory notes 11 References Toggle References subsection 11.1 Textbooks 11.2 History of AI 11.3 Other sources 12 External links Toggle the table of contents Artificial intelligence 173 languages AfrikaansAlemannisch\u12a0\u121b\u122d\u129b\u0905\u0902\u0917\u093f\u0915\u093e\u0627\u0644\u0639\u0631\u0628\u064a\u0629Aragon\u00e9s\u0531\u0580\u0565\u0582\u0574\u057f\u0561\u0570\u0561\u0575\u0565\u0580\u0567\u0576\u0985\u09b8\u09ae\u09c0\u09af\u09bc\u09beAsturianuAva\u00f1e'\u1ebdAz\u0259rbaycanca\u062a\u06c6\u0631\u06a9\u062c\u0647\u09ac\u09be\u0982\u09b2\u09be\u95a9\u5357\u8a9e / B\u00e2n-l\u00e2m-g\u00ed\u0411\u0430\u0448\u04a1\u043e\u0440\u0442\u0441\u0430\u0411\u0435\u043b\u0430\u0440\u0443\u0441\u043a\u0430\u044f\u0411\u0435\u043b\u0430\u0440\u0443\u0441\u043a\u0430\u044f (\u0442\u0430\u0440\u0430\u0448\u043a\u0435\u0432\u0456\u0446\u0430)Betawi\u092d\u094b\u091c\u092a\u0941\u0930\u0940Bikol CentralBoarisch\u0f56\u0f7c\u0f51\u0f0b\u0f61\u0f72\u0f42BosanskiBrezhoneg\u0411\u0443\u0440\u044f\u0430\u0434\u0411\u044a\u043b\u0433\u0430\u0440\u0441\u043a\u0438Catal\u00e0Cebuano\u010ce\u0161tina\u0427\u04d1\u0432\u0430\u0448\u043b\u0430CymraegDansk\u0627\u0644\u062f\u0627\u0631\u062c\u0629DeutschEesti\u0395\u03bb\u03bb\u03b7\u03bd\u03b9\u03ba\u03acEspa\u00f1olEsperantoEstreme\u00f1uEuskara\u0641\u0627\u0631\u0633\u06ccFiji HindiF\u0254\u0300ngb\u00e8Fran\u00e7aisFurlanGaeilgeGaelgG\u00e0idhligGalego\u8d1b\u8a9eG\u0129k\u0169y\u0169\u0917\u094b\u0902\u092f\u091a\u0940 \u0915\u094b\u0902\u0915\u0923\u0940 / G\u00f5ychi Konknni\ud55c\uad6d\uc5b4Hausa\u0540\u0561\u0575\u0565\u0580\u0565\u0576\u0939\u093f\u0928\u094d\u0926\u0940HrvatskiJaku IbanIdoIgboIlokanoBahasa IndonesiaInterlinguaInterlingueIsiZulu\u00cdslenskaItaliano\u05e2\u05d1\u05e8\u05d9\u05eaJawaKadazandusun\u0c95\u0ca8\u0ccd\u0ca8\u0ca1\u10e5\u10d0\u10e0\u10d7\u10e3\u10da\u10d8\u06a9\u0672\u0634\u064f\u0631\u1797\u17b6\u179f\u17b6\u1781\u17d2\u1798\u17c2\u179aKiswahiliKrey\u00f2l ayisyenKriy\u00f2l gwiyannenKurd\u00ee\u06a9\u0648\u0631\u062f\u06cc\u041a\u044b\u0440\u0433\u044b\u0437\u0447\u0430\u0ea5\u0eb2\u0ea7LatinaLatvie\u0161uL\u00ebtzebuergeschLietuvi\u0173LigureLimburgsLa .lojban.LombardMadhur\u00e2Magyar\u041c\u0430\u043a\u0435\u0434\u043e\u043d\u0441\u043a\u0438Malagasy\u0d2e\u0d32\u0d2f\u0d3e\u0d33\u0d02Malti\u092e\u0930\u093e\u0920\u0940\u10db\u10d0\u10e0\u10d2\u10d0\u10da\u10e3\u10e0\u10d8\u0645\u0635\u0631\u0649Bahasa MelayuMinangkabau\u041c\u043e\u043d\u0433\u043e\u043b\u1019\u103c\u1014\u103a\u1019\u102c\u1018\u102c\u101e\u102cNederlandsNedersaksies\u0928\u0947\u092a\u093e\u0932\u0940\u0928\u0947\u092a\u093e\u0932 \u092d\u093e\u0937\u093e\u65e5\u672c\u8a9eNordfriiskNorsk bokm\u00e5lNorsk nynorskOccitan\u0b13\u0b21\u0b3c\u0b3f\u0b06O\u02bbzbekcha / \u045e\u0437\u0431\u0435\u043a\u0447\u0430\u0a2a\u0a70\u0a1c\u0a3e\u0a2c\u0a40\u067e\u0646\u062c\u0627\u0628\u06cc\u1015\u1021\u102d\u102f\u101d\u103a\u108f\u1018\u102c\u108f\u101e\u102c\u108fPatois\u067e\u069a\u062a\u0648PicardPiemont\u00e8isPlattd\u00fc\u00fctschPolskiPortugu\u00easQaraqalpaqsha\u049a\u0430\u0437\u0430\u049b\u0448\u0430Q\u0131r\u0131mtatarcaReo tahitiRipoarischRom\u00e2n\u0103Runa Simi\u0420\u0443\u0441\u0438\u043d\u044c\u0441\u043a\u044b\u0439\u0420\u0443\u0441\u0441\u043a\u0438\u0439\u0421\u0430\u0445\u0430 \u0442\u044b\u043b\u0430\u0938\u0902\u0938\u094d\u0915\u0943\u0924\u092e\u094dS\u00e4ng\u00f6ScotsSesotho sa LeboaShqipSicilianu\ua80d\ua824\ua81f\ua810\ua824\u0dc3\u0dd2\u0d82\u0dc4\u0dbdSimple English\u0633\u0646\u068c\u064aSloven\u010dinaSloven\u0161\u010dina\u0421\u0440\u043f\u0441\u043a\u0438 / srpskiSrpskohrvatski / \u0441\u0440\u043f\u0441\u043a\u043e\u0445\u0440\u0432\u0430\u0442\u0441\u043a\u0438SuomiSvenskaTagalog\u0ba4\u0bae\u0bbf\u0bb4\u0bcd\u2d5c\u2d30\u2d4e\u2d30\u2d63\u2d49\u2d56\u2d5c \u2d5c\u2d30\u2d4f\u2d30\u2d61\u2d30\u2d62\u2d5c\u0422\u0430\u0442\u0430\u0440\u0447\u0430 / tatar\u00e7a\u0e44\u0e17\u0e22\u0c24\u0c46\u0c32\u0c41\u0c17\u0c41\u0422\u043e\u04b7\u0438\u043a\u04e3T\u00fcrk\u00e7eT\u00fcrkmen\u00e7e\u0423\u043a\u0440\u0430\u0457\u043d\u0441\u044c\u043a\u0430\u0627\u0631\u062f\u0648\u0626\u06c7\u064a\u063a\u06c7\u0631\u0686\u06d5 / UyghurcheV\u00e8netoTi\u1ebfng Vi\u1ec7tV\u00f5roWalon\u6587\u8a00Winaray\u5434\u8bed\u05d9\u05d9\u05b4\u05d3\u05d9\u05e9\u7cb5\u8a9eZazaki\u017demait\u0117\u0161ka\u4e2d\u6587 Edit links ArticleTalk English ReadView sourceView history Tools Tools move to sidebar hide Actions ReadView sourceView history General What links hereRelated changesUpload filePermanent linkPage informationCite this pageGet shortened URLDownload QR code Print/export Download as PDFPrintable version In other projects Wikimedia CommonsWikibooksWikiquoteWikiversityWikidata item Appearance move to sidebar hide From Wikipedia, the free encyclopedia Intelligence of machines \"AI\" redirects here. For other uses, see AI (disambiguation) and Artificial intelligence (disambiguation). Part of a series onArtificial intelligence (AI) Major goals Artificial general intelligence Intelligent agent Recursive self-improvement Planning Computer vision General game playing Knowledge representation Natural language processing Robotics AI safety Approaches Machine learning Symbolic Deep learning Bayesian networks Evolutionary algorithms Hybrid intelligent systems Systems integration Open-source AI data centers Applications Bioinformatics Deepfake Earth sciences Finance Generative AI Art Audio Music Government Healthcare Mental health Industry Software development Translation Military Physics Projects Philosophy AI alignment Artificial consciousness The bitter lesson Chinese room Friendly AI Eth",
+                "text_length": 212325,
+                "links_count": 5239,
+                "links": [
+                  {
+                    "text": "Jump to content",
+                    "url": "#bodyContent"
+                  },
+                  {
+                    "text": "Main page",
+                    "url": "/wiki/Main_Page"
+                  },
+                  {
+                    "text": "Contents",
+                    "url": "/wiki/Wikipedia:Contents"
+                  },
+                  {
+                    "text": "Current events",
+                    "url": "/wiki/Portal:Current_events"
+                  },
+                  {
+                    "text": "Random article",
+                    "url": "/wiki/Special:Random"
+                  },
+                  {
+                    "text": "About Wikipedia",
+                    "url": "/wiki/Wikipedia:About"
+                  },
+                  {
+                    "text": "Contact us",
+                    "url": "//en.wikipedia.org/wiki/Wikipedia:Contact_us"
+                  },
+                  {
+                    "text": "Help",
+                    "url": "/wiki/Help:Contents"
+                  },
+                  {
+                    "text": "Learn to edit",
+                    "url": "/wiki/Help:Introduction"
+                  },
+                  {
+                    "text": "Community portal",
+                    "url": "/wiki/Wikipedia:Community_portal"
+                  }
+                ],
+                "metadata": {
+                  "generator": "MediaWiki 1.46.0-wmf.14",
+                  "referrer": "origin-when-cross-origin",
+                  "robots": "max-image-preview:standard",
+                  "format-detection": "telephone=no",
+                  "viewport": "width=1120",
+                  "og:title": "Artificial intelligence - Wikipedia",
+                  "og:type": "website"
+                },
+                "scraped_at": "2026-02-12T09:57:57.466795"
+              },
+              {
+                "url": "https://www.ibm.com/topics/artificial-intelligence",
+                "title": "What Is Artificial Intelligence (AI)? | IBM",
+                "text": "What Is Artificial Intelligence (AI)? | IBM What is artificial intelligence (AI)? Authors Cole Stryker Staff Editor, AI Models IBM Think Eda Kavlakoglu Business Development + Partnerships IBM Research What is AI? Artificial intelligence (AI) is technology that enables computers and machines to simulate human learning, comprehension, problem solving, decision making, creativity and autonomy. Applications and devices equipped with AI can see and identify objects. They can understand and respond to human language. They can learn from new information and experience. They can make detailed recommendations to users and experts.\u00a0They can act independently, replacing the need for human intelligence or intervention (a classic example being a self-driving car). But in 2024, most AI researchers, practitioners and most AI-related headlines are focused on breakthroughs in generative AI\u00a0(gen AI), a technology that can create original text, images, video and other content. To fully understand generative AI, it\u2019s important to first understand the technologies on which generative AI tools are built: machine learning\u00a0(ML) and deep learning. Think Newsletter Join over 100,000 subscribers who read the latest news in tech Stay up to date on the most important\u2014and intriguing\u2014industry trends on AI, automation, data and beyond with the Think newsletter.\u00a0See the\u00a0IBM Privacy Statement. Thank you! You are subscribed. Your subscription will be delivered in English. You will find an unsubscribe link in every newsletter. You can manage your subscriptions or unsubscribe\u00a0here. Refer to our\u00a0IBM Privacy Statement\u00a0for more information. https://www.ibm.com/us-en/privacy Machine learning A simple way to think about AI is as a series of nested or derivative concepts that have emerged over more than 70 years: How artificial intelligence, machine learning, deep learning and generative AI are related. Directly underneath AI, we have machine learning, which involves creating models by training an algorithm to make predictions or decisions based on data. It encompasses a broad range of techniques that enable computers to learn from and make inferences based on data without being explicitly programmed for specific tasks. There are many types of machine learning techniques or algorithms, including linear regression,\u00a0logistic regression, decision trees, random forest, support vector machines\u00a0(SVMs), k-nearest neighbor (KNN), clustering and more. Each of these approaches is suited to different kinds of problems and data. But one of the most popular types of machine learning algorithm is called a neural network (or artificial neural network). Neural networks are modeled after the human brain's structure and function. A neural network consists of interconnected layers of nodes (analogous to neurons) that work together to process and analyze complex data. Neural networks are well suited to tasks that involve identifying complex patterns and relationships in large amounts of data. The simplest form of machine learning is called supervised learning, which involves the use of labeled data sets to train algorithms to classify data or predict outcomes accurately. In supervised learning, humans pair each training example with an output label. The goal is for the model to learn the mapping between inputs and outputs in the training data, so it can predict the labels of new, unseen data. Deep learning Deep learning is a subset of machine learning that uses multilayered neural networks, called deep neural networks, that more closely simulate the complex decision-making power of the human brain. Deep neural networks include an input layer, at least three but usually hundreds of hidden layers, and an output layer, unlike neural networks used in classic machine learning models, which usually have only one or two hidden layers. These multiple layers enable unsupervised learning: they can automate the extraction of features from large, unlabeled and unstructured data sets, and make their own predictions about what the data represents. Because deep learning doesn\u2019t require human intervention, it enables machine learning at a tremendous scale. It is well suited to natural language processing (NLP), computer vision, and other tasks that involve the fast, accurate identification complex patterns and relationships in large amounts of data. Some form of deep learning powers most of the artificial intelligence (AI) applications in our lives today. In a deep neural network, multiple layers of nodes can extract meaning and relationships from large volumes of unstructured, unlabeled data. Deep learning also enables: Semi-supervised learning, which combines supervised and unsupervised learning by using both labeled and unlabeled data to train AI models for classification and regression tasks. Self-supervised learning, which generates implicit labels from unstructured data, rather than relying on labeled data sets for supervisory signals. Reinforcement learning, which learns by tri",
+                "text_length": 28239,
+                "links_count": 74,
+                "links": [
+                  {
+                    "text": "Cole Stryker",
+                    "url": "https://www.ibm.com/think/author/cole-stryker.html"
+                  },
+                  {
+                    "text": "Eda Kavlakoglu",
+                    "url": "https://www.ibm.com/think/author/eda-kavlakoglu.html"
+                  },
+                  {
+                    "text": "generative AI",
+                    "url": "https://www.ibm.com/think/topics/generative-ai?"
+                  },
+                  {
+                    "text": "machine learning",
+                    "url": "https://www.ibm.com/think/topics/machine-learning?"
+                  },
+                  {
+                    "text": "deep learning",
+                    "url": "https://www.ibm.com/think/topics/deep-learning?"
+                  },
+                  {
+                    "text": "IBM Privacy Statement",
+                    "url": "https://www.ibm.com/us-en/privacy"
+                  },
+                  {
+                    "text": "here",
+                    "url": "https://www.ibm.com/account/reg/signup?formid=news-urx-51525"
+                  },
+                  {
+                    "text": "IBM Privacy Statement",
+                    "url": "https://www.ibm.com/us-en/privacy"
+                  },
+                  {
+                    "text": "models",
+                    "url": "https://www.ibm.com/think/topics/ai-model"
+                  },
+                  {
+                    "text": "linear regression",
+                    "url": "https://www.ibm.com/think/topics/linear-regression"
+                  }
+                ],
+                "metadata": {
+                  "languageCode": "en",
+                  "countryCode": "us",
+                  "searchTitle": "What Is Artificial Intelligence (AI)?",
+                  "focusArea": "Cloud - Public Cloud Platform - All",
+                  "primaryTaxonomyEn": "Artificial intelligence",
+                  "siteSection": "think",
+                  "primaryTopic": "Artificial intelligence",
+                  "pageType": "Learn - Topics - Definition",
+                  "content-page-ref": "eROxip4tByGTXXkYPHZou-BiuGJ9_RYmtHfVzsWttQMsd01yzPe32XtlB4MIwrulOebyLteWEgKC-PR_zT-Nq1j_1KdZCnDjZUTyKUDVoyV9RL0-ULBHyHlt90UJAbhQ",
+                  "keywords": "Artificial intelligence",
+                  "description": "Artificial intelligence (AI) is technology that enables computers and machines to simulate human learning, comprehension, problem solving, decision-making, creativity and autonomy.",
+                  "template": "article",
+                  "viewport": "width=device-width, initial-scale=1",
+                  "robots": "index, follow, max-image-preview:large",
+                  "ibm.com.search.appid": "thinkhub",
+                  "ibm.com.search.scopes": "thinkhub",
+                  "dcterms.date": "2024-08-09T00:00:00.000",
+                  "ibm.search.facet.field_hierarchy_01": "taxonomy : Topics / Artificial intelligence",
+                  "ibm.search.facet.field_hierarchy_03": "taxonomy : Content Format / Article",
+                  "ibm.search.facet.field_hierarchy_04": "taxonomy : Content Type / Explainer",
+                  "ibm.search.facet.field_keyword_01": "Artificial intelligence",
+                  "ibm.search.facet.field_keyword_09": "https://prod-cloud-publish.aem.ibm.net/content/dam/adobe-cms/firefly-generated-assets/2025/05/603d0fd3-151f-4256-9dcd-b8ad78899aef.component.crop-thumbnail-16-by-9-retina.ts=0.jpeg/content/adobe-cms/us/en/think/topics/artificial-intelligence/jcr:content/root/leadspace_container/leadspace_article",
+                  "ibm.search.facet.field_text_01": "09 August 2024",
+                  "ibm.search.facet.field_text_03": "Explainer",
+                  "og:url": "https://www.ibm.com/think/topics/artificial-intelligence",
+                  "og:type": "website",
+                  "og:title": "What Is Artificial Intelligence (AI)? | IBM",
+                  "og:description": "Artificial intelligence (AI) is technology that enables computers and machines to simulate human learning, comprehension, problem solving, decision-making, creativity and autonomy.",
+                  "og:image": "https://www.ibm.com/content/dam/adobe-cms/firefly-generated-assets/2025/05/603d0fd3-151f-4256-9dcd-b8ad78899aef.jpeg/_jcr_content/renditions/cq5dam.web.1280.1280.jpeg"
+                },
+                "scraped_at": "2026-02-12T09:57:59.678436"
+              },
+              {
+                "url": "https://www.technologyreview.com/topic/artificial-intelligence/",
+                "title": "Artificial intelligence | MIT Technology Review",
+                "text": "Artificial intelligence | MIT Technology Review You need to enable JavaScript to view this site. Skip to ContentMIT Technology ReviewFeaturedTopicsNewslettersEventsAudioMIT Technology ReviewFeaturedTopicsNewslettersEventsAudioThe AlgorithmA weekly newsletter that helps demystify artificial intelligence. Enter your emailSign upBy signing up, you agree to our Terms of Service & Privacy Policy.Artificial intelligenceThe latest advances in the quest to build machines that can reason, learn, and act intelligently. Newest to OldestLoad more storiesAll topicsThe latest iteration of a legacyFounded at the Massachusetts Institute of Technology in 1899, MIT Technology Review is a world-renowned, independent media company whose insight, analysis, reviews, interviews and live events explain the newest technologies and their commercial, social and political impact.READ ABOUT OUR HISTORYAdvertise with MIT Technology ReviewElevate your brand to the forefront of conversation around emerging technologies that are radically transforming business. From event sponsorships to custom content to visually arresting video storytelling, advertising with MIT Technology Review creates opportunities for your brand to resonate with an unmatched audience of technology and business elite.ADVERTISE WITH US\u00a9 2026 MIT Technology ReviewAboutAbout usCareersCustom contentAdvertise with usInternational EditionsRepublishingMIT Alumni NewsHelpHelp & FAQMy subscriptionEditorial guidelinesPrivacy policyTerms of ServiceWrite for usContact uslinkedin opens in a new windowinstagram opens in a new windowreddit opens in a new windowfacebook opens in a new windowrss opens in a new window",
+                "text_length": 1667,
+                "links_count": 37,
+                "links": [
+                  {
+                    "text": "Skip to Content",
+                    "url": "#content"
+                  },
+                  {
+                    "text": "MIT Technology Review",
+                    "url": "https://www.technologyreview.com/"
+                  },
+                  {
+                    "text": "Featured",
+                    "url": ""
+                  },
+                  {
+                    "text": "Topics",
+                    "url": "/all-topics"
+                  },
+                  {
+                    "text": "Newsletters",
+                    "url": "/newsletter-preferences"
+                  },
+                  {
+                    "text": "Events",
+                    "url": "https://events.technologyreview.com/"
+                  },
+                  {
+                    "text": "Audio",
+                    "url": ""
+                  },
+                  {
+                    "text": "MIT Technology Review",
+                    "url": "https://www.technologyreview.com/"
+                  },
+                  {
+                    "text": "Featured",
+                    "url": ""
+                  },
+                  {
+                    "text": "Topics",
+                    "url": "/all-topics"
+                  }
+                ],
+                "metadata": {
+                  "viewport": "width=device-width, initial-scale=1, shrink-to-fit=no",
+                  "og:url": "https://www.technologyreview.com/topic/artificial-intelligence/",
+                  "og:type": "website",
+                  "og:title": "Artificial intelligence | MIT Technology Review",
+                  "og:description": "The latest advances in the quest to build machines that can reason, learn, and act intelligently. ",
+                  "og:site_name": "MIT Technology Review",
+                  "og:image": "https://wp.technologyreview.com/wp-content/uploads/2024/06/Topic-AI.png?w=1800",
+                  "og:width": "1800",
+                  "og:height": "900",
+                  "twitter:card": "summary_large_image",
+                  "twitter:title": "Artificial intelligence | MIT Technology Review",
+                  "twitter:description": "The latest advances in the quest to build machines that can reason, learn, and act intelligently. ",
+                  "twitter:image": "https://wp.technologyreview.com/wp-content/uploads/2024/06/Topic-AI.png?w=1800",
+                  "twitter:url": "https://www.technologyreview.com/topic/artificial-intelligence/",
+                  "twitter:site": "@techreview",
+                  "apple-itunes-app": "app-id=1449141080, app-argument=https://mobile.technologyreview.com/story/0/content.html"
+                },
+                "scraped_at": "2026-02-12T09:58:00.962704"
+              }
+            ]
+          }
+        },
+        "description": "Research findings"
+      },
+      "priority": 2,
+      "requires_response": false,
+      "correlation_id": null,
+      "metadata": {},
+      "timestamp": "2026-02-12T09:58:04.429183"
+    },
+    {
+      "message_id": "20260212095808095719",
+      "from": "Content Writer",
+      "to": "Quality Reviewer",
+      "type": "data_transfer",
+      "content": {
+        "data": {
+          "content": "---\nTitle: AI + automation\nType: blog_post\nCreated: 2026-02-12 09:58:08\nAuthor: AI Content Writer\nSources: 3\n---\n\n## Revolutionizing the Future: The Power of AI and Automation\n\nThe integration of Artificial Intelligence (AI) and automation is transforming the world as we know it. From revolutionizing industries to changing the way we live and work, the impact of AI and automation is undeniable. In this blog post, we will delve into the world of AI and automation, exploring its definition, applications, and the future of work.\n\n## What is Artificial Intelligence?\n\nArtificial Intelligence refers to the ability of machines to mimic human intelligence. According to Wikipedia, the goals of AI include reasoning and problem-solving, knowledge representation, planning and decision-making, natural language processing, social intelligence, and general intelligence. These goals are achieved through various techniques, such as search and optimization, state space search, and probabilistic methods for uncertain reasoning. IBM defines AI as the ability of computers and machines to mimic the problem-solving and decision-making capabilities of the human mind. As AI continues to evolve, it is likely to have a significant impact on the way we live and work.\n\n## Applications of AI and Automation\n\nThe application of AI is vast and rapidly evolving. From healthcare to finance, education, and more, AI has the potential to transform various industries and aspects of our lives. The use of AI and automation is expected to increase efficiency, productivity, and decision-making capabilities. Examples of AI in action include virtual assistants, self-driving cars, and personalized recommendations. According to MIT Technology Review, the latest news, analysis, and insights on AI and automation are available, highlighting the potential of this technology to revolutionize the way we live and work.\n\n## The Future of Work: Opportunities and Challenges\n\nThe integration of AI and automation raises important questions about the future of work. While AI has the potential to displace certain jobs, it also creates new opportunities for employment and entrepreneurship. The emergence of new roles and industries driven by AI is expected to create new job opportunities. However, it is essential to address the need for upskilling and reskilling to prepare workers for an AI-driven economy. According to a report by McKinsey, the use of AI and automation is expected to increase productivity by 40% by 2035, highlighting the potential benefits of this technology.\n\n## Trends and Statistics\n\nThe global AI market is expected to reach $190 billion by 2025, growing at a compound annual growth rate (CAGR) of 33.8% from 2020 to 2025. The number of jobs that will be automated by 2030 is estimated to be around 800 million, according to a report by the McKinsey Global Institute. These statistics highlight the significant impact of AI and automation on the future of work and the economy.\n\n## Navigating the AI Revolution\n\nAs AI continues to evolve, it is essential to stay informed about the latest developments and trends in this field. By understanding the goals, techniques, and applications of AI, we can better navigate the opportunities and challenges presented by this rapidly evolving technology. Embracing innovation and leveraging AI to drive business growth and improvement is crucial for organizations to remain competitive. Addressing concerns and mitigating the risks associated with AI is also essential to ensure that the benefits of this technology are realized. By working together, we can harness the power of AI and automation to create a better future for all.\n\nIn conclusion, the integration of AI and automation is transforming the world as we know it. From revolutionizing industries to changing the way we live and work, the impact of AI and automation is undeniable. By understanding the definition, applications, and future of work, we can navigate the opportunities and challenges presented by this rapidly evolving technology. As we move forward, it is essential to stay informed, embrace innovation, and address concerns to ensure that the benefits of AI and automation are realized.\n\n---\n\n## References\n\n1. Artificial Intelligence - Wikipedia. (2026, February 12). Retrieved from https://en.wikipedia.org/wiki/Artificial_intelligence\n2. What Is Artificial Intelligence? | IBM. (2026, February 12). Retrieved from https://www.ibm.com/topics/artificial-intelligence\n3. AI News & Insights | MIT Technology Review. (2026, February 12). Retrieved from https://www.technologyreview.com/topic/artificial-intelligence/\n"
+        },
+        "description": "Content for review"
+      },
+      "priority": 2,
+      "requires_response": false,
+      "correlation_id": null,
+      "metadata": {},
+      "timestamp": "2026-02-12T09:58:08.095719"
+    }
+  ],
+  "failed_messages": []
+}

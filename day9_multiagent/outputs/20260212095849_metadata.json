@@ -1,0 +1,30 @@
+{
+  "workflow_id": "20260212095849",
+  "status": "completed",
+  "metadata": {
+    "word_count": 1071,
+    "tone": "professional",
+    "sources": [
+      "Understanding Instagram. (2026, February 12). Retrieved from https://example.com/Instagram",
+      "Instagram - Latest Developments. (2026, February 12). Retrieved from https://example.com/Instagram-news",
+      "Instagram Best Practices. (2026, February 12). Retrieved from https://example.com/Instagram-guide",
+      "The Future of Instagram. (2026, February 12). Retrieved from https://example.com/future-Instagram",
+      "Instagram Case Studies. (2026, February 12). Retrieved from https://example.com/Instagram-cases"
+    ],
+    "sources_count": 5,
+    "research_depth": "standard",
+    "revision_cycles": 0,
+    "final_approved": true,
+    "final_score": 0.8
+  },
+  "timing": {
+    "total_seconds": 90.52274400000002,
+    "total_minutes": 1.5087124000000003,
+    "stages": {
+      "research": 74.64378,
+      "writing": 10.035481,
+      "review_1": 5.843483
+    }
+  },
+  "completed_at": "2026-02-12T10:00:19.747641"
+}

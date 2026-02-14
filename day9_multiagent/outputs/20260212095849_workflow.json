@@ -1,0 +1,27 @@
+{
+  "workflow_id": "20260212095849",
+  "topic": "Instagram",
+  "content_type": "article",
+  "word_count": 1000,
+  "tone": "professional",
+  "research_depth": "standard",
+  "started_at": "2026-02-12T09:58:49.222421",
+  "status": "running",
+  "stages": {
+    "research": {
+      "status": "completed",
+      "time_seconds": 74.64378,
+      "sources_found": 5
+    },
+    "writing": {
+      "status": "completed",
+      "time_seconds": 10.035481,
+      "word_count": 1071
+    },
+    "review_1": {
+      "status": "approved",
+      "time_seconds": 5.843483,
+      "score": 0.8
+    }
+  }
+}
