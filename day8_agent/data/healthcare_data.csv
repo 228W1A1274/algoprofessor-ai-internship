@@ -1,0 +1,501 @@
+patient_id,name,age,gender,hypertension,heart_disease,diabetes,avg_glucose_level,bmi,blood_pressure_systolic,blood_pressure_diastolic,smoking_status,department,doctor_assigned,procedure,procedure_cost,consultation_fee,total_cost,diagnosis,room_number,admission_status
+1001,Patient_1,69,Male,1,0,0,99,32.9,126,72,formerly smoked,General Practice,Dr. Amanda Taylor,Blood Test,30,170,414,Obesity,114,Outpatient
+1002,Patient_2,32,Male,1,1,0,78,22.9,176,84,never smoked,Orthopedics,Dr. Jennifer Lee,Physical Therapy,100,180,665,Coronary Artery Disease,518,Admitted
+1003,Patient_3,78,Female,0,1,0,133,31.0,102,107,Unknown,Neurology,Dr. James Wilson,Nerve Conduction Study,350,220,618,Coronary Artery Disease,142,Outpatient
+1004,Patient_4,38,Female,1,1,0,189,29.6,121,77,never smoked,Internal Medicine,Dr. David Martinez,Physical Exam,100,190,761,Fracture,445,Outpatient
+1005,Patient_5,41,Male,1,0,0,121,29.6,135,110,Unknown,Pediatrics,Dr. Emily Rodriguez,Growth Assessment,80,180,491,Arthritis,218,Outpatient
+1006,Patient_6,20,Male,1,0,0,158,31.4,112,71,formerly smoked,Neurology,Dr. James Wilson,EEG,250,220,716,Influenza,138,Outpatient
+1007,Patient_7,39,Female,1,0,0,122,29.2,134,99,formerly smoked,Orthopedics,Dr. Sarah Johnson,Cast Application,180,200,761,COVID-19,523,Admitted
+1008,Patient_8,70,Male,1,0,0,147,35.6,106,76,never smoked,General Practice,Dr. Amanda Taylor,Vaccination,40,170,688,Anxiety,124,Outpatient
+1009,Patient_9,19,Female,0,0,0,110,31.7,174,74,formerly smoked,Radiology,Dr. James Wilson,Ultrasound,250,220,708,Pneumonia,238,Outpatient
+1010,Patient_10,47,Male,0,0,0,137,29.2,155,101,never smoked,Cardiology,Dr. Michael Chen,Echocardiogram,300,250,964,Arthritis,513,Outpatient
+1011,Patient_11,55,Male,0,0,1,77,34.7,95,74,never smoked,Radiology,Dr. James Wilson,Ultrasound,250,220,836,Fracture,248,Admitted
+1012,Patient_12,19,Female,1,1,0,71,30.3,107,74,formerly smoked,Emergency,Dr. Robert Brown,Wound Care,200,230,597,Influenza,323,Outpatient
+1013,Patient_13,81,Male,0,0,1,174,24.2,111,114,Unknown,Neurology,Dr. James Wilson,CT Scan,600,220,867,Influenza,347,Discharged
+1014,Patient_14,77,Female,0,0,0,194,22.5,122,98,formerly smoked,Emergency,Dr. Jennifer Lee,Wound Care,200,180,430,Asthma,527,Admitted
+1015,Patient_15,38,Male,0,0,0,179,21.5,119,72,smokes,Cardiology,Dr. Sarah Johnson,Stress Test,200,200,698,Type 2 Diabetes,229,Outpatient
+1016,Patient_16,50,Male,0,0,0,155,36.0,170,76,never smoked,Neurology,Dr. James Wilson,CT Scan,600,220,917,Coronary Artery Disease,234,Admitted
+1017,Patient_17,75,Male,1,0,0,189,32.3,121,91,never smoked,Surgery,Dr. Robert Brown,Orthopedic Surgery,6000,230,6668,Fracture,147,Outpatient
+1018,Patient_18,39,Female,1,0,0,196,36.8,131,68,never smoked,Orthopedics,Dr. Jennifer Lee,X-Ray,120,180,515,Depression,513,Admitted
+1019,Patient_19,66,Male,0,0,0,85,30.3,167,99,formerly smoked,Neurology,Dr. James Wilson,CT Scan,600,220,996,COVID-19,137,Outpatient
+1020,Patient_20,76,Male,0,0,0,131,27.7,99,79,Unknown,Orthopedics,Dr. Jennifer Lee,MRI Scan,800,180,1359,Obesity,446,Outpatient
+1021,Patient_21,59,Male,0,0,1,182,19.7,125,85,formerly smoked,Radiology,Dr. Christopher Moore,X-Ray,120,210,803,Pneumonia,443,Outpatient
+1022,Patient_22,77,Male,0,0,0,81,31.6,123,86,never smoked,Oncology,Dr. Lisa Anderson,CT Scan,600,200,879,Obesity,414,Outpatient
+1023,Patient_23,32,Female,0,0,0,104,29.9,162,80,never smoked,Pediatrics,Dr. Amanda Taylor,Physical Exam,100,170,454,Type 2 Diabetes,540,Outpatient
+1024,Patient_24,79,Female,0,0,0,80,37.8,117,77,formerly smoked,Oncology,Dr. David Martinez,Radiation,3000,190,3556,Migraine,518,Outpatient
+1025,Patient_25,79,Male,0,0,1,133,23.2,100,72,never smoked,General Practice,Dr. Christopher Moore,Blood Test,30,210,700,Healthy Checkup,241,Admitted
+1026,Patient_26,64,Female,0,1,0,119,28.8,167,75,smokes,Pediatrics,Dr. Amanda Taylor,Physical Exam,100,170,668,Depression,112,Admitted
+1027,Patient_27,79,Male,0,1,0,138,31.2,128,68,smokes,Pediatrics,Dr. Emily Rodriguez,Physical Exam,100,180,306,Asthma,221,Discharged
+1028,Patient_28,68,Male,0,0,0,117,31.1,136,71,formerly smoked,Internal Medicine,Dr. Lisa Anderson,Physical Exam,100,200,751,Healthy Checkup,512,Admitted
+1029,Patient_29,72,Male,0,0,0,89,29.4,108,103,never smoked,Pediatrics,Dr. Amanda Taylor,Growth Assessment,80,170,713,Type 2 Diabetes,239,Outpatient
+1030,Patient_30,81,Female,0,0,0,170,33.7,104,97,never smoked,Cardiology,Dr. Michael Chen,Echocardiogram,300,250,997,Type 2 Diabetes,135,Discharged
+1031,Patient_31,20,Female,1,0,1,137,22.5,117,78,never smoked,Oncology,Dr. David Martinez,Chemotherapy,2500,190,3167,Healthy Checkup,212,Admitted
+1032,Patient_32,68,Female,0,0,0,104,32.6,113,119,never smoked,Radiology,Dr. James Wilson,CT Scan,600,220,1311,Back Pain,434,Outpatient
+1033,Patient_33,24,Female,0,0,0,134,30.6,161,66,never smoked,Orthopedics,Dr. Sarah Johnson,Physical Therapy,100,200,713,Pneumonia,322,Outpatient
+1034,Patient_34,38,Female,1,0,0,77,36.0,98,116,formerly smoked,General Practice,Dr. Amanda Taylor,Physical Exam,100,170,689,Pneumonia,444,Discharged
+1035,Patient_35,56,Female,0,0,0,114,35.0,136,94,formerly smoked,Pediatrics,Dr. Emily Rodriguez,Physical Exam,100,180,474,Hypertension,111,Discharged
+1036,Patient_36,35,Female,1,0,0,156,24.6,122,107,never smoked,General Practice,Dr. Amanda Taylor,Vaccination,40,170,423,Obesity,540,Outpatient
+1037,Patient_37,21,Female,0,0,0,145,23.9,151,77,never smoked,Radiology,Dr. James Wilson,CT Scan,600,220,1188,COVID-19,411,Admitted
+1038,Patient_38,77,Female,1,0,0,145,37.6,108,75,never smoked,General Practice,Dr. Christopher Moore,Blood Test,30,210,581,Migraine,222,Outpatient
+1039,Patient_39,31,Male,1,0,0,116,28.8,156,114,never smoked,Radiology,Dr. James Wilson,Ultrasound,250,220,583,Obesity,519,Outpatient
+1040,Patient_40,26,Female,1,0,0,84,36.2,163,98,smokes,Pediatrics,Dr. Emily Rodriguez,Blood Test,30,180,451,Pneumonia,334,Outpatient
+1041,Patient_41,70,Female,1,1,0,174,21.7,129,63,never smoked,Radiology,Dr. Christopher Moore,X-Ray,120,210,453,COVID-19,246,Admitted
+1042,Patient_42,19,Female,0,0,0,95,31.0,136,118,never smoked,Pediatrics,Dr. Emily Rodriguez,Blood Test,30,180,514,Anxiety,322,Admitted
+1043,Patient_43,77,Female,0,0,1,121,34.3,154,84,never smoked,Internal Medicine,Dr. David Martinez,Blood Test,30,190,295,Migraine,335,Outpatient
+1044,Patient_44,61,Female,1,0,0,162,37.0,118,91,smokes,Internal Medicine,Dr. Lisa Anderson,Vaccination,40,200,550,Migraine,133,Outpatient
+1045,Patient_45,25,Female,0,0,0,90,25.1,139,99,formerly smoked,Radiology,Dr. Christopher Moore,CT Scan,600,210,1278,Type 2 Diabetes,515,Outpatient
+1046,Patient_46,64,Female,1,1,1,120,32.6,102,72,never smoked,Internal Medicine,Dr. David Martinez,Physical Exam,100,190,601,Migraine,321,Outpatient
+1047,Patient_47,52,Female,0,0,0,107,29.0,90,104,formerly smoked,Orthopedics,Dr. Jennifer Lee,X-Ray,120,180,495,Asthma,145,Discharged
+1048,Patient_48,53,Female,0,0,1,89,19.7,123,76,smokes,Orthopedics,Dr. Jennifer Lee,Cast Application,180,180,710,Healthy Checkup,220,Outpatient
+1049,Patient_49,67,Female,0,0,0,124,32.0,137,108,Unknown,Internal Medicine,Dr. David Martinez,Physical Exam,100,190,333,Depression,235,Admitted
+1050,Patient_50,21,Female,0,1,1,161,32.0,166,96,never smoked,Internal Medicine,Dr. Lisa Anderson,Vaccination,40,200,654,Back Pain,230,Admitted
+1051,Patient_51,19,Male,0,1,0,97,36.6,137,65,smokes,Surgery,Dr. Michael Chen,Gallbladder Removal,5000,250,5435,Hypertension,449,Admitted
+1052,Patient_52,23,Male,0,0,0,73,28.2,138,78,Unknown,Surgery,Dr. Robert Brown,Hernia Repair,4000,230,4572,Obesity,431,Discharged
+1053,Patient_53,71,Female,0,0,0,145,23.0,153,72,Unknown,Pediatrics,Dr. Amanda Taylor,Vaccination,40,170,455,Fracture,539,Outpatient
+1054,Patient_54,21,Female,0,0,1,136,19.4,150,116,formerly smoked,Radiology,Dr. Christopher Moore,CT Scan,600,210,1246,Arthritis,239,Outpatient
+1055,Patient_55,71,Male,0,0,1,155,26.6,118,119,formerly smoked,Emergency,Dr. Jennifer Lee,X-Ray,120,180,383,Hypertension,218,Outpatient
+1056,Patient_56,80,Female,1,0,0,160,24.4,128,85,never smoked,Emergency,Dr. Robert Brown,X-Ray,120,230,556,Asthma,329,Outpatient
+1057,Patient_57,35,Male,0,0,0,174,33.3,177,73,smokes,Internal Medicine,Dr. David Martinez,Blood Test,30,190,370,Hypertension,128,Discharged
+1058,Patient_58,61,Male,0,0,1,70,25.4,115,90,formerly smoked,General Practice,Dr. Christopher Moore,Physical Exam,100,210,465,Migraine,520,Outpatient
+1059,Patient_59,51,Male,0,0,0,141,37.0,106,113,formerly smoked,Internal Medicine,Dr. David Martinez,Physical Exam,100,190,305,Type 2 Diabetes,332,Admitted
+1060,Patient_60,79,Male,1,0,1,156,37.3,160,63,never smoked,Surgery,Dr. Michael Chen,Appendectomy,3500,250,3914,Depression,349,Admitted
+1061,Patient_61,31,Male,0,0,1,75,30.6,102,119,smokes,Pediatrics,Dr. Amanda Taylor,Growth Assessment,80,170,654,Arthritis,236,Outpatient
+1062,Patient_62,65,Female,1,1,0,130,36.6,158,98,smokes,Internal Medicine,Dr. David Martinez,Blood Test,30,190,682,Pneumonia,338,Discharged
+1063,Patient_63,32,Male,1,0,0,81,33.3,115,67,never smoked,Oncology,Dr. Lisa Anderson,Radiation,3000,200,3344,Type 2 Diabetes,442,Outpatient
+1064,Patient_64,79,Female,0,0,0,75,29.2,138,84,smokes,General Practice,Dr. Christopher Moore,Consultation,150,210,857,Migraine,346,Discharged
+1065,Patient_65,57,Female,0,1,0,96,22.0,156,72,formerly smoked,Oncology,Dr. David Martinez,CT Scan,600,190,826,Migraine,342,Outpatient
+1066,Patient_66,70,Male,0,0,1,193,27.4,96,91,smokes,Pediatrics,Dr. Emily Rodriguez,Vaccination,40,180,552,Arthritis,241,Admitted
+1067,Patient_67,41,Male,0,0,0,175,29.4,147,118,never smoked,Pediatrics,Dr. Emily Rodriguez,Vaccination,40,180,622,Arthritis,417,Admitted
+1068,Patient_68,43,Female,0,0,1,162,35.3,138,97,never smoked,Orthopedics,Dr. Sarah Johnson,Cast Application,180,200,793,Anxiety,537,Admitted
+1069,Patient_69,77,Male,1,0,0,178,27.9,142,97,Unknown,Neurology,Dr. James Wilson,CT Scan,600,220,864,Coronary Artery Disease,514,Outpatient
+1070,Patient_70,58,Male,0,1,1,168,36.0,154,115,never smoked,Oncology,Dr. David Martinez,CT Scan,600,190,1191,Depression,135,Admitted
+1071,Patient_71,46,Female,0,0,0,104,31.6,151,87,smokes,Orthopedics,Dr. Sarah Johnson,MRI Scan,800,200,1205,Influenza,531,Outpatient
+1072,Patient_72,32,Female,0,0,0,153,21.2,106,112,formerly smoked,Surgery,Dr. Michael Chen,Orthopedic Surgery,6000,250,6311,Depression,537,Outpatient
+1073,Patient_73,62,Male,1,0,0,125,37.9,132,89,formerly smoked,Cardiology,Dr. Sarah Johnson,ECG Test,50,200,669,Influenza,132,Outpatient
+1074,Patient_74,82,Female,0,0,0,118,28.8,114,62,never smoked,General Practice,Dr. Christopher Moore,Physical Exam,100,210,665,COVID-19,127,Admitted
+1075,Patient_75,26,Male,0,0,0,115,26.1,92,87,formerly smoked,Cardiology,Dr. Michael Chen,Stress Test,200,250,917,Back Pain,239,Outpatient
+1076,Patient_76,18,Male,1,1,1,182,31.4,168,62,never smoked,Radiology,Dr. James Wilson,MRI Scan,800,220,1327,Type 2 Diabetes,225,Outpatient
+1077,Patient_77,25,Male,1,0,0,112,20.6,118,104,never smoked,Surgery,Dr. Robert Brown,Gallbladder Removal,5000,230,5248,Pneumonia,548,Outpatient
+1078,Patient_78,80,Female,0,1,0,193,30.9,121,113,never smoked,Surgery,Dr. Michael Chen,Hernia Repair,4000,250,4614,Hypertension,135,Discharged
+1079,Patient_79,28,Female,0,0,0,166,28.2,115,93,never smoked,Cardiology,Dr. Michael Chen,Echocardiogram,300,250,849,Migraine,147,Admitted
+1080,Patient_80,25,Female,1,0,0,159,26.4,105,75,Unknown,Oncology,Dr. David Martinez,CT Scan,600,190,796,Migraine,215,Discharged
+1081,Patient_81,52,Female,0,0,0,108,37.1,114,81,Unknown,Neurology,Dr. James Wilson,CT Scan,600,220,1068,Coronary Artery Disease,247,Outpatient
+1082,Patient_82,52,Female,0,0,1,154,28.7,143,91,never smoked,Oncology,Dr. David Martinez,CT Scan,600,190,1217,Type 2 Diabetes,233,Outpatient
+1083,Patient_83,50,Male,0,1,1,131,22.8,117,97,smokes,Cardiology,Dr. Sarah Johnson,Stress Test,200,200,516,Back Pain,236,Outpatient
+1084,Patient_84,22,Male,0,1,1,175,27.4,162,67,never smoked,Radiology,Dr. Christopher Moore,MRI Scan,800,210,1077,Type 2 Diabetes,117,Outpatient
+1085,Patient_85,58,Male,1,0,1,176,36.4,145,114,formerly smoked,Oncology,Dr. David Martinez,Radiation,3000,190,3223,Anxiety,419,Admitted
+1086,Patient_86,45,Male,1,0,0,123,21.9,154,67,smokes,Emergency,Dr. Jennifer Lee,X-Ray,120,180,493,Obesity,138,Outpatient
+1087,Patient_87,24,Female,0,0,0,195,22.7,175,116,Unknown,Oncology,Dr. David Martinez,Radiation,3000,190,3514,Healthy Checkup,215,Outpatient
+1088,Patient_88,29,Male,0,0,0,78,18.8,169,65,never smoked,Pediatrics,Dr. Emily Rodriguez,Growth Assessment,80,180,314,COVID-19,248,Outpatient
+1089,Patient_89,51,Female,0,0,1,157,18.8,130,73,smokes,Orthopedics,Dr. Sarah Johnson,X-Ray,120,200,585,Arthritis,444,Outpatient
+1090,Patient_90,50,Male,0,0,0,106,34.7,140,91,never smoked,General Practice,Dr. Christopher Moore,Consultation,150,210,839,Pneumonia,332,Discharged
+1091,Patient_91,65,Female,1,0,0,118,32.8,160,94,Unknown,Oncology,Dr. David Martinez,Biopsy,400,190,631,Back Pain,234,Outpatient
+1092,Patient_92,40,Female,0,0,0,110,25.4,167,69,never smoked,Neurology,Dr. Emily Rodriguez,CT Scan,600,180,1076,Arthritis,530,Admitted
+1093,Patient_93,79,Male,0,0,0,86,32.1,118,62,formerly smoked,Neurology,Dr. Emily Rodriguez,EEG,250,180,890,Pneumonia,119,Outpatient
+1094,Patient_94,54,Male,0,0,1,157,26.2,172,118,formerly smoked,Oncology,Dr. Lisa Anderson,Biopsy,400,200,830,Obesity,518,Outpatient
+1095,Patient_95,61,Male,0,0,1,90,37.1,108,71,formerly smoked,Internal Medicine,Dr. David Martinez,Blood Test,30,190,672,Asthma,411,Outpatient
+1096,Patient_96,52,Male,0,0,0,120,37.4,155,108,never smoked,Surgery,Dr. Michael Chen,Orthopedic Surgery,6000,250,6627,Fracture,122,Outpatient
+1097,Patient_97,82,Female,1,0,1,128,26.2,130,118,Unknown,Oncology,Dr. Lisa Anderson,Biopsy,400,200,993,Obesity,243,Discharged
+1098,Patient_98,64,Male,0,0,0,110,35.2,134,90,never smoked,Surgery,Dr. Michael Chen,Orthopedic Surgery,6000,250,6259,COVID-19,347,Admitted
+1099,Patient_99,20,Male,1,0,0,108,33.6,104,88,formerly smoked,Emergency,Dr. Robert Brown,Emergency Care,500,230,1087,Anxiety,315,Outpatient
+1100,Patient_100,18,Female,0,0,0,80,24.5,92,64,never smoked,Cardiology,Dr. Sarah Johnson,ECG Test,50,200,724,Influenza,128,Discharged
+1101,Patient_101,22,Male,0,0,0,146,23.0,100,111,never smoked,Emergency,Dr. Robert Brown,Emergency Care,500,230,1173,Obesity,327,Discharged
+1102,Patient_102,31,Male,0,0,0,196,27.4,142,84,formerly smoked,Oncology,Dr. David Martinez,Radiation,3000,190,3317,COVID-19,121,Outpatient
+1103,Patient_103,44,Male,1,0,1,115,33.7,135,100,never smoked,Neurology,Dr. Emily Rodriguez,MRI Scan,800,180,1158,Influenza,512,Discharged
+1104,Patient_104,26,Male,1,0,0,114,37.2,119,90,never smoked,Internal Medicine,Dr. David Martinez,Urinalysis,20,190,614,Pneumonia,339,Admitted
+1105,Patient_105,32,Male,0,1,1,70,33.4,146,80,never smoked,Radiology,Dr. James Wilson,X-Ray,120,220,731,Influenza,414,Discharged
+1106,Patient_106,59,Female,0,0,0,177,35.2,107,117,never smoked,Surgery,Dr. Robert Brown,Orthopedic Surgery,6000,230,6422,Depression,136,Outpatient
+1107,Patient_107,68,Male,1,0,0,88,30.3,140,79,smokes,Orthopedics,Dr. Jennifer Lee,MRI Scan,800,180,1071,Arthritis,438,Admitted
+1108,Patient_108,80,Male,0,0,0,145,34.8,137,98,smokes,Surgery,Dr. Michael Chen,Appendectomy,3500,250,4118,COVID-19,221,Admitted
+1109,Patient_109,69,Male,0,0,0,141,33.8,155,81,never smoked,Pediatrics,Dr. Emily Rodriguez,Blood Test,30,180,440,Migraine,511,Outpatient
+1110,Patient_110,21,Male,1,0,0,178,25.9,97,63,never smoked,General Practice,Dr. Amanda Taylor,Blood Test,30,170,277,Arthritis,525,Admitted
+1111,Patient_111,40,Male,0,0,1,81,29.3,111,72,never smoked,Oncology,Dr. David Martinez,CT Scan,600,190,874,Pneumonia,331,Outpatient
+1112,Patient_112,32,Female,0,0,0,114,34.2,95,104,never smoked,Emergency,Dr. Robert Brown,X-Ray,120,230,379,Back Pain,420,Admitted
+1113,Patient_113,60,Male,0,0,0,159,19.4,165,101,formerly smoked,Orthopedics,Dr. Sarah Johnson,MRI Scan,800,200,1212,Type 2 Diabetes,238,Admitted
+1114,Patient_114,46,Female,0,0,0,172,34.3,146,109,formerly smoked,Neurology,Dr. Emily Rodriguez,CT Scan,600,180,828,Arthritis,324,Outpatient
+1115,Patient_115,53,Female,0,0,0,77,22.0,125,108,never smoked,Neurology,Dr. James Wilson,CT Scan,600,220,1084,Depression,440,Outpatient
+1116,Patient_116,30,Male,1,0,0,160,28.5,168,79,never smoked,Neurology,Dr. James Wilson,Nerve Conduction Study,350,220,714,Influenza,225,Outpatient
+1117,Patient_117,49,Male,0,0,0,156,34.3,146,111,never smoked,Radiology,Dr. Christopher Moore,X-Ray,120,210,398,Depression,241,Outpatient
+1118,Patient_118,76,Male,0,0,0,153,23.4,138,72,smokes,Pediatrics,Dr. Emily Rodriguez,Blood Test,30,180,267,Coronary Artery Disease,311,Discharged
+1119,Patient_119,45,Male,0,0,0,151,23.3,134,76,Unknown,Neurology,Dr. James Wilson,EEG,250,220,654,Healthy Checkup,247,Outpatient
+1120,Patient_120,83,Female,0,0,0,137,26.4,171,113,never smoked,Neurology,Dr. Emily Rodriguez,EEG,250,180,491,Obesity,349,Outpatient
+1121,Patient_121,59,Male,1,1,0,196,35.9,155,95,never smoked,Oncology,Dr. David Martinez,Chemotherapy,2500,190,3168,Migraine,238,Outpatient
+1122,Patient_122,62,Male,0,0,0,151,18.5,166,92,smokes,Pediatrics,Dr. Amanda Taylor,Blood Test,30,170,507,Obesity,323,Admitted
+1123,Patient_123,79,Male,0,0,0,153,36.1,134,60,Unknown,Internal Medicine,Dr. Lisa Anderson,Vaccination,40,200,684,Influenza,110,Admitted
+1124,Patient_124,74,Male,1,0,1,182,21.5,168,74,never smoked,Internal Medicine,Dr. Lisa Anderson,Blood Test,30,200,525,Coronary Artery Disease,512,Outpatient
+1125,Patient_125,23,Male,0,0,0,145,37.8,109,72,never smoked,Pediatrics,Dr. Emily Rodriguez,Growth Assessment,80,180,425,Pneumonia,227,Discharged
+1126,Patient_126,45,Male,0,0,0,191,37.1,153,76,never smoked,General Practice,Dr. Christopher Moore,Vaccination,40,210,420,Asthma,147,Admitted
+1127,Patient_127,45,Female,0,0,0,110,28.1,156,83,formerly smoked,Radiology,Dr. Christopher Moore,MRI Scan,800,210,1072,Anxiety,510,Admitted
+1128,Patient_128,61,Female,0,0,1,71,28.5,172,117,never smoked,Orthopedics,Dr. Jennifer Lee,Cast Application,180,180,506,Coronary Artery Disease,536,Admitted
+1129,Patient_129,47,Male,0,0,0,98,27.9,92,67,never smoked,Surgery,Dr. Michael Chen,Orthopedic Surgery,6000,250,6733,Fracture,215,Discharged
+1130,Patient_130,79,Male,0,0,0,174,30.9,143,109,formerly smoked,Oncology,Dr. David Martinez,Chemotherapy,2500,190,2995,Obesity,445,Outpatient
+1131,Patient_131,79,Male,1,0,1,120,20.3,167,86,never smoked,Cardiology,Dr. Sarah Johnson,Angiography,1500,200,1860,Asthma,426,Admitted
+1132,Patient_132,18,Female,0,0,0,144,19.1,153,104,smokes,Internal Medicine,Dr. Lisa Anderson,Urinalysis,20,200,360,COVID-19,349,Outpatient
+1133,Patient_133,44,Male,0,0,0,79,19.6,129,82,never smoked,Pediatrics,Dr. Emily Rodriguez,Vaccination,40,180,553,Hypertension,212,Outpatient
+1134,Patient_134,79,Female,0,0,0,120,27.2,148,105,never smoked,Orthopedics,Dr. Jennifer Lee,Physical Therapy,100,180,376,Migraine,448,Outpatient
+1135,Patient_135,20,Male,0,0,0,187,23.9,144,67,formerly smoked,Pediatrics,Dr. Amanda Taylor,Physical Exam,100,170,715,Influenza,411,Admitted
+1136,Patient_136,44,Male,1,0,1,190,30.6,151,67,never smoked,Surgery,Dr. Michael Chen,Orthopedic Surgery,6000,250,6470,COVID-19,518,Discharged
+1137,Patient_137,26,Male,0,1,0,108,37.9,93,118,Unknown,Orthopedics,Dr. Jennifer Lee,Physical Therapy,100,180,322,COVID-19,520,Outpatient
+1138,Patient_138,79,Male,0,0,0,97,26.0,149,85,formerly smoked,Internal Medicine,Dr. Lisa Anderson,Blood Test,30,200,662,Hypertension,544,Outpatient
+1139,Patient_139,54,Female,1,0,0,72,29.7,164,106,never smoked,Neurology,Dr. Emily Rodriguez,CT Scan,600,180,1071,Arthritis,311,Admitted
+1140,Patient_140,68,Female,0,0,0,153,26.6,119,118,smokes,Pediatrics,Dr. Amanda Taylor,Physical Exam,100,170,647,Pneumonia,148,Outpatient
+1141,Patient_141,61,Male,0,0,0,186,35.0,91,72,never smoked,Cardiology,Dr. Sarah Johnson,ECG Test,50,200,357,Depression,537,Outpatient
+1142,Patient_142,41,Male,0,0,1,71,36.1,151,98,Unknown,Internal Medicine,Dr. Lisa Anderson,Urinalysis,20,200,485,Migraine,440,Outpatient
+1143,Patient_143,76,Female,0,0,0,162,35.6,138,96,never smoked,Emergency,Dr. Robert Brown,Wound Care,200,230,524,Anxiety,332,Admitted
+1144,Patient_144,49,Female,1,0,0,163,37.5,98,108,formerly smoked,Cardiology,Dr. Sarah Johnson,Echocardiogram,300,200,761,Type 2 Diabetes,111,Outpatient
+1145,Patient_145,69,Female,0,0,0,109,19.0,120,87,never smoked,General Practice,Dr. Amanda Taylor,Blood Test,30,170,512,COVID-19,136,Admitted
+1146,Patient_146,79,Female,0,0,0,71,34.9,150,84,never smoked,Radiology,Dr. James Wilson,X-Ray,120,220,724,Asthma,311,Outpatient
+1147,Patient_147,75,Male,0,0,0,150,33.2,168,75,smokes,Internal Medicine,Dr. Lisa Anderson,Urinalysis,20,200,290,COVID-19,530,Discharged
+1148,Patient_148,69,Female,1,0,0,81,23.0,137,114,smokes,Neurology,Dr. Emily Rodriguez,MRI Scan,800,180,1421,Depression,214,Outpatient
+1149,Patient_149,29,Male,0,0,1,134,37.1,114,61,never smoked,Internal Medicine,Dr. Lisa Anderson,Vaccination,40,200,458,Type 2 Diabetes,430,Outpatient
+1150,Patient_150,56,Female,1,0,0,124,21.4,125,113,never smoked,Surgery,Dr. Michael Chen,Hernia Repair,4000,250,4270,COVID-19,529,Outpatient
+1151,Patient_151,19,Female,0,0,0,114,31.8,97,77,smokes,Orthopedics,Dr. Jennifer Lee,MRI Scan,800,180,1071,Hypertension,547,Outpatient
+1152,Patient_152,20,Female,1,0,0,170,22.9,162,76,Unknown,Pediatrics,Dr. Amanda Taylor,Blood Test,30,170,326,Depression,434,Discharged
+1153,Patient_153,73,Female,1,0,0,131,26.9,147,89,never smoked,Orthopedics,Dr. Sarah Johnson,Physical Therapy,100,200,379,Coronary Artery Disease,241,Admitted
+1154,Patient_154,76,Female,1,0,1,118,32.5,134,98,formerly smoked,Orthopedics,Dr. Sarah Johnson,Physical Therapy,100,200,611,Coronary Artery Disease,215,Outpatient
+1155,Patient_155,19,Male,1,0,0,196,29.5,151,72,never smoked,Internal Medicine,Dr. David Martinez,Physical Exam,100,190,527,Depression,112,Outpatient
+1156,Patient_156,19,Male,0,0,0,92,26.8,128,91,smokes,Surgery,Dr. Robert Brown,Gallbladder Removal,5000,230,5700,Back Pain,110,Outpatient
+1157,Patient_157,71,Female,0,0,0,107,24.9,147,109,never smoked,Pediatrics,Dr. Amanda Taylor,Vaccination,40,170,581,Pneumonia,314,Outpatient
+1158,Patient_158,18,Female,0,0,0,97,34.9,170,88,never smoked,Pediatrics,Dr. Amanda Taylor,Vaccination,40,170,613,Hypertension,528,Outpatient
+1159,Patient_159,36,Male,0,0,0,90,21.3,172,105,smokes,Orthopedics,Dr. Jennifer Lee,MRI Scan,800,180,1465,Healthy Checkup,434,Discharged
+1160,Patient_160,19,Female,0,0,0,176,26.9,153,89,never smoked,General Practice,Dr. Amanda Taylor,Blood Test,30,170,381,COVID-19,144,Discharged
+1161,Patient_161,70,Female,0,0,1,168,36.1,133,77,formerly smoked,Radiology,Dr. Christopher Moore,MRI Scan,800,210,1034,Migraine,439,Outpatient
+1162,Patient_162,61,Male,0,1,0,188,35.0,118,72,never smoked,Surgery,Dr. Robert Brown,Hernia Repair,4000,230,4385,Asthma,543,Outpatient
+1163,Patient_163,49,Female,0,0,0,142,26.3,148,102,never smoked,General Practice,Dr. Christopher Moore,Consultation,150,210,364,Coronary Artery Disease,512,Discharged
+1164,Patient_164,49,Female,1,0,0,191,33.4,160,80,never smoked,Oncology,Dr. Lisa Anderson,CT Scan,600,200,919,Depression,429,Admitted
+1165,Patient_165,72,Male,0,0,1,99,34.6,98,89,formerly smoked,Oncology,Dr. Lisa Anderson,Radiation,3000,200,3476,Coronary Artery Disease,533,Admitted
+1166,Patient_166,73,Male,1,0,0,177,35.8,95,80,never smoked,Cardiology,Dr. Sarah Johnson,Angiography,1500,200,1717,Type 2 Diabetes,117,Outpatient
+1167,Patient_167,34,Male,1,0,1,167,29.1,118,107,formerly smoked,Orthopedics,Dr. Sarah Johnson,MRI Scan,800,200,1430,Type 2 Diabetes,229,Discharged
+1168,Patient_168,55,Female,1,0,0,101,22.5,147,114,smokes,Pediatrics,Dr. Emily Rodriguez,Blood Test,30,180,407,Anxiety,425,Discharged
+1169,Patient_169,41,Male,0,1,0,148,23.5,106,76,smokes,Internal Medicine,Dr. Lisa Anderson,Urinalysis,20,200,276,Back Pain,221,Outpatient
+1170,Patient_170,28,Male,1,0,1,110,24.3,105,99,never smoked,Pediatrics,Dr. Amanda Taylor,Growth Assessment,80,170,342,Obesity,548,Admitted
+1171,Patient_171,33,Male,1,0,0,132,30.1,176,78,never smoked,Pediatrics,Dr. Emily Rodriguez,Growth Assessment,80,180,278,Influenza,141,Outpatient
+1172,Patient_172,76,Male,1,0,0,92,19.1,92,111,never smoked,Neurology,Dr. Emily Rodriguez,MRI Scan,800,180,1363,Arthritis,418,Admitted
+1173,Patient_173,20,Male,0,0,0,173,30.9,110,74,never smoked,Pediatrics,Dr. Amanda Taylor,Blood Test,30,170,552,Healthy Checkup,232,Admitted
+1174,Patient_174,37,Male,0,0,1,144,25.6,153,68,never smoked,Cardiology,Dr. Sarah Johnson,Echocardiogram,300,200,692,Type 2 Diabetes,222,Outpatient
+1175,Patient_175,76,Female,0,0,0,117,24.3,179,111,formerly smoked,General Practice,Dr. Christopher Moore,Blood Test,30,210,476,Type 2 Diabetes,441,Admitted
+1176,Patient_176,53,Female,0,0,0,126,35.7,125,69,never smoked,Oncology,Dr. David Martinez,CT Scan,600,190,1176,Back Pain,224,Discharged
+1177,Patient_177,36,Male,0,1,0,187,27.5,175,103,never smoked,Pediatrics,Dr. Emily Rodriguez,Blood Test,30,180,635,Migraine,414,Outpatient
+1178,Patient_178,84,Male,1,0,0,169,20.4,151,90,never smoked,Pediatrics,Dr. Amanda Taylor,Growth Assessment,80,170,526,Obesity,119,Outpatient
+1179,Patient_179,36,Male,1,0,0,193,34.6,131,112,formerly smoked,Neurology,Dr. James Wilson,Nerve Conduction Study,350,220,796,Depression,227,Admitted
+1180,Patient_180,37,Female,0,0,1,103,19.4,165,82,never smoked,Surgery,Dr. Robert Brown,Orthopedic Surgery,6000,230,6462,Influenza,435,Outpatient
+1181,Patient_181,69,Female,1,0,1,76,32.7,131,111,formerly smoked,Internal Medicine,Dr. David Martinez,Blood Test,30,190,259,Type 2 Diabetes,525,Admitted
+1182,Patient_182,50,Female,0,0,1,125,33.6,150,89,never smoked,Surgery,Dr. Michael Chen,Orthopedic Surgery,6000,250,6572,Back Pain,335,Discharged
+1183,Patient_183,57,Female,1,0,0,134,25.4,102,92,smokes,Internal Medicine,Dr. David Martinez,Urinalysis,20,190,362,Asthma,238,Discharged
+1184,Patient_184,56,Female,1,0,0,116,34.6,100,116,smokes,Radiology,Dr. James Wilson,X-Ray,120,220,466,Migraine,523,Outpatient
+1185,Patient_185,18,Female,0,0,1,88,28.6,143,111,never smoked,Pediatrics,Dr. Amanda Taylor,Vaccination,40,170,446,Arthritis,142,Admitted
+1186,Patient_186,28,Female,0,0,0,195,27.5,105,68,never smoked,Neurology,Dr. James Wilson,CT Scan,600,220,1305,Hypertension,130,Discharged
+1187,Patient_187,74,Female,1,1,1,118,19.4,97,113,never smoked,Emergency,Dr. Robert Brown,IV Fluids,150,230,872,Depression,132,Outpatient
+1188,Patient_188,67,Female,0,0,1,182,24.2,148,106,never smoked,Orthopedics,Dr. Sarah Johnson,Physical Therapy,100,200,354,Migraine,126,Admitted
+1189,Patient_189,40,Male,0,0,0,107,36.7,146,60,formerly smoked,Oncology,Dr. Lisa Anderson,Chemotherapy,2500,200,3167,Hypertension,223,Outpatient
+1190,Patient_190,48,Male,1,0,0,133,26.1,129,103,smokes,General Practice,Dr. Amanda Taylor,Physical Exam,100,170,705,Coronary Artery Disease,529,Discharged
+1191,Patient_191,59,Male,0,1,0,138,29.2,148,94,formerly smoked,Oncology,Dr. David Martinez,Radiation,3000,190,3361,Influenza,348,Admitted
+1192,Patient_192,24,Male,1,0,0,185,28.9,91,70,smokes,General Practice,Dr. Christopher Moore,Vaccination,40,210,358,Arthritis,527,Admitted
+1193,Patient_193,33,Female,0,0,0,134,30.0,165,93,never smoked,Radiology,Dr. Christopher Moore,Ultrasound,250,210,813,Anxiety,148,Discharged
+1194,Patient_194,77,Female,1,0,1,100,19.7,99,75,never smoked,Surgery,Dr. Robert Brown,Appendectomy,3500,230,4198,Influenza,218,Admitted
+1195,Patient_195,19,Male,0,0,0,182,25.6,133,68,smokes,Cardiology,Dr. Sarah Johnson,Angiography,1500,200,1883,Obesity,141,Admitted
+1196,Patient_196,18,Female,1,0,0,178,32.6,100,91,never smoked,Pediatrics,Dr. Amanda Taylor,Physical Exam,100,170,708,Arthritis,526,Outpatient
+1197,Patient_197,65,Male,1,0,0,138,22.4,168,74,formerly smoked,Emergency,Dr. Jennifer Lee,Wound Care,200,180,747,Obesity,336,Discharged
+1198,Patient_198,29,Female,0,0,0,189,22.5,169,71,never smoked,General Practice,Dr. Christopher Moore,Vaccination,40,210,720,Influenza,346,Outpatient
+1199,Patient_199,54,Male,0,0,0,157,18.7,170,92,never smoked,Orthopedics,Dr. Sarah Johnson,MRI Scan,800,200,1197,Migraine,229,Discharged
+1200,Patient_200,49,Female,1,0,0,136,27.0,179,104,Unknown,General Practice,Dr. Amanda Taylor,Physical Exam,100,170,640,Depression,113,Outpatient
+1201,Patient_201,26,Female,0,0,0,144,35.7,91,73,never smoked,Cardiology,Dr. Michael Chen,Echocardiogram,300,250,922,Back Pain,219,Admitted
+1202,Patient_202,36,Male,0,0,0,114,19.5,139,116,Unknown,Oncology,Dr. David Martinez,Radiation,3000,190,3650,Influenza,520,Discharged
+1203,Patient_203,65,Female,0,0,0,73,22.2,101,116,Unknown,Neurology,Dr. Emily Rodriguez,MRI Scan,800,180,1476,Fracture,325,Outpatient
+1204,Patient_204,20,Male,0,0,0,176,24.5,179,67,smokes,Oncology,Dr. David Martinez,CT Scan,600,190,876,Arthritis,239,Admitted
+1205,Patient_205,37,Male,1,0,1,120,32.8,112,67,formerly smoked,Radiology,Dr. Christopher Moore,MRI Scan,800,210,1210,Anxiety,125,Outpatient
+1206,Patient_206,41,Male,0,0,0,119,31.0,107,86,formerly smoked,Neurology,Dr. Emily Rodriguez,Nerve Conduction Study,350,180,866,Depression,325,Outpatient
+1207,Patient_207,71,Male,0,1,0,75,26.6,151,71,smokes,Oncology,Dr. Lisa Anderson,Radiation,3000,200,3521,COVID-19,444,Admitted
+1208,Patient_208,50,Female,0,0,0,128,33.3,151,60,never smoked,Orthopedics,Dr. Sarah Johnson,MRI Scan,800,200,1274,Hypertension,130,Admitted
+1209,Patient_209,41,Female,0,0,0,194,30.4,127,102,formerly smoked,Oncology,Dr. Lisa Anderson,Chemotherapy,2500,200,2910,Arthritis,245,Outpatient
+1210,Patient_210,53,Female,0,0,0,99,36.0,156,99,formerly smoked,Orthopedics,Dr. Jennifer Lee,Cast Application,180,180,750,Coronary Artery Disease,141,Discharged
+1211,Patient_211,55,Male,0,0,0,191,34.5,127,101,never smoked,Orthopedics,Dr. Sarah Johnson,Cast Application,180,200,497,Asthma,115,Outpatient
+1212,Patient_212,42,Female,1,0,0,194,23.4,156,110,never smoked,Neurology,Dr. Emily Rodriguez,CT Scan,600,180,970,Depression,329,Discharged
+1213,Patient_213,35,Male,0,0,0,106,23.8,150,70,never smoked,Surgery,Dr. Michael Chen,Appendectomy,3500,250,3791,Depression,111,Admitted
+1214,Patient_214,83,Female,0,0,0,193,20.9,90,98,formerly smoked,Internal Medicine,Dr. David Martinez,Vaccination,40,190,271,Obesity,137,Admitted
+1215,Patient_215,71,Female,1,0,0,170,25.1,134,102,smokes,Pediatrics,Dr. Emily Rodriguez,Physical Exam,100,180,594,Fracture,547,Admitted
+1216,Patient_216,52,Female,0,1,0,104,38.0,117,90,never smoked,General Practice,Dr. Christopher Moore,Blood Test,30,210,515,Pneumonia,329,Admitted
+1217,Patient_217,78,Male,1,0,0,156,26.4,110,76,Unknown,Internal Medicine,Dr. Lisa Anderson,Physical Exam,100,200,628,COVID-19,110,Admitted
+1218,Patient_218,58,Female,0,0,0,87,22.8,102,92,formerly smoked,Cardiology,Dr. Sarah Johnson,ECG Test,50,200,266,Arthritis,515,Outpatient
+1219,Patient_219,50,Female,0,0,0,182,33.4,116,91,smokes,Surgery,Dr. Robert Brown,Gallbladder Removal,5000,230,5512,Type 2 Diabetes,543,Discharged
+1220,Patient_220,50,Male,0,0,0,98,29.1,96,117,formerly smoked,Internal Medicine,Dr. Lisa Anderson,Vaccination,40,200,670,Migraine,535,Discharged
+1221,Patient_221,31,Female,0,0,1,146,21.4,111,88,smokes,Neurology,Dr. Emily Rodriguez,EEG,250,180,687,COVID-19,123,Admitted
+1222,Patient_222,38,Male,1,0,0,128,25.9,163,80,never smoked,Cardiology,Dr. Michael Chen,Angiography,1500,250,1812,Migraine,216,Discharged
+1223,Patient_223,65,Female,0,1,1,195,26.6,142,80,smokes,Emergency,Dr. Jennifer Lee,X-Ray,120,180,361,Influenza,240,Outpatient
+1224,Patient_224,37,Male,0,0,0,178,33.2,168,99,never smoked,Surgery,Dr. Michael Chen,Appendectomy,3500,250,3849,Influenza,340,Admitted
+1225,Patient_225,25,Male,0,0,0,91,18.9,168,82,smokes,Internal Medicine,Dr. Lisa Anderson,Urinalysis,20,200,238,Anxiety,541,Discharged
+1226,Patient_226,24,Female,0,1,0,137,23.7,93,115,Unknown,Cardiology,Dr. Sarah Johnson,Echocardiogram,300,200,516,COVID-19,123,Outpatient
+1227,Patient_227,84,Male,1,0,0,138,28.6,112,65,never smoked,Emergency,Dr. Robert Brown,IV Fluids,150,230,704,Migraine,433,Admitted
+1228,Patient_228,34,Male,0,0,0,118,23.7,159,81,never smoked,Oncology,Dr. Lisa Anderson,Chemotherapy,2500,200,3122,Anxiety,536,Outpatient
+1229,Patient_229,50,Male,0,0,0,178,30.8,177,109,smokes,Cardiology,Dr. Michael Chen,ECG Test,50,250,765,Healthy Checkup,141,Admitted
+1230,Patient_230,65,Male,0,0,0,155,27.9,173,97,never smoked,Neurology,Dr. Emily Rodriguez,CT Scan,600,180,1152,COVID-19,427,Outpatient
+1231,Patient_231,76,Male,0,1,1,122,25.6,173,96,smokes,Oncology,Dr. David Martinez,CT Scan,600,190,1035,Fracture,246,Outpatient
+1232,Patient_232,39,Male,1,0,1,192,37.0,165,104,never smoked,Neurology,Dr. Emily Rodriguez,EEG,250,180,680,Fracture,218,Discharged
+1233,Patient_233,47,Female,0,0,0,156,30.8,122,110,never smoked,Internal Medicine,Dr. David Martinez,Physical Exam,100,190,744,Hypertension,444,Admitted
+1234,Patient_234,55,Male,1,0,0,111,21.0,117,113,Unknown,Pediatrics,Dr. Emily Rodriguez,Growth Assessment,80,180,340,Arthritis,431,Outpatient
+1235,Patient_235,68,Male,0,1,0,167,29.4,97,67,formerly smoked,Internal Medicine,Dr. David Martinez,Blood Test,30,190,258,Pneumonia,339,Outpatient
+1236,Patient_236,71,Female,0,0,0,178,33.7,90,100,smokes,Oncology,Dr. David Martinez,Radiation,3000,190,3225,Migraine,537,Outpatient
+1237,Patient_237,25,Female,1,1,0,120,32.3,126,108,never smoked,Orthopedics,Dr. Sarah Johnson,MRI Scan,800,200,1423,Arthritis,320,Outpatient
+1238,Patient_238,44,Female,0,0,0,154,21.9,152,94,formerly smoked,Internal Medicine,Dr. David Martinez,Urinalysis,20,190,638,Fracture,148,Outpatient
+1239,Patient_239,44,Female,0,0,0,196,37.5,111,110,formerly smoked,Oncology,Dr. Lisa Anderson,Radiation,3000,200,3587,Coronary Artery Disease,439,Discharged
+1240,Patient_240,38,Female,1,0,1,90,27.3,159,70,formerly smoked,Cardiology,Dr. Sarah Johnson,Angiography,1500,200,2185,Migraine,321,Discharged
+1241,Patient_241,47,Female,0,0,0,113,21.6,110,83,formerly smoked,Radiology,Dr. James Wilson,Ultrasound,250,220,878,Depression,346,Discharged
+1242,Patient_242,45,Female,1,0,0,172,22.0,124,108,formerly smoked,Internal Medicine,Dr. Lisa Anderson,Blood Test,30,200,426,Arthritis,524,Discharged
+1243,Patient_243,81,Male,0,0,1,137,20.4,168,80,never smoked,Cardiology,Dr. Sarah Johnson,Echocardiogram,300,200,657,Fracture,535,Outpatient
+1244,Patient_244,78,Male,1,0,0,198,34.2,94,110,never smoked,Neurology,Dr. James Wilson,Nerve Conduction Study,350,220,773,Asthma,411,Discharged
+1245,Patient_245,65,Female,1,1,0,161,20.9,149,61,smokes,Surgery,Dr. Michael Chen,Appendectomy,3500,250,3945,Fracture,424,Outpatient
+1246,Patient_246,36,Male,0,1,1,93,20.9,135,99,never smoked,Pediatrics,Dr. Emily Rodriguez,Growth Assessment,80,180,475,Influenza,413,Outpatient
+1247,Patient_247,21,Male,1,0,0,194,35.1,139,78,formerly smoked,Neurology,Dr. Emily Rodriguez,EEG,250,180,714,Anxiety,247,Outpatient
+1248,Patient_248,52,Male,0,0,0,180,25.2,137,98,never smoked,Neurology,Dr. Emily Rodriguez,Nerve Conduction Study,350,180,986,Depression,335,Outpatient
+1249,Patient_249,81,Female,1,0,0,167,19.1,95,87,formerly smoked,Oncology,Dr. Lisa Anderson,Chemotherapy,2500,200,2895,Type 2 Diabetes,320,Admitted
+1250,Patient_250,66,Female,0,0,0,86,19.5,178,118,smokes,Orthopedics,Dr. Sarah Johnson,Cast Application,180,200,686,Healthy Checkup,411,Discharged
+1251,Patient_251,34,Male,0,0,0,168,21.3,145,76,never smoked,General Practice,Dr. Christopher Moore,Blood Test,30,210,391,Obesity,317,Outpatient
+1252,Patient_252,61,Female,0,0,1,151,22.7,148,65,never smoked,Radiology,Dr. Christopher Moore,MRI Scan,800,210,1023,Healthy Checkup,520,Admitted
+1253,Patient_253,47,Male,0,1,1,173,31.5,118,78,never smoked,Orthopedics,Dr. Sarah Johnson,MRI Scan,800,200,1324,Depression,527,Outpatient
+1254,Patient_254,63,Male,0,0,0,88,21.6,160,115,formerly smoked,Oncology,Dr. David Martinez,CT Scan,600,190,935,Anxiety,223,Admitted
+1255,Patient_255,23,Male,1,1,1,154,20.8,166,97,smokes,Pediatrics,Dr. Emily Rodriguez,Vaccination,40,180,645,Influenza,244,Admitted
+1256,Patient_256,54,Male,1,1,0,77,33.4,107,87,never smoked,Radiology,Dr. James Wilson,CT Scan,600,220,876,Influenza,144,Admitted
+1257,Patient_257,41,Female,1,0,0,97,31.6,91,61,smokes,Radiology,Dr. James Wilson,X-Ray,120,220,550,Obesity,321,Outpatient
+1258,Patient_258,63,Female,0,1,0,74,27.0,97,97,never smoked,Oncology,Dr. Lisa Anderson,CT Scan,600,200,1067,Migraine,348,Outpatient
+1259,Patient_259,70,Female,0,0,0,170,29.2,164,114,formerly smoked,Emergency,Dr. Jennifer Lee,X-Ray,120,180,509,Asthma,420,Outpatient
+1260,Patient_260,77,Male,0,0,0,187,24.6,143,96,Unknown,Neurology,Dr. James Wilson,Nerve Conduction Study,350,220,586,Asthma,130,Outpatient
+1261,Patient_261,80,Female,0,0,1,133,27.9,127,110,never smoked,Surgery,Dr. Robert Brown,Hernia Repair,4000,230,4515,Obesity,224,Outpatient
+1262,Patient_262,49,Male,0,0,0,160,28.4,137,111,formerly smoked,Emergency,Dr. Robert Brown,IV Fluids,150,230,723,Migraine,331,Outpatient
+1263,Patient_263,50,Female,0,0,0,186,26.1,116,63,never smoked,Oncology,Dr. David Martinez,Radiation,3000,190,3392,Arthritis,541,Outpatient
+1264,Patient_264,84,Male,1,0,0,167,36.2,109,81,never smoked,Emergency,Dr. Jennifer Lee,X-Ray,120,180,398,Migraine,232,Outpatient
+1265,Patient_265,35,Male,0,0,1,80,18.8,101,85,never smoked,Surgery,Dr. Robert Brown,Hernia Repair,4000,230,4508,Pneumonia,514,Admitted
+1266,Patient_266,42,Male,0,0,1,123,33.8,132,108,never smoked,Oncology,Dr. Lisa Anderson,Biopsy,400,200,808,Pneumonia,437,Admitted
+1267,Patient_267,71,Female,0,0,1,116,20.9,150,102,formerly smoked,Oncology,Dr. David Martinez,Radiation,3000,190,3318,Healthy Checkup,144,Outpatient
+1268,Patient_268,75,Female,0,0,0,74,34.1,120,95,never smoked,Radiology,Dr. Christopher Moore,CT Scan,600,210,1144,Fracture,530,Outpatient
+1269,Patient_269,84,Female,0,0,0,89,30.5,150,117,formerly smoked,Emergency,Dr. Robert Brown,IV Fluids,150,230,667,Obesity,227,Admitted
+1270,Patient_270,63,Female,1,0,0,115,34.9,163,72,never smoked,Cardiology,Dr. Michael Chen,Echocardiogram,300,250,801,Migraine,117,Admitted
+1271,Patient_271,41,Male,0,0,0,81,20.4,156,111,never smoked,Internal Medicine,Dr. Lisa Anderson,Vaccination,40,200,504,Back Pain,326,Discharged
+1272,Patient_272,49,Female,0,0,0,139,29.4,124,117,formerly smoked,Oncology,Dr. David Martinez,Chemotherapy,2500,190,2960,Migraine,340,Discharged
+1273,Patient_273,64,Female,0,0,1,86,28.3,104,91,Unknown,Emergency,Dr. Robert Brown,Wound Care,200,230,841,Depression,215,Outpatient
+1274,Patient_274,40,Male,1,0,0,184,32.3,105,76,never smoked,General Practice,Dr. Amanda Taylor,Vaccination,40,170,617,Anxiety,321,Outpatient
+1275,Patient_275,83,Male,1,0,0,117,28.9,102,100,smokes,Pediatrics,Dr. Emily Rodriguez,Growth Assessment,80,180,447,Arthritis,421,Outpatient
+1276,Patient_276,44,Male,1,0,0,177,29.0,124,95,formerly smoked,General Practice,Dr. Christopher Moore,Consultation,150,210,778,Hypertension,511,Discharged
+1277,Patient_277,19,Female,0,0,0,121,26.9,164,114,formerly smoked,Emergency,Dr. Jennifer Lee,X-Ray,120,180,513,Healthy Checkup,224,Discharged
+1278,Patient_278,34,Male,0,1,0,165,24.5,148,119,formerly smoked,Neurology,Dr. Emily Rodriguez,Nerve Conduction Study,350,180,812,Healthy Checkup,526,Admitted
+1279,Patient_279,50,Male,0,0,0,139,27.9,110,105,never smoked,Neurology,Dr. Emily Rodriguez,CT Scan,600,180,990,Healthy Checkup,423,Discharged
+1280,Patient_280,26,Male,1,1,0,171,20.8,143,78,never smoked,Emergency,Dr. Robert Brown,X-Ray,120,230,714,Depression,439,Admitted
+1281,Patient_281,60,Female,1,0,1,144,37.2,164,117,formerly smoked,Radiology,Dr. James Wilson,Ultrasound,250,220,545,COVID-19,141,Admitted
+1282,Patient_282,65,Male,0,0,1,151,32.4,119,119,never smoked,Radiology,Dr. Christopher Moore,X-Ray,120,210,477,Fracture,333,Outpatient
+1283,Patient_283,56,Female,1,0,0,161,37.1,137,94,Unknown,Oncology,Dr. David Martinez,Radiation,3000,190,3510,Obesity,327,Outpatient
+1284,Patient_284,59,Female,1,0,0,73,22.9,124,105,never smoked,Surgery,Dr. Robert Brown,Hernia Repair,4000,230,4442,Influenza,533,Discharged
+1285,Patient_285,43,Male,0,0,1,178,35.6,175,99,never smoked,Internal Medicine,Dr. David Martinez,Urinalysis,20,190,642,Obesity,249,Admitted
+1286,Patient_286,67,Male,1,0,0,117,34.3,127,115,smokes,Oncology,Dr. Lisa Anderson,Chemotherapy,2500,200,2808,Coronary Artery Disease,331,Outpatient
+1287,Patient_287,42,Female,1,0,0,142,31.7,120,118,never smoked,General Practice,Dr. Christopher Moore,Physical Exam,100,210,438,Hypertension,127,Discharged
+1288,Patient_288,41,Male,0,0,1,141,30.7,167,87,formerly smoked,Internal Medicine,Dr. Lisa Anderson,Blood Test,30,200,239,COVID-19,421,Discharged
+1289,Patient_289,30,Male,0,0,0,185,24.7,113,60,formerly smoked,General Practice,Dr. Christopher Moore,Physical Exam,100,210,356,Back Pain,137,Admitted
+1290,Patient_290,77,Female,0,0,0,150,34.4,138,101,Unknown,Radiology,Dr. James Wilson,MRI Scan,800,220,1398,Back Pain,416,Outpatient
+1291,Patient_291,24,Female,0,0,0,150,28.3,121,77,smokes,Emergency,Dr. Robert Brown,Wound Care,200,230,744,Fracture,543,Outpatient
+1292,Patient_292,74,Male,0,0,0,182,19.9,144,107,formerly smoked,Surgery,Dr. Michael Chen,Gallbladder Removal,5000,250,5345,Pneumonia,331,Admitted
+1293,Patient_293,53,Female,0,0,0,165,24.6,168,99,formerly smoked,General Practice,Dr. Christopher Moore,Blood Test,30,210,685,Obesity,244,Discharged
+1294,Patient_294,62,Male,1,1,1,141,36.7,147,92,Unknown,Radiology,Dr. Christopher Moore,MRI Scan,800,210,1112,Arthritis,438,Discharged
+1295,Patient_295,37,Male,0,0,0,132,35.1,92,71,never smoked,Surgery,Dr. Michael Chen,Gallbladder Removal,5000,250,5629,Influenza,237,Admitted
+1296,Patient_296,82,Male,0,1,0,107,37.6,169,67,never smoked,Oncology,Dr. David Martinez,CT Scan,600,190,1131,Pneumonia,327,Admitted
+1297,Patient_297,25,Female,0,0,0,136,30.7,158,83,never smoked,Emergency,Dr. Robert Brown,Emergency Care,500,230,875,Influenza,237,Admitted
+1298,Patient_298,33,Male,0,0,0,138,23.3,174,75,never smoked,Pediatrics,Dr. Amanda Taylor,Blood Test,30,170,567,Asthma,217,Discharged
+1299,Patient_299,31,Male,1,0,0,82,21.7,99,109,formerly smoked,Neurology,Dr. Emily Rodriguez,Nerve Conduction Study,350,180,959,Healthy Checkup,436,Admitted
+1300,Patient_300,32,Male,0,0,1,100,22.1,172,63,formerly smoked,Orthopedics,Dr. Jennifer Lee,Physical Therapy,100,180,695,COVID-19,414,Outpatient
+1301,Patient_301,83,Female,0,0,0,183,18.9,114,97,formerly smoked,Surgery,Dr. Robert Brown,Hernia Repair,4000,230,4256,Influenza,143,Outpatient
+1302,Patient_302,49,Female,0,0,1,91,26.1,157,103,never smoked,Pediatrics,Dr. Emily Rodriguez,Vaccination,40,180,439,Anxiety,246,Outpatient
+1303,Patient_303,80,Female,1,0,1,162,22.2,150,86,smokes,Pediatrics,Dr. Emily Rodriguez,Vaccination,40,180,237,Type 2 Diabetes,216,Admitted
+1304,Patient_304,68,Female,1,0,0,136,26.5,118,68,never smoked,Surgery,Dr. Michael Chen,Hernia Repair,4000,250,4416,Healthy Checkup,448,Admitted
+1305,Patient_305,42,Female,0,0,0,123,36.7,108,106,formerly smoked,Pediatrics,Dr. Emily Rodriguez,Physical Exam,100,180,712,Healthy Checkup,423,Discharged
+1306,Patient_306,75,Male,0,1,1,111,26.9,132,75,formerly smoked,General Practice,Dr. Amanda Taylor,Blood Test,30,170,676,Arthritis,547,Discharged
+1307,Patient_307,80,Female,0,0,0,133,35.6,155,115,never smoked,Pediatrics,Dr. Amanda Taylor,Blood Test,30,170,281,COVID-19,427,Outpatient
+1308,Patient_308,79,Female,0,0,0,195,30.3,163,71,never smoked,Radiology,Dr. Christopher Moore,X-Ray,120,210,757,Hypertension,434,Admitted
+1309,Patient_309,39,Female,0,0,0,90,23.3,150,90,never smoked,Internal Medicine,Dr. David Martinez,Physical Exam,100,190,361,Pneumonia,414,Outpatient
+1310,Patient_310,75,Male,0,0,0,104,25.4,132,83,smokes,General Practice,Dr. Amanda Taylor,Blood Test,30,170,509,Influenza,340,Outpatient
+1311,Patient_311,75,Female,0,0,0,99,20.1,114,114,Unknown,Pediatrics,Dr. Amanda Taylor,Growth Assessment,80,170,728,Influenza,229,Admitted
+1312,Patient_312,66,Female,0,1,1,126,25.0,109,73,formerly smoked,Oncology,Dr. Lisa Anderson,CT Scan,600,200,1053,Asthma,320,Discharged
+1313,Patient_313,69,Male,1,0,1,116,31.7,137,104,never smoked,Neurology,Dr. Emily Rodriguez,Nerve Conduction Study,350,180,691,Healthy Checkup,332,Outpatient
+1314,Patient_314,59,Female,0,0,0,88,19.9,172,84,never smoked,Emergency,Dr. Robert Brown,Wound Care,200,230,756,Migraine,516,Admitted
+1315,Patient_315,32,Male,0,0,0,183,22.5,176,93,smokes,Pediatrics,Dr. Emily Rodriguez,Blood Test,30,180,629,Obesity,228,Discharged
+1316,Patient_316,71,Male,0,1,0,77,25.9,113,62,smokes,Cardiology,Dr. Sarah Johnson,Angiography,1500,200,2101,Coronary Artery Disease,218,Discharged
+1317,Patient_317,77,Male,0,0,0,95,37.6,100,117,never smoked,Neurology,Dr. James Wilson,CT Scan,600,220,857,Migraine,327,Admitted
+1318,Patient_318,25,Male,1,0,0,182,33.8,144,83,never smoked,Oncology,Dr. Lisa Anderson,CT Scan,600,200,1242,Obesity,134,Outpatient
+1319,Patient_319,70,Male,0,0,0,140,32.8,117,113,smokes,Radiology,Dr. James Wilson,X-Ray,120,220,732,Influenza,423,Outpatient
+1320,Patient_320,77,Female,0,0,0,99,20.8,158,101,never smoked,Pediatrics,Dr. Amanda Taylor,Physical Exam,100,170,470,Migraine,434,Outpatient
+1321,Patient_321,22,Male,1,0,1,136,33.7,152,68,never smoked,Radiology,Dr. James Wilson,CT Scan,600,220,1313,Arthritis,348,Admitted
+1322,Patient_322,23,Male,0,1,0,134,33.8,148,85,never smoked,Pediatrics,Dr. Emily Rodriguez,Vaccination,40,180,419,Type 2 Diabetes,349,Outpatient
+1323,Patient_323,64,Female,0,0,0,105,30.2,94,79,formerly smoked,Orthopedics,Dr. Jennifer Lee,X-Ray,120,180,554,Influenza,213,Discharged
+1324,Patient_324,72,Male,1,0,0,94,37.8,140,99,smokes,Internal Medicine,Dr. David Martinez,Blood Test,30,190,398,Influenza,328,Outpatient
+1325,Patient_325,57,Female,0,0,1,106,24.8,110,69,Unknown,Radiology,Dr. Christopher Moore,CT Scan,600,210,844,Type 2 Diabetes,430,Admitted
+1326,Patient_326,69,Female,0,0,0,70,36.9,101,78,formerly smoked,Internal Medicine,Dr. David Martinez,Urinalysis,20,190,291,Pneumonia,323,Outpatient
+1327,Patient_327,33,Female,1,0,0,106,36.3,139,62,formerly smoked,Neurology,Dr. Emily Rodriguez,Nerve Conduction Study,350,180,918,Type 2 Diabetes,119,Outpatient
+1328,Patient_328,30,Male,0,0,0,197,18.7,93,83,never smoked,Orthopedics,Dr. Sarah Johnson,X-Ray,120,200,717,Back Pain,339,Discharged
+1329,Patient_329,47,Male,0,0,1,196,27.3,131,64,formerly smoked,Emergency,Dr. Robert Brown,X-Ray,120,230,569,Migraine,346,Outpatient
+1330,Patient_330,36,Male,0,0,0,70,37.6,173,62,never smoked,General Practice,Dr. Amanda Taylor,Consultation,150,170,477,Arthritis,127,Admitted
+1331,Patient_331,34,Female,1,0,0,104,20.5,127,117,formerly smoked,Internal Medicine,Dr. Lisa Anderson,Urinalysis,20,200,223,Asthma,311,Admitted
+1332,Patient_332,80,Male,0,0,0,173,29.2,114,86,never smoked,Orthopedics,Dr. Jennifer Lee,MRI Scan,800,180,1146,Pneumonia,415,Outpatient
+1333,Patient_333,36,Male,0,0,0,92,37.6,103,75,never smoked,Internal Medicine,Dr. David Martinez,Physical Exam,100,190,757,Fracture,349,Admitted
+1334,Patient_334,75,Male,0,0,0,78,29.3,164,108,never smoked,Surgery,Dr. Michael Chen,Hernia Repair,4000,250,4697,Asthma,438,Outpatient
+1335,Patient_335,72,Female,0,0,1,103,22.2,121,74,never smoked,Oncology,Dr. David Martinez,CT Scan,600,190,1198,Hypertension,339,Admitted
+1336,Patient_336,79,Female,0,0,0,197,29.9,100,94,never smoked,Emergency,Dr. Robert Brown,IV Fluids,150,230,791,Hypertension,218,Outpatient
+1337,Patient_337,40,Male,0,1,0,73,22.5,150,71,never smoked,Oncology,Dr. David Martinez,Biopsy,400,190,793,Hypertension,238,Outpatient
+1338,Patient_338,26,Male,0,0,0,171,28.6,107,100,Unknown,Pediatrics,Dr. Emily Rodriguez,Physical Exam,100,180,473,COVID-19,119,Discharged
+1339,Patient_339,29,Male,0,0,1,144,19.9,116,112,never smoked,Internal Medicine,Dr. David Martinez,Vaccination,40,190,464,Hypertension,217,Discharged
+1340,Patient_340,18,Male,0,0,0,168,30.3,144,103,formerly smoked,Pediatrics,Dr. Emily Rodriguez,Physical Exam,100,180,485,Arthritis,542,Admitted
+1341,Patient_341,75,Female,0,0,0,141,28.6,143,85,smokes,Cardiology,Dr. Sarah Johnson,Stress Test,200,200,549,Asthma,449,Outpatient
+1342,Patient_342,18,Female,0,0,1,72,32.9,171,106,Unknown,Internal Medicine,Dr. Lisa Anderson,Physical Exam,100,200,458,Obesity,528,Admitted
+1343,Patient_343,51,Female,0,1,1,103,30.8,176,93,formerly smoked,Orthopedics,Dr. Jennifer Lee,Cast Application,180,180,638,Anxiety,310,Outpatient
+1344,Patient_344,65,Female,1,0,0,114,29.2,164,82,smokes,Emergency,Dr. Robert Brown,Wound Care,200,230,733,Healthy Checkup,342,Outpatient
+1345,Patient_345,18,Male,0,0,0,130,32.0,110,90,never smoked,Pediatrics,Dr. Amanda Taylor,Physical Exam,100,170,673,Depression,526,Discharged
+1346,Patient_346,33,Male,0,0,1,152,21.3,133,109,never smoked,Internal Medicine,Dr. David Martinez,Blood Test,30,190,600,Coronary Artery Disease,143,Discharged
+1347,Patient_347,78,Male,0,0,0,192,30.1,94,79,never smoked,Cardiology,Dr. Michael Chen,Echocardiogram,300,250,715,Anxiety,132,Outpatient
+1348,Patient_348,81,Female,1,0,1,171,21.9,176,71,formerly smoked,Oncology,Dr. Lisa Anderson,Chemotherapy,2500,200,3010,Pneumonia,316,Outpatient
+1349,Patient_349,80,Male,1,0,1,85,36.5,130,82,formerly smoked,Orthopedics,Dr. Sarah Johnson,Physical Therapy,100,200,367,COVID-19,529,Discharged
+1350,Patient_350,39,Female,0,0,0,135,19.8,148,63,never smoked,Surgery,Dr. Michael Chen,Gallbladder Removal,5000,250,5712,Fracture,234,Discharged
+1351,Patient_351,84,Female,0,1,0,188,26.9,178,82,never smoked,Internal Medicine,Dr. David Martinez,Vaccination,40,190,317,Migraine,333,Admitted
+1352,Patient_352,43,Male,1,0,0,193,32.1,143,107,formerly smoked,Surgery,Dr. Michael Chen,Hernia Repair,4000,250,4466,Back Pain,231,Outpatient
+1353,Patient_353,33,Male,0,0,0,171,27.4,163,114,never smoked,Neurology,Dr. Emily Rodriguez,MRI Scan,800,180,980,Obesity,317,Outpatient
+1354,Patient_354,68,Male,0,0,0,135,20.3,111,107,formerly smoked,Emergency,Dr. Robert Brown,X-Ray,120,230,484,Influenza,344,Admitted
+1355,Patient_355,74,Female,0,0,1,82,29.3,172,60,formerly smoked,Internal Medicine,Dr. David Martinez,Physical Exam,100,190,474,Obesity,147,Admitted
+1356,Patient_356,46,Male,0,0,0,180,31.0,154,113,smokes,Radiology,Dr. James Wilson,X-Ray,120,220,690,Hypertension,536,Admitted
+1357,Patient_357,64,Female,1,0,1,103,32.2,153,84,smokes,Cardiology,Dr. Sarah Johnson,ECG Test,50,200,389,Fracture,449,Outpatient
+1358,Patient_358,79,Male,1,0,0,108,25.8,160,61,smokes,Pediatrics,Dr. Amanda Taylor,Physical Exam,100,170,375,Depression,241,Admitted
+1359,Patient_359,33,Female,0,0,0,189,29.5,93,89,formerly smoked,Radiology,Dr. Christopher Moore,X-Ray,120,210,462,Influenza,426,Admitted
+1360,Patient_360,65,Female,0,0,0,195,27.3,154,62,smokes,Neurology,Dr. James Wilson,MRI Scan,800,220,1127,Coronary Artery Disease,125,Admitted
+1361,Patient_361,56,Male,1,0,0,124,31.6,104,117,formerly smoked,Emergency,Dr. Robert Brown,X-Ray,120,230,527,Fracture,518,Discharged
+1362,Patient_362,50,Female,1,0,0,96,29.9,165,80,never smoked,Oncology,Dr. Lisa Anderson,Biopsy,400,200,897,Back Pain,138,Discharged
+1363,Patient_363,40,Female,0,0,0,187,28.8,111,84,never smoked,Orthopedics,Dr. Sarah Johnson,Cast Application,180,200,737,Asthma,530,Outpatient
+1364,Patient_364,27,Male,1,0,1,122,23.4,175,79,never smoked,Surgery,Dr. Robert Brown,Orthopedic Surgery,6000,230,6609,Fracture,230,Outpatient
+1365,Patient_365,51,Female,1,0,0,108,18.5,136,108,never smoked,Neurology,Dr. Emily Rodriguez,MRI Scan,800,180,1375,COVID-19,519,Discharged
+1366,Patient_366,69,Male,1,0,0,134,21.9,170,111,formerly smoked,Pediatrics,Dr. Emily Rodriguez,Blood Test,30,180,568,Hypertension,322,Admitted
+1367,Patient_367,27,Female,0,0,0,82,20.8,135,81,smokes,Orthopedics,Dr. Jennifer Lee,Cast Application,180,180,505,Coronary Artery Disease,129,Admitted
+1368,Patient_368,36,Male,0,0,0,90,27.3,103,80,never smoked,Oncology,Dr. Lisa Anderson,CT Scan,600,200,1249,Migraine,117,Admitted
+1369,Patient_369,75,Male,1,0,0,122,30.4,139,92,never smoked,Pediatrics,Dr. Emily Rodriguez,Growth Assessment,80,180,333,Depression,218,Admitted
+1370,Patient_370,18,Female,0,0,0,88,22.7,109,111,Unknown,Cardiology,Dr. Sarah Johnson,ECG Test,50,200,712,Depression,112,Outpatient
+1371,Patient_371,21,Female,1,0,0,126,36.8,139,97,never smoked,Surgery,Dr. Robert Brown,Gallbladder Removal,5000,230,5707,Healthy Checkup,321,Discharged
+1372,Patient_372,33,Female,0,0,0,94,18.6,122,74,formerly smoked,Radiology,Dr. Christopher Moore,Ultrasound,250,210,567,Type 2 Diabetes,234,Outpatient
+1373,Patient_373,41,Female,0,0,0,100,33.6,148,117,formerly smoked,Internal Medicine,Dr. Lisa Anderson,Vaccination,40,200,361,COVID-19,134,Outpatient
+1374,Patient_374,19,Female,0,1,1,150,30.7,132,117,formerly smoked,Neurology,Dr. James Wilson,Nerve Conduction Study,350,220,586,Hypertension,345,Discharged
+1375,Patient_375,49,Male,0,0,0,92,25.8,168,105,never smoked,Internal Medicine,Dr. David Martinez,Physical Exam,100,190,485,Depression,535,Admitted
+1376,Patient_376,41,Female,1,0,0,101,19.5,101,111,never smoked,Orthopedics,Dr. Jennifer Lee,X-Ray,120,180,626,Influenza,113,Admitted
+1377,Patient_377,29,Male,1,0,0,143,30.7,129,74,never smoked,Internal Medicine,Dr. Lisa Anderson,Urinalysis,20,200,537,Coronary Artery Disease,539,Outpatient
+1378,Patient_378,67,Male,1,0,0,79,26.0,109,105,formerly smoked,Radiology,Dr. James Wilson,X-Ray,120,220,636,Asthma,444,Outpatient
+1379,Patient_379,52,Female,0,0,1,123,36.8,127,84,formerly smoked,General Practice,Dr. Christopher Moore,Vaccination,40,210,728,COVID-19,540,Admitted
+1380,Patient_380,50,Male,0,0,0,121,29.1,92,80,never smoked,Orthopedics,Dr. Sarah Johnson,Physical Therapy,100,200,798,Arthritis,332,Outpatient
+1381,Patient_381,50,Male,0,0,0,183,36.8,117,83,formerly smoked,Surgery,Dr. Michael Chen,Hernia Repair,4000,250,4501,Coronary Artery Disease,425,Outpatient
+1382,Patient_382,78,Male,0,0,0,83,22.8,145,116,smokes,Pediatrics,Dr. Emily Rodriguez,Vaccination,40,180,706,Obesity,520,Outpatient
+1383,Patient_383,68,Male,0,0,0,179,32.7,179,117,never smoked,Surgery,Dr. Michael Chen,Orthopedic Surgery,6000,250,6368,Influenza,138,Outpatient
+1384,Patient_384,60,Female,0,0,0,122,30.5,102,64,formerly smoked,Internal Medicine,Dr. Lisa Anderson,Vaccination,40,200,401,COVID-19,348,Outpatient
+1385,Patient_385,29,Male,0,0,0,148,32.9,166,65,formerly smoked,Emergency,Dr. Robert Brown,X-Ray,120,230,547,Type 2 Diabetes,416,Admitted
+1386,Patient_386,84,Female,0,0,1,91,22.7,155,108,never smoked,Orthopedics,Dr. Sarah Johnson,Physical Therapy,100,200,797,Type 2 Diabetes,348,Outpatient
+1387,Patient_387,82,Female,1,0,0,99,31.5,126,102,never smoked,Pediatrics,Dr. Emily Rodriguez,Vaccination,40,180,705,Pneumonia,235,Admitted
+1388,Patient_388,50,Male,1,0,0,73,28.2,138,107,formerly smoked,Oncology,Dr. Lisa Anderson,CT Scan,600,200,844,Healthy Checkup,143,Discharged
+1389,Patient_389,57,Female,0,0,0,128,33.0,155,103,smokes,Cardiology,Dr. Michael Chen,ECG Test,50,250,613,Influenza,522,Outpatient
+1390,Patient_390,60,Female,0,0,0,77,24.9,125,106,smokes,Surgery,Dr. Robert Brown,Hernia Repair,4000,230,4408,Type 2 Diabetes,434,Outpatient
+1391,Patient_391,61,Female,1,0,0,81,35.9,143,82,formerly smoked,Surgery,Dr. Robert Brown,Orthopedic Surgery,6000,230,6611,Pneumonia,426,Outpatient
+1392,Patient_392,46,Male,0,0,0,188,20.1,115,63,smokes,Orthopedics,Dr. Sarah Johnson,MRI Scan,800,200,1417,Pneumonia,222,Outpatient
+1393,Patient_393,30,Female,1,0,1,103,34.2,164,86,never smoked,Emergency,Dr. Robert Brown,Wound Care,200,230,473,COVID-19,537,Outpatient
+1394,Patient_394,29,Female,1,0,0,151,35.3,161,77,formerly smoked,Internal Medicine,Dr. David Martinez,Vaccination,40,190,500,Pneumonia,436,Discharged
+1395,Patient_395,63,Female,0,0,1,167,34.4,129,80,formerly smoked,Internal Medicine,Dr. David Martinez,Physical Exam,100,190,367,Coronary Artery Disease,129,Discharged
+1396,Patient_396,19,Male,0,0,1,196,28.5,132,87,never smoked,Orthopedics,Dr. Jennifer Lee,X-Ray,120,180,625,Back Pain,221,Outpatient
+1397,Patient_397,52,Female,0,1,1,144,27.0,111,94,smokes,Surgery,Dr. Michael Chen,Hernia Repair,4000,250,4427,Pneumonia,518,Admitted
+1398,Patient_398,25,Male,0,0,0,174,37.9,109,81,formerly smoked,Pediatrics,Dr. Amanda Taylor,Growth Assessment,80,170,606,Hypertension,334,Outpatient
+1399,Patient_399,43,Male,0,0,0,118,23.0,97,99,never smoked,Cardiology,Dr. Michael Chen,Echocardiogram,300,250,1047,Influenza,530,Outpatient
+1400,Patient_400,51,Male,1,0,0,148,29.2,118,82,Unknown,Orthopedics,Dr. Sarah Johnson,X-Ray,120,200,735,Hypertension,540,Admitted
+1401,Patient_401,24,Male,0,0,1,162,31.6,129,62,never smoked,Pediatrics,Dr. Emily Rodriguez,Blood Test,30,180,660,Arthritis,514,Admitted
+1402,Patient_402,75,Male,0,1,0,87,32.2,179,99,never smoked,Pediatrics,Dr. Amanda Taylor,Growth Assessment,80,170,252,Depression,537,Discharged
+1403,Patient_403,46,Male,1,0,0,165,22.5,119,109,never smoked,Oncology,Dr. Lisa Anderson,Chemotherapy,2500,200,2913,Type 2 Diabetes,334,Admitted
+1404,Patient_404,53,Female,1,0,0,107,31.3,170,69,smokes,Radiology,Dr. Christopher Moore,Ultrasound,250,210,801,Healthy Checkup,344,Outpatient
+1405,Patient_405,38,Male,0,0,0,156,34.5,173,84,smokes,General Practice,Dr. Amanda Taylor,Blood Test,30,170,273,Depression,348,Outpatient
+1406,Patient_406,53,Female,0,0,1,157,19.5,144,111,never smoked,Cardiology,Dr. Sarah Johnson,Echocardiogram,300,200,550,Pneumonia,531,Outpatient
+1407,Patient_407,27,Female,0,0,1,119,36.3,105,108,formerly smoked,Neurology,Dr. James Wilson,EEG,250,220,536,Asthma,136,Admitted
+1408,Patient_408,41,Male,0,0,0,77,19.1,135,67,never smoked,Emergency,Dr. Jennifer Lee,Emergency Care,500,180,1011,Asthma,126,Discharged
+1409,Patient_409,81,Female,0,0,0,138,25.4,151,114,smokes,General Practice,Dr. Christopher Moore,Blood Test,30,210,332,Type 2 Diabetes,221,Outpatient
+1410,Patient_410,66,Female,0,0,0,190,18.8,96,70,formerly smoked,Oncology,Dr. Lisa Anderson,CT Scan,600,200,975,Arthritis,317,Outpatient
+1411,Patient_411,53,Female,1,1,0,133,20.0,169,64,never smoked,Cardiology,Dr. Michael Chen,ECG Test,50,250,444,Asthma,438,Outpatient
+1412,Patient_412,41,Female,0,0,0,190,36.3,134,117,Unknown,Internal Medicine,Dr. Lisa Anderson,Blood Test,30,200,236,Back Pain,229,Outpatient
+1413,Patient_413,40,Male,1,0,1,134,25.4,148,104,never smoked,General Practice,Dr. Amanda Taylor,Physical Exam,100,170,538,Obesity,125,Discharged
+1414,Patient_414,79,Female,1,0,0,176,26.8,145,112,never smoked,Internal Medicine,Dr. Lisa Anderson,Vaccination,40,200,615,Hypertension,317,Outpatient
+1415,Patient_415,54,Male,0,1,0,169,22.7,137,114,formerly smoked,Emergency,Dr. Jennifer Lee,X-Ray,120,180,621,Back Pain,538,Outpatient
+1416,Patient_416,29,Female,1,0,1,151,30.1,116,96,Unknown,Internal Medicine,Dr. Lisa Anderson,Vaccination,40,200,243,Fracture,145,Discharged
+1417,Patient_417,72,Female,0,0,0,120,30.1,142,115,never smoked,Emergency,Dr. Robert Brown,X-Ray,120,230,487,Coronary Artery Disease,240,Outpatient
+1418,Patient_418,30,Male,1,0,0,152,25.8,176,118,never smoked,Cardiology,Dr. Sarah Johnson,Angiography,1500,200,1930,Anxiety,421,Admitted
+1419,Patient_419,40,Female,0,0,1,181,25.0,177,104,never smoked,Surgery,Dr. Robert Brown,Gallbladder Removal,5000,230,5317,Migraine,124,Admitted
+1420,Patient_420,47,Female,0,0,0,125,35.8,162,97,formerly smoked,Emergency,Dr. Robert Brown,Emergency Care,500,230,746,Asthma,148,Discharged
+1421,Patient_421,34,Female,0,0,1,129,26.0,124,88,never smoked,Pediatrics,Dr. Amanda Taylor,Blood Test,30,170,251,Healthy Checkup,221,Outpatient
+1422,Patient_422,79,Male,1,0,1,189,28.1,140,64,formerly smoked,Neurology,Dr. Emily Rodriguez,MRI Scan,800,180,1113,Pneumonia,148,Outpatient
+1423,Patient_423,30,Female,1,0,1,92,24.0,173,68,Unknown,Neurology,Dr. James Wilson,EEG,250,220,680,Healthy Checkup,224,Outpatient
+1424,Patient_424,76,Male,0,1,0,82,33.8,126,118,formerly smoked,Orthopedics,Dr. Sarah Johnson,MRI Scan,800,200,1324,Influenza,244,Admitted
+1425,Patient_425,36,Female,1,0,0,170,26.3,170,107,never smoked,Neurology,Dr. James Wilson,EEG,250,220,949,Coronary Artery Disease,247,Outpatient
+1426,Patient_426,66,Male,0,0,0,93,28.5,146,61,never smoked,Orthopedics,Dr. Jennifer Lee,X-Ray,120,180,757,Hypertension,114,Admitted
+1427,Patient_427,29,Male,0,0,1,177,23.4,97,60,never smoked,Neurology,Dr. James Wilson,MRI Scan,800,220,1412,Arthritis,225,Outpatient
+1428,Patient_428,78,Female,0,0,1,80,37.8,168,99,smokes,Emergency,Dr. Robert Brown,IV Fluids,150,230,598,Coronary Artery Disease,141,Outpatient
+1429,Patient_429,36,Female,0,0,0,86,24.2,109,119,never smoked,Pediatrics,Dr. Amanda Taylor,Growth Assessment,80,170,454,Migraine,231,Outpatient
+1430,Patient_430,26,Male,0,0,0,94,33.5,142,110,never smoked,Surgery,Dr. Michael Chen,Gallbladder Removal,5000,250,5460,Fracture,319,Outpatient
+1431,Patient_431,45,Male,1,0,0,163,26.8,101,89,formerly smoked,Internal Medicine,Dr. David Martinez,Urinalysis,20,190,486,COVID-19,121,Discharged
+1432,Patient_432,69,Female,0,0,0,90,22.5,138,70,never smoked,Oncology,Dr. David Martinez,CT Scan,600,190,813,Obesity,537,Outpatient
+1433,Patient_433,33,Male,0,0,0,153,34.1,106,87,formerly smoked,Neurology,Dr. Emily Rodriguez,CT Scan,600,180,1265,Asthma,329,Admitted
+1434,Patient_434,29,Female,0,0,0,106,25.0,153,103,never smoked,Surgery,Dr. Michael Chen,Orthopedic Surgery,6000,250,6253,Arthritis,532,Admitted
+1435,Patient_435,42,Female,1,0,1,111,35.4,131,71,smokes,Surgery,Dr. Michael Chen,Gallbladder Removal,5000,250,5401,Arthritis,138,Outpatient
+1436,Patient_436,69,Female,1,0,0,170,36.3,118,98,Unknown,Emergency,Dr. Robert Brown,Emergency Care,500,230,1172,Asthma,329,Discharged
+1437,Patient_437,70,Female,0,0,0,117,35.3,108,85,formerly smoked,Cardiology,Dr. Michael Chen,Angiography,1500,250,2232,Asthma,323,Discharged
+1438,Patient_438,40,Male,1,1,0,172,19.2,100,72,Unknown,Cardiology,Dr. Michael Chen,Angiography,1500,250,2008,Asthma,543,Discharged
+1439,Patient_439,33,Female,0,1,0,97,33.9,139,118,never smoked,Neurology,Dr. James Wilson,Nerve Conduction Study,350,220,893,Asthma,349,Outpatient
+1440,Patient_440,74,Male,1,0,0,110,26.5,160,67,formerly smoked,Oncology,Dr. David Martinez,Chemotherapy,2500,190,3046,Asthma,140,Outpatient
+1441,Patient_441,56,Female,0,0,0,168,35.5,147,113,formerly smoked,Neurology,Dr. James Wilson,EEG,250,220,637,Arthritis,343,Outpatient
+1442,Patient_442,70,Male,1,0,1,116,30.9,123,87,formerly smoked,Neurology,Dr. Emily Rodriguez,Nerve Conduction Study,350,180,705,Type 2 Diabetes,216,Admitted
+1443,Patient_443,59,Female,0,0,1,174,34.8,109,117,never smoked,Orthopedics,Dr. Sarah Johnson,MRI Scan,800,200,1309,Type 2 Diabetes,232,Admitted
+1444,Patient_444,75,Male,0,0,0,193,28.2,139,89,never smoked,Pediatrics,Dr. Amanda Taylor,Physical Exam,100,170,560,Healthy Checkup,112,Discharged
+1445,Patient_445,56,Male,1,0,0,82,28.9,177,68,never smoked,Pediatrics,Dr. Amanda Taylor,Vaccination,40,170,688,Type 2 Diabetes,347,Admitted
+1446,Patient_446,31,Female,0,0,0,169,21.3,99,98,never smoked,Oncology,Dr. David Martinez,Biopsy,400,190,645,Migraine,443,Admitted
+1447,Patient_447,22,Female,0,0,0,100,33.8,121,90,never smoked,Orthopedics,Dr. Jennifer Lee,X-Ray,120,180,407,Type 2 Diabetes,139,Admitted
+1448,Patient_448,52,Female,0,0,0,199,26.7,141,117,smokes,Surgery,Dr. Robert Brown,Appendectomy,3500,230,4202,Arthritis,119,Discharged
+1449,Patient_449,35,Female,0,0,0,85,28.3,104,80,never smoked,Orthopedics,Dr. Sarah Johnson,X-Ray,120,200,615,Asthma,329,Outpatient
+1450,Patient_450,26,Male,0,0,0,142,33.8,173,115,never smoked,Neurology,Dr. Emily Rodriguez,CT Scan,600,180,1240,Back Pain,236,Outpatient
+1451,Patient_451,75,Female,0,0,0,123,30.2,92,106,formerly smoked,Cardiology,Dr. Michael Chen,Stress Test,200,250,773,Pneumonia,345,Discharged
+1452,Patient_452,34,Male,0,0,0,169,22.4,126,93,formerly smoked,General Practice,Dr. Amanda Taylor,Physical Exam,100,170,571,Depression,220,Outpatient
+1453,Patient_453,24,Male,0,0,1,178,30.0,129,114,smokes,Oncology,Dr. David Martinez,Radiation,3000,190,3523,Pneumonia,343,Outpatient
+1454,Patient_454,63,Female,1,0,0,156,26.4,161,90,formerly smoked,Surgery,Dr. Robert Brown,Gallbladder Removal,5000,230,5370,Obesity,446,Admitted
+1455,Patient_455,30,Male,0,0,0,77,27.7,129,111,never smoked,Emergency,Dr. Robert Brown,X-Ray,120,230,504,Migraine,149,Admitted
+1456,Patient_456,57,Male,0,0,0,76,19.1,145,84,smokes,General Practice,Dr. Amanda Taylor,Physical Exam,100,170,531,Influenza,430,Discharged
+1457,Patient_457,59,Male,0,0,1,105,22.6,112,71,formerly smoked,General Practice,Dr. Amanda Taylor,Blood Test,30,170,472,Arthritis,312,Outpatient
+1458,Patient_458,26,Male,0,0,0,87,24.0,100,60,never smoked,Orthopedics,Dr. Jennifer Lee,X-Ray,120,180,719,Hypertension,228,Outpatient
+1459,Patient_459,67,Female,1,1,0,72,32.4,153,114,formerly smoked,Internal Medicine,Dr. Lisa Anderson,Urinalysis,20,200,451,Back Pain,248,Outpatient
+1460,Patient_460,44,Female,0,0,0,97,18.7,97,81,Unknown,General Practice,Dr. Amanda Taylor,Vaccination,40,170,450,Depression,121,Outpatient
+1461,Patient_461,83,Female,0,1,1,139,26.5,145,99,never smoked,Neurology,Dr. James Wilson,MRI Scan,800,220,1374,Coronary Artery Disease,519,Admitted
+1462,Patient_462,22,Female,1,0,0,97,36.5,149,96,never smoked,Radiology,Dr. James Wilson,X-Ray,120,220,676,Healthy Checkup,145,Admitted
+1463,Patient_463,46,Male,1,0,1,123,20.7,99,106,never smoked,Cardiology,Dr. Sarah Johnson,Stress Test,200,200,888,Depression,546,Admitted
+1464,Patient_464,54,Male,0,0,1,134,28.6,128,60,never smoked,Cardiology,Dr. Michael Chen,ECG Test,50,250,557,Anxiety,433,Admitted
+1465,Patient_465,55,Female,1,0,0,169,33.8,117,60,never smoked,Radiology,Dr. Christopher Moore,MRI Scan,800,210,1258,Hypertension,116,Discharged
+1466,Patient_466,25,Female,1,0,1,90,36.9,138,116,formerly smoked,Pediatrics,Dr. Emily Rodriguez,Blood Test,30,180,286,Arthritis,226,Admitted
+1467,Patient_467,82,Female,0,1,0,82,33.1,125,101,never smoked,Neurology,Dr. James Wilson,Nerve Conduction Study,350,220,749,Type 2 Diabetes,539,Admitted
+1468,Patient_468,34,Male,1,0,1,126,32.6,102,113,Unknown,Emergency,Dr. Jennifer Lee,Emergency Care,500,180,745,Asthma,116,Outpatient
+1469,Patient_469,62,Female,1,0,0,118,34.6,125,101,smokes,General Practice,Dr. Christopher Moore,Vaccination,40,210,557,Anxiety,233,Discharged
+1470,Patient_470,21,Female,0,1,1,187,27.2,115,80,formerly smoked,Pediatrics,Dr. Amanda Taylor,Physical Exam,100,170,617,Anxiety,318,Admitted
+1471,Patient_471,53,Female,0,0,0,123,34.2,175,74,smokes,Neurology,Dr. James Wilson,Nerve Conduction Study,350,220,740,COVID-19,444,Admitted
+1472,Patient_472,48,Male,0,0,0,122,18.7,93,76,never smoked,Orthopedics,Dr. Jennifer Lee,X-Ray,120,180,773,Hypertension,445,Outpatient
+1473,Patient_473,36,Male,1,0,0,113,36.5,171,81,formerly smoked,Cardiology,Dr. Sarah Johnson,Echocardiogram,300,200,521,Coronary Artery Disease,422,Outpatient
+1474,Patient_474,78,Male,1,0,0,116,27.1,153,97,formerly smoked,Pediatrics,Dr. Amanda Taylor,Growth Assessment,80,170,616,Influenza,346,Outpatient
+1475,Patient_475,71,Male,0,0,0,122,29.3,127,94,smokes,Oncology,Dr. David Martinez,Chemotherapy,2500,190,2796,Pneumonia,121,Discharged
+1476,Patient_476,56,Male,0,0,0,143,23.5,177,104,smokes,General Practice,Dr. Christopher Moore,Physical Exam,100,210,748,Influenza,216,Discharged
+1477,Patient_477,36,Male,0,0,0,115,33.0,176,75,never smoked,General Practice,Dr. Amanda Taylor,Vaccination,40,170,532,Depression,340,Outpatient
+1478,Patient_478,56,Male,0,0,0,82,20.0,111,67,Unknown,Emergency,Dr. Jennifer Lee,Emergency Care,500,180,906,Coronary Artery Disease,522,Outpatient
+1479,Patient_479,84,Male,0,0,1,171,35.5,91,106,never smoked,Internal Medicine,Dr. David Martinez,Blood Test,30,190,663,Asthma,248,Outpatient
+1480,Patient_480,62,Female,0,0,0,93,34.6,120,76,smokes,Oncology,Dr. David Martinez,CT Scan,600,190,1231,Type 2 Diabetes,120,Admitted
+1481,Patient_481,30,Female,1,1,0,71,22.7,100,76,Unknown,General Practice,Dr. Christopher Moore,Physical Exam,100,210,705,Coronary Artery Disease,248,Discharged
+1482,Patient_482,75,Male,0,1,0,150,34.3,135,113,never smoked,Surgery,Dr. Robert Brown,Gallbladder Removal,5000,230,5445,Healthy Checkup,420,Outpatient
+1483,Patient_483,37,Male,1,0,0,169,33.8,151,85,smokes,Oncology,Dr. David Martinez,CT Scan,600,190,858,Coronary Artery Disease,511,Admitted
+1484,Patient_484,78,Female,0,1,1,180,30.8,158,72,never smoked,General Practice,Dr. Christopher Moore,Physical Exam,100,210,393,COVID-19,525,Outpatient
+1485,Patient_485,56,Male,0,0,0,171,25.8,153,76,never smoked,Radiology,Dr. James Wilson,MRI Scan,800,220,1122,Arthritis,546,Admitted
+1486,Patient_486,18,Male,0,0,0,86,23.8,99,97,formerly smoked,Oncology,Dr. David Martinez,Radiation,3000,190,3228,Type 2 Diabetes,130,Outpatient
+1487,Patient_487,20,Male,0,0,1,81,23.0,129,76,formerly smoked,Neurology,Dr. James Wilson,CT Scan,600,220,832,Asthma,428,Outpatient
+1488,Patient_488,79,Female,1,0,1,185,24.7,113,107,Unknown,Oncology,Dr. David Martinez,Biopsy,400,190,886,Back Pain,546,Outpatient
+1489,Patient_489,80,Female,0,0,0,93,36.1,133,73,formerly smoked,Emergency,Dr. Robert Brown,Emergency Care,500,230,1042,Obesity,220,Discharged
+1490,Patient_490,42,Female,1,0,1,98,20.0,149,104,formerly smoked,Orthopedics,Dr. Jennifer Lee,X-Ray,120,180,480,Pneumonia,535,Admitted
+1491,Patient_491,73,Female,0,0,1,191,34.7,151,65,smokes,Orthopedics,Dr. Jennifer Lee,MRI Scan,800,180,1472,Anxiety,148,Outpatient
+1492,Patient_492,50,Female,1,0,0,159,25.3,176,94,Unknown,Orthopedics,Dr. Sarah Johnson,MRI Scan,800,200,1267,Pneumonia,315,Outpatient
+1493,Patient_493,55,Male,0,0,0,134,28.7,106,105,never smoked,Neurology,Dr. Emily Rodriguez,EEG,250,180,442,Back Pain,338,Outpatient
+1494,Patient_494,23,Female,1,0,0,153,34.0,154,73,Unknown,Pediatrics,Dr. Emily Rodriguez,Growth Assessment,80,180,379,Coronary Artery Disease,348,Outpatient
+1495,Patient_495,75,Male,1,0,0,188,35.7,146,106,never smoked,Orthopedics,Dr. Sarah Johnson,Physical Therapy,100,200,757,Arthritis,228,Outpatient
+1496,Patient_496,61,Male,0,0,0,85,25.2,144,67,smokes,Cardiology,Dr. Sarah Johnson,ECG Test,50,200,602,Hypertension,415,Outpatient
+1497,Patient_497,62,Female,0,0,0,173,27.5,142,74,never smoked,Neurology,Dr. Emily Rodriguez,EEG,250,180,486,Influenza,146,Admitted
+1498,Patient_498,49,Female,1,0,0,161,26.6,145,113,never smoked,Pediatrics,Dr. Amanda Taylor,Vaccination,40,170,249,Influenza,537,Discharged
+1499,Patient_499,62,Male,1,0,0,96,18.8,98,86,never smoked,Cardiology,Dr. Michael Chen,Angiography,1500,250,2123,Influenza,134,Outpatient
+1500,Patient_500,78,Male,0,0,0,102,24.3,111,72,formerly smoked,Cardiology,Dr. Michael Chen,Stress Test,200,250,785,COVID-19,110,Outpatient
