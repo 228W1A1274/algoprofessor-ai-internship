@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HCL Knowledge Assistant</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .container {
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        max-width: 900px;
+        width: 100%;
+        overflow: hidden;
+      }
+
+      .header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 30px;
+        text-align: center;
+      }
+
+      .header h1 {
+        font-size: 2em;
+        margin-bottom: 10px;
+      }
+
+      .header p {
+        opacity: 0.9;
+        font-size: 1.1em;
+      }
+
+      .login-section {
+        padding: 40px;
+        display: none;
+      }
+
+      .login-section.active {
+        display: block;
+      }
+
+      .chat-section {
+        display: none;
+      }
+
+      .chat-section.active {
+        display: block;
+      }
+
+      .input-group {
+        margin-bottom: 20px;
+      }
+
+      .input-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+        color: #333;
+      }
+
+      .input-group input,
+      .input-group select {
+        width: 100%;
+        padding: 12px;
+        border: 2px solid #e0e0e0;
+        border-radius: 8px;
+        font-size: 1em;
+        transition: border-color 0.3s;
+      }
+
+      .input-group input:focus,
+      .input-group select:focus {
+        outline: none;
+        border-color: #667eea;
+      }
+
+      .btn {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 14px 30px;
+        border: none;
+        border-radius: 8px;
+        font-size: 1em;
+        font-weight: 600;
+        cursor: pointer;
+        width: 100%;
+        transition: transform 0.2s;
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+      }
+
+      .btn:active {
+        transform: translateY(0);
+      }
+
+      .chat-container {
+        height: 500px;
+        overflow-y: auto;
+        padding: 20px;
+        background: #f8f9fa;
+      }
+
+      .message {
+        margin-bottom: 20px;
+        padding: 15px;
+        border-radius: 12px;
+        max-width: 80%;
+        animation: fadeIn 0.3s;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .message.user {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        margin-left: auto;
+      }
+
+      .message.assistant {
+        background: white;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .message.assistant .sources {
+        margin-top: 10px;
+        padding-top: 10px;
+        border-top: 1px solid #e0e0e0;
+        font-size: 0.9em;
+        color: #666;
+      }
+
+      .input-area {
+        padding: 20px;
+        background: white;
+        border-top: 1px solid #e0e0e0;
+        display: flex;
+        gap: 10px;
+      }
+
+      .input-area input {
+        flex: 1;
+        padding: 12px;
+        border: 2px solid #e0e0e0;
+        border-radius: 8px;
+        font-size: 1em;
+      }
+
+      .input-area button {
+        padding: 12px 24px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 600;
+      }
+
+      .stats {
+        padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
+        background: #f8f9fa;
+      }
+
+      .stat-card {
+        background: white;
+        padding: 15px;
+        border-radius: 8px;
+        text-align: center;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .stat-card .value {
+        font-size: 2em;
+        font-weight: bold;
+        color: #667eea;
+      }
+
+      .stat-card .label {
+        font-size: 0.9em;
+        color: #666;
+        margin-top: 5px;
+      }
+
+      .mode-selector {
+        padding: 20px;
+        background: white;
+      }
+
+      .error {
+        background: #fee;
+        color: #c33;
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+      }
+
+      .loading {
+        text-align: center;
+        padding: 20px;
+        color: #667eea;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>🤖 HCL Knowledge Assistant</h1>
+        <p>AI-Powered Knowledge Base for HCL Software Division</p>
+      </div>
+
+      <!-- Login Section -->
+      <div class="login-section active" id="loginSection">
+        <h2 style="margin-bottom: 20px">Login</h2>
+        <div id="loginError" class="error" style="display: none"></div>
+        <div class="input-group">
+          <label>Username</label>
+          <input
+            type="text"
+            id="username"
+            placeholder="Enter username"
+            value="demo"
+          />
+        </div>
+        <div class="input-group">
+          <label>Password</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Enter password"
+            value="demo123"
+          />
+        </div>
+        <button class="btn" onclick="login()">Login</button>
+        <p style="margin-top: 15px; text-align: center; color: #666">
+          Demo credentials: username: <strong>demo</strong>, password:
+          <strong>demo123</strong>
+        </p>
+      </div>
+
+      <!-- Chat Section -->
+      <div class="chat-section" id="chatSection">
+        <div class="stats" id="stats">
+          <div class="stat-card">
+            <div class="value">0</div>
+            <div class="label">Queries Today</div>
+          </div>
+          <div class="stat-card">
+            <div class="value">RAG</div>
+            <div class="label">Current Mode</div>
+          </div>
+          <div class="stat-card">
+            <div class="value">Online</div>
+            <div class="label">Status</div>
+          </div>
+        </div>
+
+        <div class="mode-selector">
+          <label><strong>Query Mode:</strong></label>
+          <select
+            id="queryMode"
+            style="
+              width: 100%;
+              padding: 10px;
+              margin-top: 10px;
+              border-radius: 8px;
+            "
+          >
+            <option value="rag">RAG - Document Retrieval</option>
+            <option value="agent">Agent - Intelligent Assistant</option>
+            <option value="hybrid">Hybrid - Best of Both</option>
+          </select>
+        </div>
+
+        <div class="chat-container" id="chatContainer">
+          <div class="message assistant">
+            <strong>HCL Assistant</strong>
+            <p>Hello! I'm your HCL Knowledge Assistant. I can help you with:</p>
+            <ul style="margin-top: 10px; margin-left: 20px">
+              <li>Product information (DX, Domino, AppScan, etc.)</li>
+              <li>Employee policies and benefits</li>
+              <li>IT support and troubleshooting</li>
+              <li>Company information and contacts</li>
+            </ul>
+            <p style="margin-top: 10px">
+              Try asking: "What is the leave policy?" or "Tell me about HCL DX"
+            </p>
+          </div>
+        </div>
+
+        <div class="input-area">
+          <input
+            type="text"
+            id="queryInput"
+            placeholder="Ask me anything about HCL..."
+            onkeypress="if (event.key === 'Enter') sendQuery();"
+          />
+          <button onclick="sendQuery()">Send</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let token = null;
+
+      // 1. ROBUST LOGIN FUNCTION
+      async function login() {
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+        const errorDiv = document.getElementById("loginError");
+        const btn = document.querySelector(".login-section .btn");
+
+        // Show loading state on button
+        btn.textContent = "Logging in...";
+        btn.disabled = true;
+
+        try {
+          const formData = new FormData();
+          formData.append("username", username);
+          formData.append("password", password);
+
+          const response = await fetch(
+            "http://localhost:8000/api/v1/auth/login",
+            {
+              method: "POST",
+              body: formData,
+            },
+          );
+
+          if (response.ok) {
+            const data = await response.json();
+            token = data.access_token;
+
+            // Switch screens
+            document.getElementById("loginSection").classList.remove("active");
+            document.getElementById("chatSection").classList.add("active");
+
+            // Load stats immediately
+            loadStats();
+          } else {
+            errorDiv.textContent = "Invalid credentials. Try: demo/demo123";
+            errorDiv.style.display = "block";
+            btn.textContent = "Login";
+            btn.disabled = false;
+          }
+        } catch (error) {
+          errorDiv.textContent =
+            "Error connecting to server. Is Docker running?";
+          errorDiv.style.display = "block";
+          btn.textContent = "Login";
+          btn.disabled = false;
+          console.error("Login Error:", error);
+        }
+      }
+
+      // 2. FIXED QUERY FUNCTION (No more 'null' errors)
+      async function sendQuery() {
+        const input = document.getElementById("queryInput");
+        const query = input.value.trim();
+
+        if (!query) return;
+
+        const chatContainer = document.getElementById("chatContainer");
+        const mode = document.getElementById("queryMode").value;
+
+        // Add USER message
+        // We use 'insertAdjacentHTML' instead of 'innerHTML +=' to prevent breaking existing elements
+        chatContainer.insertAdjacentHTML(
+          "beforeend",
+          `
+                <div class="message user">
+                    <strong>You</strong>
+                    <p>${query}</p>
+                </div>
+            `,
+        );
+
+        // Add LOADING indicator
+        const loadingId = "loading-" + Date.now();
+        chatContainer.insertAdjacentHTML(
+          "beforeend",
+          `<div class="loading" id="${loadingId}">🤔 Thinking...</div>`,
+        );
+        chatContainer.scrollTop = chatContainer.scrollHeight;
+
+        input.value = "";
+
+        try {
+          // FETCH Request
+          const response = await fetch("http://localhost:8000/api/v1/query", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${token}`,
+            },
+            body: JSON.stringify({
+              query: query,
+              mode: mode,
+              max_results: 5,
+            }),
+          });
+
+          // Remove loading safely
+          const loader = document.getElementById(loadingId);
+          if (loader) loader.remove();
+
+          if (response.ok) {
+            const data = await response.json();
+
+            // Format the confidence score
+            const confidence = data.confidence
+              ? (data.confidence * 100).toFixed(0) + "%"
+              : "N/A";
+            const time = data.processing_time
+              ? data.processing_time.toFixed(2) + "s"
+              : "0s";
+
+            chatContainer.insertAdjacentHTML(
+              "beforeend",
+              `
+                        <div class="message assistant">
+                            <strong>HCL Assistant</strong>
+                            <p>${data.answer.replace(/\n/g, "<br>")}</p>
+                            <div class="sources">
+                                <strong>Sources:</strong> ${data.sources.length} items found (${data.mode_used} mode)
+                                <br><small>Confidence: ${confidence} | Time: ${time}</small>
+                            </div>
+                        </div>
+                    `,
+            );
+          } else {
+            throw new Error(`Server responded with ${response.status}`);
+          }
+        } catch (error) {
+          // Safe error handling - ensure loader is gone
+          const loader = document.getElementById(loadingId);
+          if (loader) loader.remove();
+
+          console.error("Query Error:", error);
+          chatContainer.insertAdjacentHTML(
+            "beforeend",
+            `
+                    <div class="message assistant">
+                        <strong>Error</strong>
+                        <p>Could not reach the AI. Is the backend running?</p>
+                        <small style="color:red">${error.message}</small>
+                    </div>
+                `,
+          );
+        }
+
+        chatContainer.scrollTop = chatContainer.scrollHeight;
+      }
+
+      // 3. STATS FUNCTION
+      async function loadStats() {
+        try {
+          const response = await fetch("http://localhost:8000/api/v1/stats", {
+            headers: { Authorization: `Bearer ${token}` },
+          });
+
+          if (response.ok) {
+            const data = await response.json();
+            const statsDiv = document.getElementById("stats");
+            statsDiv.innerHTML = `
+                        <div class="stat-card">
+                            <div class="value">${data.total_queries || 0}</div>
+                            <div class="label">Queries Today</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="value">Active</div>
+                            <div class="label">System Status</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="value" style="color:green">Online</div>
+                            <div class="label">AI Engine</div>
+                        </div>
+                    `;
+          }
+        } catch (error) {
+          console.log("Stats not available yet");
+        }
+      }
+    </script>
+  </body>
+</html>
