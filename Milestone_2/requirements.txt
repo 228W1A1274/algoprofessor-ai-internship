@@ -1,0 +1,13 @@
+
+sentence-transformers
+chromadb
+rank-bm25
+groq
+pymupdf
+pdfplumber
+fastapi
+uvicorn
+streamlit
+ragas
+requests
+beautifulsoup4
