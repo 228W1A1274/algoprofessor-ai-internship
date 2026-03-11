@@ -1,0 +1,18 @@
+{
+  "Claude 3.5 Sonnet": {
+    "model": "Claude 3.5 Sonnet",
+    "status": "skipped \u2014 no ANTHROPIC_API_KEY"
+  },
+  "GPT-4o": {
+    "model": "GPT-4o",
+    "status": "skipped \u2014 no OPENAI_API_KEY"
+  },
+  "Llama 3.3-70B (Groq FREE)": {
+    "model": "Llama 3.3-70B (Groq FREE)",
+    "summary": "## MEETING CONTEXT\nBusiness / team meeting\n\n## YOUR TASK\nProvide the following sections clearly:\n\n### 1. EXECUTIVE SUMMARY\nThe meeting discussed large language models (LLMs) and their applications in artificial intelligence. LLMs are designed to understand human language and can generate meaningful sentences, answer questions, and translate languages. However, they have limitations and require human verification to ensure accuracy. The future of LLMs is expected to be more accurate and efficient.\n\n### 2. KEY DECISIONS MADE\nNo formal decisions identified.\n\n### 3. ACTION ITEMS\nNo explicit action items identified.\n\n### 4. TOPICS DISCUSSED\n* Introduction to large language models (LLMs)\n* Applications of LLMs in artificial intelligence\n* Limitations of LLMs\n* Future of LLMs\n* Retrieval auto-generation model\n\n### 5. MEETING SENTIMENT\nNeutral - The overall tone of the meeting was informative, with speakers providing an overview of LLMs and their potential applications without expressing any strong emotions or biases.",
+    "tokens": 1109,
+    "cost_usd": 0.0,
+    "latency_sec": 0.95,
+    "status": "success"
+  }
+}

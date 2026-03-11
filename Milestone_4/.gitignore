@@ -1,0 +1,53 @@
+# ── API Keys & Secrets ──────────────────────
+.env
+*.env
+secrets.json
+api_keys.txt
+
+# ── Python ───────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+*.egg-info/
+dist/
+build/
+
+# ── Audio Files (too large for GitHub) ──────
+*.mp3
+*.wav
+*.m4a
+*.ogg
+*.flac
+*.mpeg
+*.mp4
+# Keep sample placeholder
+!data/.gitkeep
+
+# ── Model Cache (very large) ─────────────────
+.cache/
+models/
+*.pt
+*.bin
+*.onnx
+
+# ── Generated Outputs ────────────────────────
+outputs/*.pdf
+outputs/*.png
+outputs/*.json
+# Keep placeholder
+!outputs/.gitkeep
+
+# ── Jupyter Checkpoints ──────────────────────
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# ── OS Files ─────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── IDE ──────────────────────────────────────
+.vscode/
+.idea/
+*.swp

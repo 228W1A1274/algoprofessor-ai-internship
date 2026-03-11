@@ -1,0 +1,42 @@
+# ============================================================
+# MeetScribe — AI Meeting Intelligence Tool
+# AlgoProfessor AI Internship | Milestone 4 | Day 25
+# ============================================================
+
+# ── Audio Processing ──────────────────────────────────────
+faster-whisper==1.0.3          # 4x faster Whisper, same accuracy
+pyannote.audio==3.1.1          # Speaker diarisation
+librosa==0.10.2                # Audio loading & resampling
+soundfile==0.12.1              # Audio file I/O
+pydub==0.25.1                  # Audio format conversion
+
+# ── LLM APIs ─────────────────────────────────────────────
+groq==0.9.0                    # FREE Llama 3.3 70B (primary LLM)
+anthropic==0.34.2              # Claude 3.5 Sonnet (optional)
+openai==1.40.0                 # GPT-4o (optional - requires credits)
+
+# ── PDF Generation ───────────────────────────────────────
+reportlab==4.2.2               # PDF creation and formatting
+
+# ── Web UI ───────────────────────────────────────────────
+gradio==4.42.0                 # Gradio web interface
+
+# ── Data & Utilities ─────────────────────────────────────
+numpy==1.26.4                  # Numerical operations
+requests==2.32.3               # HTTP requests (Slack webhook)
+python-dotenv==1.0.1           # Load .env files locally
+
+# ── Visualisation ────────────────────────────────────────
+matplotlib==3.9.2              # Charts and graphs
+
+# ── Install Notes ────────────────────────────────────────
+# In Google Colab, install with:
+#   !pip install -r requirements.txt
+#
+# Locally, install with:
+#   pip install -r requirements.txt
+#
+# pyannote.audio also requires:
+#   - HuggingFace token (huggingface.co/settings/tokens)
+#   - Accept model license at:
+#     huggingface.co/pyannote/speaker-diarization-3.1

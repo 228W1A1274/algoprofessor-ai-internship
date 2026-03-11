@@ -1,0 +1,182 @@
+[
+  {
+    "speaker": "SPEAKER_00",
+    "start": 0.18,
+    "end": 4.34,
+    "text": "Hello everyone, today I am going to talk about the large language models commonly known"
+  },
+  {
+    "speaker": "SPEAKER_01",
+    "start": 4.34,
+    "end": 4.98,
+    "text": "as LLMs."
+  },
+  {
+    "speaker": "SPEAKER_00",
+    "start": 5.42,
+    "end": 9.22,
+    "text": "Large language models are the type of artificial intelligence designed to understand"
+  },
+  {
+    "speaker": "SPEAKER_01",
+    "start": 9.22,
+    "end": 10.58,
+    "text": "ungenerated human language."
+  },
+  {
+    "speaker": "SPEAKER_00",
+    "start": 10.96,
+    "end": 14.76,
+    "text": "They are built using deep learning techniques, especially neural networks called transformer"
+  },
+  {
+    "speaker": "SPEAKER_01",
+    "start": 14.76,
+    "end": 15.24,
+    "text": "models."
+  },
+  {
+    "speaker": "SPEAKER_00",
+    "start": 15.72,
+    "end": 19.76,
+    "text": "These models are trained on massive amounts of text data, such as books, articles, websites,"
+  },
+  {
+    "speaker": "SPEAKER_01",
+    "start": 20.02,
+    "end": 21.9,
+    "text": "and conservations to learn patterns in language."
+  },
+  {
+    "speaker": "SPEAKER_00",
+    "start": 22.74,
+    "end": 24.78,
+    "text": "An LLM does not actually think like humans."
+  },
+  {
+    "speaker": "SPEAKER_01",
+    "start": 25.24,
+    "end": 29.78,
+    "text": "Instead, it predicts the most likely next word based on a context of previous words."
+  },
+  {
+    "speaker": "SPEAKER_00",
+    "start": 29.78,
+    "end": 35.08,
+    "text": "By doing this repeatedly, it can generate meaningful sentences, answer questions, summarize"
+  },
+  {
+    "speaker": "SPEAKER_01",
+    "start": 35.08,
+    "end": 38.16,
+    "text": "documents, translate languages, and even write code."
+  },
+  {
+    "speaker": "SPEAKER_00",
+    "start": 38.76,
+    "end": 44.16,
+    "text": "One popular example is chargeivity, which can assist users in learning, programming, writing"
+  },
+  {
+    "speaker": "SPEAKER_01",
+    "start": 44.16,
+    "end": 46.7,
+    "text": "and problems-solving through natural conversations."
+  },
+  {
+    "speaker": "SPEAKER_00",
+    "start": 47.5,
+    "end": 52.4,
+    "text": "LLMs are also used in virtual assistants, customer support chatboards, education platforms,"
+  },
+  {
+    "speaker": "SPEAKER_01",
+    "start": 52.76,
+    "end": 53.94,
+    "text": "and content creation tools."
+  },
+  {
+    "speaker": "SPEAKER_00",
+    "start": 54.86,
+    "end": 57.72,
+    "text": "However, LLMs also have the limitations."
+  },
+  {
+    "speaker": "SPEAKER_01",
+    "start": 57.72,
+    "end": 63.44,
+    "text": "They can sometimes produce incorrect information because they rely on patterns learned from"
+  },
+  {
+    "speaker": "SPEAKER_00",
+    "start": 63.44,
+    "end": 65.52,
+    "text": "the data rather than real understanding."
+  },
+  {
+    "speaker": "SPEAKER_01",
+    "start": 66.12,
+    "end": 70.26,
+    "text": "Therefore, human verification is still important when using age-generated context."
+  },
+  {
+    "speaker": "SPEAKER_00",
+    "start": 70.74,
+    "end": 76.74,
+    "text": "In futures, LLMs are expected to become more accurate, more efficient, and better at reasoning"
+  },
+  {
+    "speaker": "SPEAKER_01",
+    "start": 76.74,
+    "end": 77.84,
+    "text": "on personalization."
+  },
+  {
+    "speaker": "SPEAKER_00",
+    "start": 78.2,
+    "end": 82.38,
+    "text": "They will likely play a major role in humans' interact with technology."
+  },
+  {
+    "speaker": "SPEAKER_01",
+    "start": 82.72,
+    "end": 89.02,
+    "text": "In conclusion, large-language models represent a significant step forward in artificial intelligence,"
+  },
+  {
+    "speaker": "SPEAKER_00",
+    "start": 89.4,
+    "end": 95.76,
+    "text": "enabling more natural communication between the humans and missions and opening new possibilities"
+  },
+  {
+    "speaker": "SPEAKER_01",
+    "start": 95.76,
+    "end": 96.64,
+    "text": "of an innovation."
+  },
+  {
+    "speaker": "SPEAKER_00",
+    "start": 97.44,
+    "end": 103.4,
+    "text": "LLMs also consists of an rack model, which is nothing but a retrieval auto-generation that"
+  },
+  {
+    "speaker": "SPEAKER_01",
+    "start": 103.4,
+    "end": 109.74,
+    "text": "is used to take the data from the PDFs and other documents and generate the answer depending"
+  },
+  {
+    "speaker": "SPEAKER_00",
+    "start": 109.74,
+    "end": 111.96,
+    "text": "upon the query we provided to the LLMs."
+  },
+  {
+    "speaker": "SPEAKER_01",
+    "start": 111.96,
+    "end": 113.62,
+    "text": "Thank you for giving this opportunity."
+  }
+]
