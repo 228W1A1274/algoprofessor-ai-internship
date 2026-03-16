@@ -1,0 +1,21 @@
+# CodeXcelerate — Day 30 Milestone 5
+# AlgoProfessor AI R&D Internship 2026
+#
+# Install with: pip install -r requirements.txt
+#
+# System dependencies (NOT installable via pip):
+#   Linux:  sudo apt-get install -y clang libomp-dev
+#           wget .../hyperfine_1.18.0_amd64.deb && dpkg -i ...
+#   Mac:    brew install llvm hyperfine
+#   Colab:  handled automatically by Cell 1 in the notebook
+
+# ── LLM API ──────────────────────────────────────────────────────────────────
+groq>=0.9.0                  # Groq API client (free tier, Llama 3.3 70B)
+
+# ── Data & Visualisation ─────────────────────────────────────────────────────
+pandas>=2.0.0                # DataFrame for benchmark results
+plotly>=5.18.0               # Interactive charts
+rich>=13.0.0                 # Beautiful terminal output
+
+# ── Utilities ────────────────────────────────────────────────────────────────
+python-dotenv>=1.0.0         # Load GROQ_API_KEY from .env file locally

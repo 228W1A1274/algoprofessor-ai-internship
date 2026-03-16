@@ -1,0 +1,39 @@
+# .gitignore for CodeXcelerate — Day 30 Milestone 5
+
+# ── API Keys (NEVER commit these) ────────────────────────────────────────────
+.env
+*.key
+secrets.json
+
+# ── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+env/
+
+# ── Compiled Binaries ─────────────────────────────────────────────────────────
+# Keep .cpp files (generated C++ is useful to review)
+# But don't commit compiled binaries
+src/examples/bubble_sort
+src/examples/prime_sieve
+src/examples/matrix_multiply
+/tmp/
+
+# ── Notebook Checkpoints ──────────────────────────────────────────────────────
+.ipynb_checkpoints/
+
+# ── Generated Outputs (large files) ──────────────────────────────────────────
+# Uncomment below if outputs are too large for GitHub (>100MB)
+# outputs/*.json
+# outputs/*.html
+
+# ── OS Files ─────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini

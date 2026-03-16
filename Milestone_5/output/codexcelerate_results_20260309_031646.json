@@ -1,0 +1,79 @@
+{
+  "timestamp": "20260309_031646",
+  "model_used": "Groq: llama-3.3-70b-versatile",
+  "api_provider": "Groq (Free Tier)",
+  "cost_usd": 0.0,
+  "config": {
+    "model": "llama-3.3-70b-versatile",
+    "temperature": "0.1",
+    "max_tokens": "4096",
+    "warmup_runs": "3",
+    "bench_runs": "10",
+    "output_dir": "/tmp/codexcelerate"
+  },
+  "programs": {
+    "bubble_sort": {
+      "description": "Bubble Sort on 10,000 random integers",
+      "python_code": "import random\n\n# Sort array using bubble sort algorithm\ndef bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n - i - 1):\n            if arr[j] > arr[j + 1]:\n                arr[j], arr[j + 1] = arr[j + 1], arr[j]\n    return arr\n\n# Generate 10,000 random integers between 0 and 100,000\nrandom.seed(42)\ndata = [random.randint(0, 100000) for _ in range(10000)]\n\nresult = bubble_sort(data)\nprint(f\"Sorted {len(result)} elements\")\nprint(f\"First 5: {result[:5]}\")\nprint(f\"Last 5:  {result[-5:]}\")",
+      "cpp_basic": "#include <iostream>\n#include <vector>\n#include <random>\n#include <algorithm>\n\n// Function to perform bubble sort on a vector\nstd::vector<long long> bubble_sort(const std::vector<long long>& arr) {\n    std::vector<long long> sorted_arr = arr;\n    long long n = sorted_arr.size();\n    for (long long i = 0; i < n; ++i) {\n        for (long long j = 0; j < n - i - 1; ++j) {\n            if (sorted_arr[j] > sorted_arr[j + 1]) {\n                std::swap(sorted_arr[j], sorted_arr[j + 1]);\n            }\n        }\n    }\n    return sorted_arr;\n}\n\nint main() {\n    // Initialize random number generator with seed 42\n    std::random_device rd;\n    std::mt19937 gen(42);\n    std::uniform_int_distribution<long long> dis(0, 100000);\n\n    // Generate 10,000 random integers between 0 and 100,000\n    std::vector<long long> data;\n    data.reserve(10000);\n    for (int i = 0; i < 10000; ++i) {\n        data.push_back(dis(gen));\n    }\n\n    // Perform bubble sort on the generated data\n    std::vector<long long> result = bubble_sort(data);\n\n    // Print the results\n    std::cout << \"Sorted \" << result.size() << \" elements\" << std::endl;\n    std::cout << \"First 5: \";\n    for (int i = 0; i < 5; ++i) {\n        std::cout << result[i] << \" \";\n    }\n    std::cout << std::endl;\n    std::cout << \"Last 5: \";\n    for (int i = result.size() - 5; i < result.size(); ++i) {\n        std::cout << result[i] << \" \";\n    }\n    std::cout << std::endl;\n\n    return 0;\n}",
+      "cpp_openmp": "#include <omp.h>\n#include <iostream>\n#include <vector>\n#include <random>\n#include <algorithm>\n\n// Function to perform bubble sort on a vector\nstd::vector<long long> bubble_sort(const std::vector<long long>& arr) {\n    std::vector<long long> sorted_arr = arr;\n    long long n = sorted_arr.size();\n    for (long long i = 0; i < n; ++i) {\n        for (long long j = 0; j < n - i - 1; ++j) {\n            if (sorted_arr[j] > sorted_arr[j + 1]) {\n                std::swap(sorted_arr[j], sorted_arr[j + 1]);\n            }\n        }\n    }\n    return sorted_arr;\n}\n\nint main() {\n    // Initialize random number generator with seed 42\n    std::random_device rd;\n    std::mt19937 gen(42);\n    std::uniform_int_distribution<long long> dis(0, 100000);\n\n    // Generate 10,000 random integers between 0 and 100,000\n    std::vector<long long> data;\n    data.reserve(10000);\n    #pragma omp parallel for\n    for (int i = 0; i < 10000; ++i) {\n        #pragma omp critical\n        data.push_back(dis(gen));\n    }\n\n    // Perform bubble sort on the generated data\n    std::vector<long long> result = bubble_sort(data);\n\n    // Print the results\n    std::cout << \"Sorted \" << result.size() << \" elements\" << std::endl;\n    std::cout << \"First 5: \";\n    #pragma omp parallel for\n    for (int i = 0; i < 5; ++i) {\n        #pragma omp critical\n        std::cout << result[i] << \" \";\n    }\n    std::cout << std::endl;\n    std::cout << \"Last 5: \";\n    #pragma omp parallel for\n    for (int i = result.size() - 5; i < result.size(); ++i) {\n        #pragma omp critical\n        std::cout << result[i] << \" \";\n    }\n    std::cout << std::endl;\n\n    return 0;\n}",
+      "tokens_used": 1969,
+      "benchmark": {
+        "program": "bubble_sort",
+        "py_mean_ms": 5797.43,
+        "py_std_ms": 1034.64,
+        "py_min_ms": 4857.47,
+        "py_max_ms": 7400.51,
+        "cpp_mean_ms": 242.4913,
+        "cpp_std_ms": 45.0778,
+        "cpp_min_ms": 153.6074,
+        "cpp_max_ms": 294.4845,
+        "speedup": 23.9,
+        "bench_time_s": 78.1,
+        "runs": 10
+      }
+    },
+    "prime_sieve": {
+      "description": "Sieve of Eratosthenes \u2014 find all primes up to 5,000,000",
+      "python_code": "# Find all prime numbers up to limit using the Sieve of Eratosthenes\ndef sieve_of_eratosthenes(limit):\n    is_prime = [True] * (limit + 1)\n    is_prime[0] = is_prime[1] = False\n\n    i = 2\n    while i * i <= limit:\n        if is_prime[i]:\n            for j in range(i * i, limit + 1, i):\n                is_prime[j] = False\n        i += 1\n\n    return [num for num in range(2, limit + 1) if is_prime[num]]\n\nLIMIT = 5_000_000\nprimes = sieve_of_eratosthenes(LIMIT)\nprint(f\"Found {len(primes)} primes up to {LIMIT:,}\")\nprint(f\"Largest prime: {primes[-1]}\")\nprint(f\"First 10 primes: {primes[:10]}\")",
+      "cpp_basic": "#include <iostream>\n#include <vector>\n#include <random>\n#include <numeric>\n#include <algorithm>\n\nstd::vector<long long> sieve_of_eratosthenes(long long limit) {\n    std::vector<bool> is_prime(limit + 1, true);\n    is_prime[0] = is_prime[1] = false;\n\n    for (long long i = 2; i * i <= limit; ++i) {\n        if (is_prime[i]) {\n            for (long long j = i * i; j <= limit; j += i) {\n                is_prime[j] = false;\n            }\n        }\n    }\n\n    std::vector<long long> primes;\n    for (long long num = 2; num <= limit; ++num) {\n        if (is_prime[num]) {\n            primes.push_back(num);\n        }\n    }\n\n    return primes;\n}\n\nint main() {\n    const long long LIMIT = 5'000'000;\n    std::vector<long long> primes = sieve_of_eratosthenes(LIMIT);\n\n    std::cout << \"Found \" << primes.size() << \" primes up to \" << LIMIT << \"\\n\";\n    std::cout << \"Largest prime: \" << primes.back() << \"\\n\";\n    std::cout << \"First 10 primes: \";\n    for (size_t i = 0; i < 10 && i < primes.size(); ++i) {\n        std::cout << primes[i] << \" \";\n    }\n    std::cout << \"\\n\";\n\n    return 0;\n}",
+      "cpp_openmp": "#include <omp.h>\n#include <iostream>\n#include <vector>\n#include <random>\n#include <numeric>\n#include <algorithm>\n\nstd::vector<long long> sieve_of_eratosthenes(long long limit) {\n    std::vector<bool> is_prime(limit + 1, true);\n    is_prime[0] = is_prime[1] = false;\n\n    for (long long i = 2; i * i <= limit; ++i) {\n        if (is_prime[i]) {\n            for (long long j = i * i; j <= limit; j += i) {\n                is_prime[j] = false;\n            }\n        }\n    }\n\n    std::vector<long long> primes;\n    #pragma omp parallel for\n    for (long long num = 2; num <= limit; ++num) {\n        if (is_prime[num]) {\n            #pragma omp critical\n            primes.push_back(num);\n        }\n    }\n\n    return primes;\n}\n\nint main() {\n    omp_set_num_threads(omp_get_max_threads());\n    const long long LIMIT = 5'000'000;\n    std::vector<long long> primes = sieve_of_eratosthenes(LIMIT);\n\n    std::cout << \"Found \" << primes.size() << \" primes up to \" << LIMIT << \"\\n\";\n    std::cout << \"Largest prime: \" << primes.back() << \"\\n\";\n    std::cout << \"First 10 primes: \";\n    #pragma omp parallel for\n    for (size_t i = 0; i < 10 && i < primes.size(); ++i) {\n        #pragma omp critical\n        std::cout << primes[i] << \" \";\n    }\n    std::cout << \"\\n\";\n\n    return 0;\n}",
+      "tokens_used": 1700,
+      "benchmark": {
+        "program": "prime_sieve",
+        "py_mean_ms": 835.82,
+        "py_std_ms": 20.99,
+        "py_min_ms": 795.51,
+        "py_max_ms": 865.95,
+        "cpp_mean_ms": 258.0853,
+        "cpp_std_ms": 185.6407,
+        "cpp_min_ms": 88.9771,
+        "cpp_max_ms": 589.7998,
+        "speedup": 3.2,
+        "bench_time_s": 14.3,
+        "runs": 10
+      }
+    },
+    "matrix_multiply": {
+      "description": "Matrix multiplication of two 200x200 matrices (pure Python)",
+      "python_code": "import random\n\n# Create a matrix filled with random floats\ndef create_matrix(rows, cols, seed=42):\n    random.seed(seed)\n    return [[random.uniform(0, 1) for _ in range(cols)] for _ in range(rows)]\n\n# Multiply two matrices using the standard O(n^3) algorithm\ndef matrix_multiply(A, B):\n    rows_A = len(A)\n    cols_A = len(A[0])\n    cols_B = len(B[0])\n    C = [[0.0] * cols_B for _ in range(rows_A)]\n    for i in range(rows_A):\n        for j in range(cols_B):\n            for k in range(cols_A):\n                C[i][j] += A[i][k] * B[k][j]\n    return C\n\nSIZE = 200\nA = create_matrix(SIZE, SIZE, seed=42)\nB = create_matrix(SIZE, SIZE, seed=123)\n\nC = matrix_multiply(A, B)\nprint(f\"Multiplied {SIZE}x{SIZE} matrices\")\nprint(f\"Result[0][0] = {C[0][0]:.6f}\")\nprint(f\"Result[0][1] = {C[0][1]:.6f}\")",
+      "cpp_basic": "#include <iostream>\n#include <vector>\n#include <random>\n\n// Create a matrix filled with random floats\nstd::vector<std::vector<double>> create_matrix(int rows, int cols, int seed) {\n    std::mt19937 gen(seed);\n    std::uniform_real_distribution<double> dis(0.0, 1.0);\n    std::vector<std::vector<double>> matrix(rows, std::vector<double>(cols));\n    for (auto& row : matrix) {\n        for (auto& val : row) {\n            val = dis(gen);\n        }\n    }\n    return matrix;\n}\n\n// Multiply two matrices using the standard O(n^3) algorithm\nstd::vector<std::vector<double>> matrix_multiply(const std::vector<std::vector<double>>& A, const std::vector<std::vector<double>>& B) {\n    int rows_A = A.size();\n    int cols_A = A[0].size();\n    int cols_B = B[0].size();\n    std::vector<std::vector<double>> C(rows_A, std::vector<double>(cols_B, 0.0));\n    for (int i = 0; i < rows_A; ++i) {\n        for (int j = 0; j < cols_B; ++j) {\n            for (int k = 0; k < cols_A; ++k) {\n                C[i][j] += A[i][k] * B[k][j];\n            }\n        }\n    }\n    return C;\n}\n\nint main() {\n    const int SIZE = 200;\n    auto A = create_matrix(SIZE, SIZE, 42);\n    auto B = create_matrix(SIZE, SIZE, 123);\n\n    auto C = matrix_multiply(A, B);\n    std::cout << \"Multiplied \" << SIZE << \"x\" << SIZE << \" matrices\" << std::endl;\n    std::cout << \"Result[0][0] = \" << C[0][0] << std::endl;\n    std::cout << \"Result[0][1] = \" << C[0][1] << std::endl;\n    return 0;\n}",
+      "cpp_openmp": "#include <omp.h>\n#include <iostream>\n#include <vector>\n#include <random>\n\n// Create a matrix filled with random floats\nstd::vector<std::vector<double>> create_matrix(int rows, int cols, int seed) {\n    std::mt19937 gen(seed);\n    std::uniform_real_distribution<double> dis(0.0, 1.0);\n    std::vector<std::vector<double>> matrix(rows, std::vector<double>(cols));\n    #pragma omp parallel for\n    for (int i = 0; i < rows; ++i) {\n        for (int j = 0; j < cols; ++j) {\n            matrix[i][j] = dis(gen);\n        }\n    }\n    return matrix;\n}\n\n// Multiply two matrices using the standard O(n^3) algorithm\nstd::vector<std::vector<double>> matrix_multiply(const std::vector<std::vector<double>>& A, const std::vector<std::vector<double>>& B) {\n    int rows_A = A.size();\n    int cols_A = A[0].size();\n    int cols_B = B[0].size();\n    std::vector<std::vector<double>> C(rows_A, std::vector<double>(cols_B, 0.0));\n    #pragma omp parallel for\n    for (int i = 0; i < rows_A; ++i) {\n        for (int j = 0; j < cols_B; ++j) {\n            double sum = 0.0;\n            #pragma omp parallel for reduction(+:sum)\n            for (int k = 0; k < cols_A; ++k) {\n                sum += A[i][k] * B[k][j];\n            }\n            #pragma omp atomic\n            C[i][j] = sum;\n        }\n    }\n    return C;\n}\n\nint main() {\n    omp_set_num_threads(omp_get_max_threads());\n    const int SIZE = 200;\n    auto A = create_matrix(SIZE, SIZE, 42);\n    auto B = create_matrix(SIZE, SIZE, 123);\n\n    auto C = matrix_multiply(A, B);\n    std::cout << \"Multiplied \" << SIZE << \"x\" << SIZE << \" matrices\" << std::endl;\n    std::cout << \"Result[0][0] = \" << C[0][0] << std::endl;\n    std::cout << \"Result[0][1] = \" << C[0][1] << std::endl;\n    return 0;\n}",
+      "tokens_used": 2161,
+      "benchmark": {
+        "program": "matrix_multiply",
+        "py_mean_ms": 760.07,
+        "py_std_ms": 10.18,
+        "py_min_ms": 738.88,
+        "py_max_ms": 775.3,
+        "cpp_mean_ms": 145.008,
+        "cpp_std_ms": 145.6036,
+        "cpp_min_ms": 53.3887,
+        "cpp_max_ms": 434.3804,
+        "speedup": 5.2,
+        "bench_time_s": 11.8,
+        "runs": 10
+      }
+    }
+  }
+}

@@ -1,0 +1,4 @@
+program,py_mean_ms,py_std_ms,py_min_ms,py_max_ms,cpp_mean_ms,cpp_std_ms,cpp_min_ms,cpp_max_ms,speedup,bench_time_s,runs
+bubble_sort,5797.43,1034.64,4857.47,7400.51,242.4913,45.0778,153.6074,294.4845,23.9,78.1,10
+prime_sieve,835.82,20.99,795.51,865.95,258.0853,185.6407,88.9771,589.7998,3.2,14.3,10
+matrix_multiply,760.07,10.18,738.88,775.3,145.008,145.6036,53.3887,434.3804,5.2,11.8,10
