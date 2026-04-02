@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.Python
+
+# Virtual environments
+venv/
+env/
+.venv/
+.env/
+
+# API keys — NEVER commit these
+.env
+secrets.py
+api_keys.py
+*.key
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Output files (generated at runtime)
+output/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp

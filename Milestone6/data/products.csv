@@ -1,0 +1,21 @@
+name,category,brand,features,ground_truth_price
+Sony BRAVIA 55-inch 4K LED TV,Television,Sony,"4K UHD, Smart TV Android, HDR10, 2 HDMI ports, 60Hz, new 2024",748.00
+Samsung 65-inch QLED 4K TV,Television,Samsung,"4K QLED, Smart TV Tizen, 120Hz, 4 HDMI, Quantum HDR, new 2024",1097.99
+LG 43-inch 4K UHD Smart TV,Television,LG,"4K UHD, WebOS Smart TV, 60Hz, HDR, 2 HDMI ports",296.99
+TCL 32-inch HD Roku Smart TV,Television,TCL,"HD 720p, Roku built-in, 2 HDMI, budget tier",129.99
+Hisense 50-inch 4K ULED TV,Television,Hisense,"4K ULED, Google TV, Dolby Vision, 60Hz, 3 HDMI",329.99
+Apple MacBook Air 13-inch M3,Laptop,Apple,"M3 chip, 8GB RAM, 256GB SSD, 13.6-inch Retina, macOS, 2024",1099.00
+Dell XPS 15 Intel Core i7,Laptop,Dell,"Intel Core i7-13700H, 16GB RAM, 512GB SSD, 15.6-inch OLED, Win11",1599.99
+HP Pavilion 15 AMD Ryzen 5,Laptop,HP,"AMD Ryzen 5 7530U, 8GB RAM, 256GB SSD, 15.6-inch FHD, Win11",449.99
+Lenovo IdeaPad 3 Intel Core i3,Laptop,Lenovo,"Intel Core i3-1215U, 8GB RAM, 256GB SSD, 15.6-inch FHD, Win11",329.99
+Microsoft Surface Pro 9,Laptop,Microsoft,"Intel Core i5, 8GB RAM, 256GB SSD, 13-inch touchscreen, Win11 Pro",999.99
+Apple iPhone 15 128GB,Smartphone,Apple,"A16 Bionic, 6.1-inch OLED, 48MP camera, 5G, iOS 17",699.00
+Samsung Galaxy S24 256GB,Smartphone,Samsung,"Snapdragon 8 Gen 3, 6.2-inch AMOLED, 50MP, 5G, Android 14",799.99
+Google Pixel 8 128GB,Smartphone,Google,"Google Tensor G3, 6.2-inch OLED, 50MP, 5G, Android 14",599.00
+OnePlus 12 256GB,Smartphone,OnePlus,"Snapdragon 8 Gen 3, 6.82-inch AMOLED, 50MP Hasselblad, 5G",699.99
+Motorola Moto G Power 5G 128GB,Smartphone,Motorola,"Snapdragon 4 Gen 1, 6.5-inch LCD, 50MP, 5G, 5000mAh budget",199.99
+Sony WH-1000XM5 Wireless ANC,Headphones,Sony,"Over-ear, ANC, 30hr battery, Bluetooth 5.2, Hi-Res Audio",279.99
+Apple AirPods Pro 2nd Generation,Headphones,Apple,"In-ear, ANC, Adaptive Transparency, H2 chip, USB-C",189.00
+Bose QuietComfort 45,Headphones,Bose,"Over-ear, ANC, 24hr battery, Bluetooth 5.1, folding design",249.00
+JBL Tune 770NC,Headphones,JBL,"Over-ear, ANC, 70hr battery, Bluetooth 5.3, budget-mid tier",79.95
+Jabra Evolve2 65 Business Headset,Headphones,Jabra,"Over-ear, ANC, 37hr battery, Bluetooth 5.0, business UC certified",249.99

@@ -1,0 +1,22 @@
+# PriceOracle — Milestone 6
+# Install all dependencies with:
+#   pip install -r requirements.txt
+
+# LLM APIs
+google-generativeai>=0.7.0
+groq>=0.9.0
+openai>=1.30.0          # optional — only needed for GPT-4o-mini
+
+# Data handling
+pandas>=2.0.0
+numpy>=1.26.0
+
+# Evaluation metrics
+scikit-learn>=1.4.0
+
+# Visualization
+matplotlib>=3.8.0
+seaborn>=0.13.0
+
+# Utilities
+python-dotenv>=1.0.0    # optional — for loading API keys from .env file
