@@ -1,0 +1,29 @@
+# render.yaml — Render Deployment Configuration
+# -----------------------------------------------
+# This file tells Render HOW to deploy our backend.
+# Render reads this file automatically from your GitHub repo.
+
+services:
+  - type: web                      # This is a web service (has a public URL)
+    name: talentwin-backend        # Name shown in your Render dashboard
+    runtime: python                # We're running Python
+    region: oregon                 # US West coast (good default)
+    plan: free                     # FREE tier (spins down after 15min inactivity)
+    
+    rootDir: .                     # Root of our project
+    
+    buildCommand: pip install -r requirements.txt   # Install all dependencies
+    startCommand: cd backend && uvicorn main:app --host 0.0.0.0 --port $PORT
+    
+    # Environment variables (set these in Render dashboard, NOT here)
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false               # Must be set manually in Render dashboard
+      - key: GITHUB_USERNAME
+        sync: false
+      - key: GITHUB_TOKEN
+        sync: false
+      - key: CALENDLY_URL
+        sync: false
+      - key: CORS_ORIGINS
+        sync: false

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TalentTwin — AI Career Agent</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Google Fonts for clean typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+  <!-- ════════════════════════════════════════════
+       HEADER — Name, title, status
+  ════════════════════════════════════════════ -->
+  <header class="header">
+    <div class="header-left">
+      <!-- Avatar circle with initials (filled by JS) -->
+      <div class="avatar" id="avatar">AI</div>
+      <div class="header-info">
+        <h1 id="candidate-name">Loading profile...</h1>
+        <p id="candidate-title">AI Career Agent</p>
+      </div>
+    </div>
+    <div class="header-right">
+      <!-- Green dot = AI is online and ready -->
+      <span class="status-dot"></span>
+      <span class="status-text">AI Agent Online</span>
+    </div>
+  </header>
+
+  <!-- ════════════════════════════════════════════
+       MAIN LAYOUT — Sidebar + Chat
+  ════════════════════════════════════════════ -->
+  <div class="app-container">
+
+    <!-- LEFT SIDEBAR — Profile info -->
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <h3>👤 About</h3>
+        <p id="bio-text">Loading...</p>
+      </div>
+
+      <div class="sidebar-section">
+        <h3>📍 Location</h3>
+        <p id="location-text">—</p>
+      </div>
+
+      <div class="sidebar-section">
+        <h3>💻 Top Skills</h3>
+        <div id="skills-tags" class="tags-container"></div>
+      </div>
+
+      <div class="sidebar-section">
+        <h3>🔗 Links</h3>
+        <div id="links-container"></div>
+      </div>
+
+      <div class="sidebar-section">
+        <h3>📁 Top Projects</h3>
+        <div id="projects-list"></div>
+      </div>
+
+      <!-- ── CALENDLY BUTTON ── -->
+      <div class="sidebar-section">
+        <h3>📅 Schedule Interview</h3>
+        <button class="calendly-btn" id="calendly-btn" onclick="openCalendly()">
+          📅 Book a Meeting
+        </button>
+        <p class="calendly-hint">Click to schedule a call directly</p>
+      </div>
+    </aside>
+
+    <!-- RIGHT PANEL — Chat Interface -->
+    <main class="chat-panel">
+
+      <!-- Suggested questions (quick-start buttons) -->
+      <div class="suggestions" id="suggestions">
+        <p class="suggestions-label">💡 Try asking:</p>
+        <div class="suggestions-grid">
+          <button class="suggestion-btn" onclick="sendSuggestion('What are your strongest technical skills?')">
+            What are your strongest technical skills?
+          </button>
+          <button class="suggestion-btn" onclick="sendSuggestion('Tell me about your best GitHub project')">
+            Tell me about your best project
+          </button>
+          <button class="suggestion-btn" onclick="sendSuggestion('What is your work experience?')">
+            What is your work experience?
+          </button>
+          <button class="suggestion-btn" onclick="sendSuggestion('Are you available for a full-time role?')">
+            Are you available for a full-time role?
+          </button>
+          <button class="suggestion-btn" onclick="sendSuggestion('What makes you stand out from other candidates?')">
+            What makes you stand out?
+          </button>
+          <button class="suggestion-btn" onclick="sendSuggestion('How can I schedule an interview?')">
+            How can I schedule an interview?
+          </button>
+        </div>
+      </div>
+
+      <!-- Chat messages area -->
+      <div class="chat-messages" id="chat-messages">
+        <!-- Messages are added here dynamically by app.js -->
+      </div>
+
+      <!-- Input area at the bottom -->
+      <div class="chat-input-area">
+        <div class="input-wrapper">
+          <textarea
+            id="question-input"
+            class="question-input"
+            placeholder="Ask me anything about the candidate..."
+            rows="1"
+            onkeydown="handleKeyDown(event)"
+            oninput="autoResize(this)"
+          ></textarea>
+          <button class="send-btn" id="send-btn" onclick="sendMessage()">
+            <span id="send-icon">➤</span>
+          </button>
+        </div>
+        <p class="input-hint">Press Enter to send · Shift+Enter for new line</p>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- ════════════════════════════════════════════
+       CALENDLY MODAL — Opens when button clicked
+  ════════════════════════════════════════════ -->
+  <div class="modal-overlay" id="calendly-modal" onclick="closeCalendly(event)">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>📅 Schedule an Interview</h2>
+        <button class="modal-close" onclick="closeCalendly()">✕</button>
+      </div>
+      <!-- Calendly embed goes here -->
+      <div id="calendly-embed-container">
+        <!-- The Calendly widget is loaded dynamically by JS -->
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+# TalentTwin AI Agent — Python Dependencies
+# Install all with: pip install -r requirements.txt
+
+# ── Web Framework ──
+fastapi==0.115.0
+uvicorn[standard]==0.32.0
+
+# ── AI (stable SDK — replaces google-genai) ──
+google-generativeai==0.8.3
+
+# ── HTTP Requests ──
+requests==2.32.3
+
+# ── Environment Variables ──
+python-dotenv==1.0.1
+
+# ── Data Validation ──
+pydantic==2.9.2

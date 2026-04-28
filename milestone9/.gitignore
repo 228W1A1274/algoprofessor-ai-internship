@@ -1,0 +1,24 @@
+# ── Secret files — NEVER commit these ──
+.env
+*.env
+
+# ── Python compiled files ──
+__pycache__/
+*.py[cod]
+*.pyc
+
+# ── Virtual environment ──
+venv/
+env/
+.venv/
+
+# ── IDE files ──
+.vscode/
+.idea/
+*.DS_Store
+
+# ── Data files (regenerated automatically) ──
+data/profile.json
+
+# ── Logs ──
+*.log
