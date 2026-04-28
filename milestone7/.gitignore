@@ -12,8 +12,6 @@ dist/
 build/
 
 # Jupyter
-.ipynb_checkpoints/
-*.ipynb
 
 # API keys — never commit
 .env
