@@ -1,0 +1,81 @@
+# docker-compose.yml
+# ───────────────────
+# Three services:
+#
+#   devsquad-api      FastAPI server (production-equivalent, port 8000)
+#   devsquad-runner   One-shot CLI run  [profile: cli]
+#   code-sandbox      Isolated Python container for QA test execution  [profile: sandbox]
+#
+# Usage
+# ─────
+#   Start API server (main deployment mode):
+#     docker compose up --build devsquad-api
+#
+#   One-shot CLI run:
+#     docker compose --profile cli up --build devsquad-runner
+#
+#   Full stack:
+#     docker compose --profile cli --profile sandbox up --build
+#
+# Prerequisites
+#   Copy .env.example → .env and set GROQ_API_KEY (+ GITHUB_TOKEN if using --push)
+
+version: "3.9"
+
+services:
+
+  # ── FastAPI web server — mirrors what Railway/Render deploy ──────────────
+  devsquad-api:
+    build:
+      context: .
+      dockerfile: Dockerfile        # root-level production Dockerfile
+    container_name: devsquad-api
+    env_file: .env
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./outputs:/app/outputs      # persist generated files to host
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - devsquad-net
+
+  # ── One-shot CLI runner ───────────────────────────────────────────────────
+  devsquad-runner:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.runner
+    container_name: devsquad-runner
+    env_file: .env
+    volumes:
+      - ./outputs:/app/outputs
+    command: >
+      python main.py
+      --task "Build a Python CLI tool that fetches weather data from
+              the Open-Meteo API for a given city and prints current
+              temperature and wind speed."
+    networks:
+      - devsquad-net
+    profiles: [cli]
+
+  # ── Code sandbox (isolated QA execution) ─────────────────────────────────
+  code-sandbox:
+    image: python:3.11-slim
+    container_name: devsquad-sandbox
+    working_dir: /sandbox
+    volumes:
+      - ./outputs:/sandbox
+    stdin_open: true
+    tty: true
+    command: /bin/sh
+    networks:
+      - devsquad-net
+    profiles: [sandbox]
+
+networks:
+  devsquad-net:
+    driver: bridge

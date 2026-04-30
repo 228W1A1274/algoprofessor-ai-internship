@@ -1,0 +1,31 @@
+# docker/Dockerfile.runner
+# ─────────────────────────
+# Builds the container that runs the DevSquad main.py script.
+#
+# Build context: project root (devsquad/)
+# Base image   : python:3.11-slim  (minimal footprint, no build tools needed)
+#
+# Layers are ordered from least-to-most volatile so Docker layer cache is
+# maximally reused during iterative development.
+
+FROM python:3.11-slim
+
+# 1. System deps (only what's needed for PyGithub TLS and git CLI)
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    git \
+    ca-certificates \
+    && rm -rf /var/lib/apt/lists/*
+
+# 2. Python deps (copied first so this layer caches unless requirements change)
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# 3. Application source (changes most often — last layer)
+COPY . .
+
+# 4. Create outputs directory so volume mount works correctly
+RUN mkdir -p outputs
+
+# 5. Default command — override in docker-compose.yml or at runtime
+CMD ["python", "main.py"]

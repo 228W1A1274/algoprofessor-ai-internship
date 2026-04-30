@@ -1,0 +1,29 @@
+# railway.toml
+# ─────────────
+# Railway reads this file automatically when you connect this repo.
+# It tells Railway exactly how to build and start DevSquad.
+#
+# How to deploy on Railway
+# ────────────────────────
+# 1. Go to https://railway.app → New Project → Deploy from GitHub repo
+# 2. Select this repository
+# 3. Railway auto-detects this file — no manual config needed
+# 4. In the Railway dashboard → Variables, add:
+#      GROQ_API_KEY   = your Groq key
+#      GITHUB_TOKEN   = your GitHub token  (only if using --push)
+# 5. Click Deploy
+#
+# Railway assigns a public URL like: https://devsquad-production.up.railway.app
+# Test it:  curl https://your-url.up.railway.app/
+
+[build]
+builder = "DOCKERFILE"          # use the root Dockerfile
+dockerfilePath = "Dockerfile"   # explicit path
+
+[deploy]
+startCommand = "uvicorn api:app --host 0.0.0.0 --port $PORT"
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 3
+
+[environments.production.deploy]
+numReplicas = 1

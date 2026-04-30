@@ -1,0 +1,35 @@
+# render.yaml
+# ────────────
+# Render Blueprint — defines the DevSquad web service declaratively.
+# Render reads this file automatically when you connect this repo.
+#
+# How to deploy on Render
+# ───────────────────────
+# 1. Go to https://render.com → New → Blueprint
+# 2. Connect your GitHub account → select this repo
+# 3. Render reads this file and creates the service automatically
+# 4. In the Render dashboard → Environment, your keys are already listed below
+#    as sync: false so Render prompts you to fill them in securely
+# 5. Click Apply → Deploy
+#
+# Your public URL will be: https://devsquad.onrender.com
+# (or whatever name Render assigns)
+
+services:
+  - type: web
+    name: devsquad
+    runtime: docker              # use the root Dockerfile
+    dockerfilePath: ./Dockerfile
+    plan: free                   # free tier; upgrade for always-on
+    region: oregon
+
+    # Render sets PORT automatically; uvicorn reads it from the Dockerfile CMD
+    healthCheckPath: /
+
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false              # Render will prompt you to enter this value
+      - key: GITHUB_TOKEN
+        sync: false              # optional; leave blank if not pushing to GitHub
+      - key: PYTHONUNBUFFERED
+        value: "1"

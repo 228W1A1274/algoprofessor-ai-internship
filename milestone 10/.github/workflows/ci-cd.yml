@@ -1,0 +1,164 @@
+# .github/workflows/ci-cd.yml
+# ─────────────────────────────
+# CI/CD pipeline for DevSquad.
+#
+# Triggers
+#   push to main     → full pipeline (test → build → deploy)
+#   pull_request     → test + build only (no deploy)
+#
+# What it does
+#   1. CI  — install deps, run pytest, check imports
+#   2. Docker build — build the production image and verify it starts
+#   3. CD  — push image to Docker Hub, trigger Railway redeploy
+#
+# Required GitHub Secrets (Settings → Secrets → Actions → New repository secret)
+#   GROQ_API_KEY          your Groq API key (used in CI smoke test)
+#   DOCKERHUB_USERNAME    your Docker Hub username
+#   DOCKERHUB_TOKEN       Docker Hub access token (not your password)
+#   RAILWAY_TOKEN         Railway API token (from railway.app → Account → Tokens)
+
+name: DevSquad CI/CD
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+env:
+  IMAGE_NAME: devsquad
+  PYTHON_VERSION: "3.11"
+
+jobs:
+
+  # ────────────────────────────────────────────────────────────────────────────
+  # Job 1: CI — install, lint-check imports, run unit tests
+  # ────────────────────────────────────────────────────────────────────────────
+  test:
+    name: Unit Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python ${{ env.PYTHON_VERSION }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip               # cache pip downloads between runs
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Check all modules import correctly
+        # A failed import here means a missing dep or circular import
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: |
+          python -c "import llm_client; print('llm_client OK')"
+          python -c "from agents import build_project_manager, build_developer, build_code_reviewer, build_qa_tester; print('agents OK')"
+          python -c "from tasks import build_tasks; print('tasks OK')"
+          python -c "from tools import run_in_docker, push_to_github; print('tools OK')"
+          python -c "import api; print('api OK')"
+
+      - name: Run unit tests
+        env:
+          GROQ_API_KEY: gsk_test_dummy_key_for_unit_tests
+        run: pytest tests/ -v --tb=short
+
+      - name: Upload test results
+        if: always()              # upload even if tests fail
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results
+          path: .pytest_cache/
+
+
+  # ────────────────────────────────────────────────────────────────────────────
+  # Job 2: Docker build — verify the production image builds and starts
+  # ────────────────────────────────────────────────────────────────────────────
+  docker-build:
+    name: Docker Build
+    runs-on: ubuntu-latest
+    needs: test               # only run if tests pass
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build production image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./Dockerfile
+          push: false           # just build; push happens in the deploy job
+          tags: ${{ env.IMAGE_NAME }}:test
+          cache-from: type=gha  # GitHub Actions cache speeds up rebuilds
+          cache-to: type=gha,mode=max
+
+      - name: Smoke-test the built image (health check)
+        run: |
+          docker run -d \
+            --name devsquad-smoke \
+            -e GROQ_API_KEY=gsk_test_dummy \
+            -p 8000:8000 \
+            ${{ env.IMAGE_NAME }}:test
+          # Wait up to 20s for the server to respond
+          for i in $(seq 1 10); do
+            curl -sf http://localhost:8000/ && echo "Health check passed" && exit 0
+            sleep 2
+          done
+          echo "Health check FAILED" && docker logs devsquad-smoke && exit 1
+
+
+  # ────────────────────────────────────────────────────────────────────────────
+  # Job 3: CD — push to Docker Hub + redeploy on Railway
+  # Only runs on push to main (not on pull_request)
+  # ────────────────────────────────────────────────────────────────────────────
+  deploy:
+    name: Deploy to Railway
+    runs-on: ubuntu-latest
+    needs: docker-build
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Build and push image to Docker Hub
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./Dockerfile
+          push: true
+          tags: |
+            ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Trigger Railway redeploy
+        # Railway CLI redeploys the service linked to RAILWAY_TOKEN
+        run: |
+          npm install -g @railway/cli
+          railway redeploy --service devsquad --yes
+        env:
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+
+      - name: Print deployment summary
+        run: |
+          echo "========================================"
+          echo "  DevSquad deployed successfully"
+          echo "  Image: ${{ secrets.DOCKERHUB_USERNAME }}/devsquad:latest"
+          echo "  Commit: ${{ github.sha }}"
+          echo "========================================"

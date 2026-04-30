@@ -1,0 +1,24 @@
+# docker/Dockerfile.sandbox
+# ──────────────────────────
+# Minimal Python sandbox for running QA-generated test suites.
+#
+# This image is intentionally bare — no network access beyond pip install,
+# no persistent storage — so it faithfully mirrors a clean CI environment.
+#
+# The devsquad-runner copies test_suite.py into /sandbox (via shared volume)
+# then runs: docker exec devsquad-sandbox pytest /sandbox/test_suite.py -v
+
+FROM python:3.11-slim
+
+# No system packages needed — tests should not shell out
+WORKDIR /sandbox
+
+# Core test utilities installed at build time
+COPY requirements.txt /tmp/requirements.txt
+RUN pip install --no-cache-dir \
+    pytest==7.4.4 \
+    pytest-mock==3.12.0 \
+    responses==0.25.0
+
+# The sandbox waits to receive files — it does not run anything by default
+CMD ["/bin/sh", "-c", "echo 'Sandbox ready. Awaiting test file.' && tail -f /dev/null"]

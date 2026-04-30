@@ -1,0 +1,18 @@
+# Secrets — never commit
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+
+# Generated output files (keep the directory, exclude content)
+outputs/*.txt
+outputs/files_*/
+
+# OS
+.DS_Store
+Thumbs.db
