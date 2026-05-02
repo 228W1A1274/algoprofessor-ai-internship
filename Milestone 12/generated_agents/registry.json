@@ -1,0 +1,12 @@
+{
+  "math_solver": {
+    "agent_name": "math_solver",
+    "description": "Solves basic math problems",
+    "port": 8101,
+    "container_id": "8b5595c0cb70",
+    "endpoint": "http://localhost:8101",
+    "deployed_at": "2026-05-02T04:25:32.726829Z",
+    "attempts": 1,
+    "status": "running"
+  }
+}

@@ -1,0 +1,24 @@
+version: "3.9"
+
+services:
+  agent-creator:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    container_name: agent-creator-backend
+    ports:
+      - "8000:8000"
+    env_file:
+      - backend/.env
+    volumes:
+      # Mount Docker socket so the backend can spawn agent containers
+      - /var/run/docker.sock:/var/run/docker.sock
+      # Persist generated agents
+      - ./generated_agents:/app/generated_agents
+    networks:
+      - agent-net
+    restart: unless-stopped
+
+networks:
+  agent-net:
+    driver: bridge
