@@ -1,0 +1,7 @@
+# mcp_servers/requirements.txt
+# Shared dependencies for ALL MCP servers.
+# Keep minimal — each server only needs fastapi + uvicorn.
+
+fastapi==0.111.*
+uvicorn[standard]==0.29.*
+pydantic==2.*

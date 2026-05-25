@@ -1,0 +1,9 @@
+# AlphaTrader — backend dependencies
+
+fastapi==0.111.*
+uvicorn[standard]==0.29.*
+pydantic-settings==2.2.*
+httpx==0.27.*
+requests==2.32.*
+python-dotenv==1.0.*
+prometheus-client==0.20.*

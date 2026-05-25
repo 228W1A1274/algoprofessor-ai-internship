@@ -1,0 +1,164 @@
+{
+  "id": null,
+  "uid": "alphatrader-main",
+  "title": "AlphaTrader — Trading Floor Monitor",
+  "tags": ["alphatrader", "trading"],
+  "timezone": "browser",
+  "schemaVersion": 38,
+  "version": 1,
+  "refresh": "15s",
+  "time": { "from": "now-30m", "to": "now" },
+  "panels": [
+    {
+      "id": 1,
+      "title": "API Request Rate (req/sec)",
+      "type": "timeseries",
+      "gridPos": { "x": 0, "y": 0, "w": 12, "h": 8 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [
+        {
+          "expr": "rate(alphatrader_request_total[1m])",
+          "legendFormat": "{{method}} {{endpoint}}",
+          "refId": "A"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": { "unit": "reqps", "color": { "mode": "palette-classic" } }
+      }
+    },
+    {
+      "id": 2,
+      "title": "Trading Cycle Duration (seconds)",
+      "type": "timeseries",
+      "gridPos": { "x": 12, "y": 0, "w": 12, "h": 8 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [
+        {
+          "expr": "histogram_quantile(0.95, rate(alphatrader_cycle_duration_seconds_bucket[5m]))",
+          "legendFormat": "p95",
+          "refId": "A"
+        },
+        {
+          "expr": "histogram_quantile(0.50, rate(alphatrader_cycle_duration_seconds_bucket[5m]))",
+          "legendFormat": "p50",
+          "refId": "B"
+        }
+      ],
+      "fieldConfig": { "defaults": { "unit": "s" } }
+    },
+    {
+      "id": 3,
+      "title": "Trade Decisions — BUY / SELL / HOLD",
+      "type": "piechart",
+      "gridPos": { "x": 0, "y": 8, "w": 8, "h": 8 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [
+        {
+          "expr": "alphatrader_trade_decisions_total",
+          "legendFormat": "{{decision}}",
+          "refId": "A"
+        }
+      ],
+      "options": { "pieType": "pie", "displayLabels": ["name", "value"] }
+    },
+    {
+      "id": 4,
+      "title": "Trade Decisions Over Time",
+      "type": "timeseries",
+      "gridPos": { "x": 8, "y": 8, "w": 16, "h": 8 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [
+        {
+          "expr": "increase(alphatrader_trade_decisions_total[5m])",
+          "legendFormat": "{{decision}}",
+          "refId": "A"
+        }
+      ],
+      "fieldConfig": { "defaults": { "unit": "short" } }
+    },
+    {
+      "id": 5,
+      "title": "Active Cycles",
+      "type": "stat",
+      "gridPos": { "x": 0, "y": 16, "w": 6, "h": 4 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [
+        {
+          "expr": "alphatrader_active_cycles",
+          "legendFormat": "Active",
+          "refId": "A"
+        }
+      ],
+      "options": { "colorMode": "background", "graphMode": "none" },
+      "fieldConfig": {
+        "defaults": {
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              { "value": null, "color": "green" },
+              { "value": 1, "color": "yellow" },
+              { "value": 3, "color": "red" }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": 6,
+      "title": "Total Errors",
+      "type": "stat",
+      "gridPos": { "x": 6, "y": 16, "w": 6, "h": 4 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [
+        {
+          "expr": "sum(alphatrader_errors_total) or vector(0)",
+          "legendFormat": "Errors",
+          "refId": "A"
+        }
+      ],
+      "options": { "colorMode": "background" },
+      "fieldConfig": {
+        "defaults": {
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              { "value": null, "color": "green" },
+              { "value": 1, "color": "orange" },
+              { "value": 5, "color": "red" }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": 7,
+      "title": "Total API Requests",
+      "type": "stat",
+      "gridPos": { "x": 12, "y": 16, "w": 6, "h": 4 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [
+        {
+          "expr": "sum(alphatrader_request_total)",
+          "legendFormat": "Requests",
+          "refId": "A"
+        }
+      ],
+      "options": { "colorMode": "value" }
+    },
+    {
+      "id": 8,
+      "title": "Total Trade Decisions",
+      "type": "stat",
+      "gridPos": { "x": 18, "y": 16, "w": 6, "h": 4 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [
+        {
+          "expr": "sum(alphatrader_trade_decisions_total) or vector(0)",
+          "legendFormat": "Trades",
+          "refId": "A"
+        }
+      ],
+      "options": { "colorMode": "value" }
+    }
+  ]
+}

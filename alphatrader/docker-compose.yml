@@ -1,0 +1,238 @@
+# AlphaTrader — docker-compose.yml
+# Run with: docker-compose up --build
+
+services:
+  # ── MCP 1: Market Data ──────────────────────────────────────────
+  market-data:
+    build:
+      context: ./mcp_servers/market_data
+      dockerfile: Dockerfile
+    container_name: alpha-market-data
+    ports:
+      - "8001:8001"
+    restart: unless-stopped
+    networks:
+      - alpha-network
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "python",
+          "-c",
+          "import urllib.request; urllib.request.urlopen('http://localhost:8001/trend')",
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 15s
+
+  # ── MCP 2: News Feed ────────────────────────────────────────────
+  news:
+    build:
+      context: ./mcp_servers/news
+      dockerfile: Dockerfile
+    container_name: alpha-news
+    ports:
+      - "8002:8002"
+    restart: unless-stopped
+    networks:
+      - alpha-network
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "python",
+          "-c",
+          "import urllib.request; urllib.request.urlopen('http://localhost:8002/headlines')",
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 15s
+
+  # ── MCP 3: Financials ───────────────────────────────────────────
+  financials:
+    build:
+      context: ./mcp_servers/financials
+      dockerfile: Dockerfile
+    container_name: alpha-financials
+    ports:
+      - "8003:8003"
+    restart: unless-stopped
+    networks:
+      - alpha-network
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "python",
+          "-c",
+          "import urllib.request; urllib.request.urlopen('http://localhost:8003/balance-sheet')",
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 15s
+
+  # ── MCP 4: Orders ───────────────────────────────────────────────
+  orders:
+    build:
+      context: ./mcp_servers/orders
+      dockerfile: Dockerfile
+    container_name: alpha-orders
+    ports:
+      - "8004:8004"
+    restart: unless-stopped
+    networks:
+      - alpha-network
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "python",
+          "-c",
+          "import urllib.request; urllib.request.urlopen('http://localhost:8004/docs')",
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 15s
+
+  # ── MCP 5: Risk Engine ──────────────────────────────────────────
+  risk:
+    build:
+      context: ./mcp_servers/risk
+      dockerfile: Dockerfile
+    container_name: alpha-risk
+    ports:
+      - "8005:8005"
+    restart: unless-stopped
+    networks:
+      - alpha-network
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "python",
+          "-c",
+          "import urllib.request; urllib.request.urlopen('http://localhost:8005/limits')",
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 15s
+
+  # ── MCP 6: Notifications ────────────────────────────────────────
+  notify:
+    build:
+      context: ./mcp_servers/notifications
+      dockerfile: Dockerfile
+    container_name: alpha-notify
+    ports:
+      - "8006:8006"
+    restart: unless-stopped
+    networks:
+      - alpha-network
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "python",
+          "-c",
+          "import urllib.request; urllib.request.urlopen('http://localhost:8006/history')",
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 15s
+
+  # ── Main Backend ────────────────────────────────────────────────
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: alpha-backend
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+    networks:
+      - alpha-network
+    env_file:
+      - .env
+    environment:
+      - MCP_MARKET_DATA_URL=http://market-data:8001
+      - MCP_NEWS_URL=http://news:8002
+      - MCP_FINANCIALS_URL=http://financials:8003
+      - MCP_ORDERS_URL=http://orders:8004
+      - MCP_RISK_URL=http://risk:8005
+      - MCP_NOTIFICATIONS_URL=http://notify:8006
+    depends_on:
+      market-data:
+        condition: service_healthy
+      news:
+        condition: service_healthy
+      financials:
+        condition: service_healthy
+      orders:
+        condition: service_healthy
+      risk:
+        condition: service_healthy
+      notify:
+        condition: service_healthy
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "python",
+          "-c",
+          "import urllib.request; urllib.request.urlopen('http://localhost:8000/')",
+        ]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 20s
+
+  # ── Prometheus ──────────────────────────────────────────────────
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: alpha-prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+    command:
+      - "--config.file=/etc/prometheus/prometheus.yml"
+      - "--storage.tsdb.path=/prometheus"
+      - "--web.console.libraries=/etc/prometheus/console_libraries"
+      - "--web.console.templates=/etc/prometheus/consoles"
+      - "--web.enable-lifecycle"
+    restart: unless-stopped
+    networks:
+      - alpha-network
+    depends_on:
+      backend:
+        condition: service_healthy
+
+  # ── Grafana ─────────────────────────────────────────────────────
+  grafana:
+    image: grafana/grafana:latest
+    container_name: alpha-grafana
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_USERS_ALLOW_SIGN_UP=false
+    volumes:
+      - ./monitoring/grafana/provisioning:/etc/grafana/provisioning:ro
+      - ./monitoring/grafana/dashboards:/var/lib/grafana/dashboards:ro
+    restart: unless-stopped
+    networks:
+      - alpha-network
+    depends_on:
+      - prometheus
+
+# ── Shared Network ───────────────────────────────────────────────
+networks:
+  alpha-network:
+    driver: bridge
